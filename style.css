@@ -141,7 +141,7 @@ HERO
     position:relative;
     z-index:2;
 
-    /* SUBE TITULAR Y TEXTO */
+    /* TEXTO MÁS ARRIBA */
     transform:translateY(-120px);
 }
 
@@ -165,8 +165,8 @@ BOTONES
     gap:22px;
     justify-content:center;
 
-    /* BAJA SOLO BOTONES */
-    margin-top:240px;
+    /* BOTONES MÁS ABAJO */
+    margin-top:320px;
 }
 
 .btn{
@@ -332,7 +332,9 @@ RESPONSIVE
     .buttons{
         flex-direction:column;
         align-items:center;
-        margin-top:190px;
+
+        /* BOTONES MÁS ABAJO TABLET */
+        margin-top:240px;
     }
 
     .btn{
@@ -374,7 +376,9 @@ RESPONSIVE
     }
 
     .buttons{
-        margin-top:170px;
+
+        /* BOTONES MÁS ABAJO MOBILE */
+        margin-top:230px;
     }
 
     .card-content{
