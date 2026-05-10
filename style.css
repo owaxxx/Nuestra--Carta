@@ -141,8 +141,11 @@ HERO
     position:relative;
     z-index:2;
 
-    /* TEXTO ARRIBA */
-    transform:translateY(-120px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:translateY(-40px);
 }
 
 .hero h1{
@@ -165,8 +168,8 @@ BOTONES
     gap:22px;
     justify-content:center;
 
-    /* BAJA FUERTE BOTONES */
-    padding-top:320px;
+    /* BOTONES MÁS ABAJO */
+    margin-top:220px;
 }
 
 .btn{
@@ -174,10 +177,14 @@ BOTONES
     align-items:center;
     justify-content:center;
     text-decoration:none;
+
     padding:18px 38px;
+
     letter-spacing:1px;
     font-size:.92rem;
+
     min-width:280px;
+
     transition:.3s ease;
 }
 
@@ -297,7 +304,7 @@ FOOTER
 }
 
 /* ======================================================
-RESPONSIVE
+TABLET
 ====================================================== */
 
 @media (max-width:768px){
@@ -321,7 +328,7 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(-40px);
+        transform:translateY(-20px);
     }
 
     .hero p{
@@ -332,8 +339,7 @@ RESPONSIVE
         flex-direction:column;
         align-items:center;
 
-        /* MOBILE/TABLET CORRECTO */
-        padding-top:180px;
+        margin-top:180px;
     }
 
     .btn{
@@ -351,6 +357,10 @@ RESPONSIVE
 
 }
 
+/* ======================================================
+MOBILE
+====================================================== */
+
 @media (max-width:520px){
 
     h1{
@@ -362,10 +372,11 @@ RESPONSIVE
     }
 
     .hero{
-        padding:0 18px;
+        padding:0 16px;
     }
 
     .hero-content{
+        width:100%;
         transform:translateY(-20px);
     }
 
@@ -374,13 +385,17 @@ RESPONSIVE
     }
 
     .buttons{
-
-        /* MOBILE MÁS EQUILIBRADO */
-        padding-top:140px;
+        margin-top:180px;
+        width:100%;
     }
 
     .btn{
+        width:100%;
         max-width:100%;
+
+        min-width:0;
+
+        padding:18px 20px;
     }
 
     .card-content{
