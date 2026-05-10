@@ -141,7 +141,7 @@ HERO
     position:relative;
     z-index:2;
 
-    /* TEXTO MÁS ARRIBA */
+    /* TEXTO ARRIBA */
     transform:translateY(-120px);
 }
 
@@ -153,7 +153,7 @@ HERO
 .hero p{
     color:var(--texto-claro);
     font-size:1.32rem;
-    margin-bottom:40px;
+    margin-bottom:0;
 }
 
 /* ======================================================
@@ -165,8 +165,8 @@ BOTONES
     gap:22px;
     justify-content:center;
 
-    /* BOTONES MÁS ABAJO */
-    margin-top:320px;
+    /* BAJA FUERTE BOTONES */
+    padding-top:320px;
 }
 
 .btn{
@@ -321,20 +321,19 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(-70px);
+        transform:translateY(-40px);
     }
 
     .hero p{
-        font-size:1.15rem;
-        margin-bottom:30px;
+        font-size:1.1rem;
     }
 
     .buttons{
         flex-direction:column;
         align-items:center;
 
-        /* BOTONES MÁS ABAJO TABLET */
-        margin-top:240px;
+        /* MOBILE/TABLET CORRECTO */
+        padding-top:180px;
     }
 
     .btn{
@@ -355,7 +354,7 @@ RESPONSIVE
 @media (max-width:520px){
 
     h1{
-        font-size:2.7rem;
+        font-size:2.5rem;
     }
 
     h2{
@@ -367,18 +366,21 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(-50px);
+        transform:translateY(-20px);
     }
 
     .hero p{
         font-size:1rem;
-        margin-bottom:20px;
     }
 
     .buttons{
 
-        /* BOTONES MÁS ABAJO MOBILE */
-        margin-top:230px;
+        /* MOBILE MÁS EQUILIBRADO */
+        padding-top:140px;
+    }
+
+    .btn{
+        max-width:100%;
     }
 
     .card-content{
