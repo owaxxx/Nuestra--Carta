@@ -40,11 +40,11 @@ SECCIONES
 ====================================================== */
 
 .section{
-    padding:70px 0;
+    padding:45px 0;
 }
 
 .section-small{
-    padding:50px 0 90px;
+    padding:40px 0 80px;
 }
 
 /* ======================================================
@@ -138,7 +138,7 @@ HERO
     width:min(980px,90%);
     position:relative;
     z-index:2;
-    transform:translateY(40px);
+    transform:translateY(120px);
 }
 
 .hero h1{
@@ -200,7 +200,7 @@ TEXTOS
 
 .section-text{
     max-width:760px;
-    margin-bottom:40px;
+    margin-bottom:30px;
 }
 
 .divider{
@@ -297,7 +297,7 @@ RESPONSIVE
 @media (max-width:768px){
 
     .section{
-        padding:50px 0;
+        padding:35px 0;
     }
 
     .section-small{
@@ -313,7 +313,7 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(20px);
+        transform:translateY(70px);
     }
 
     .hero p{
