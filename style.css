@@ -40,11 +40,13 @@ SECCIONES
 ====================================================== */
 
 .section{
-    padding:45px 0;
+    padding-top:45px;
+    padding-bottom:10px;
 }
 
 .section-small{
-    padding:40px 0 80px;
+    padding-top:20px;
+    padding-bottom:70px;
 }
 
 /* ======================================================
@@ -138,7 +140,9 @@ HERO
     width:min(980px,90%);
     position:relative;
     z-index:2;
-    transform:translateY(120px);
+
+    /* BAJA TODO EL BLOQUE */
+    transform:translateY(220px);
 }
 
 .hero h1{
@@ -149,7 +153,7 @@ HERO
 .hero p{
     color:var(--texto-claro);
     font-size:1.32rem;
-    margin-bottom:70px;
+    margin-bottom:40px;
 }
 
 /* ======================================================
@@ -160,7 +164,7 @@ BOTONES
     display:flex;
     gap:22px;
     justify-content:center;
-    margin-top:40px;
+    margin-top:120px;
 }
 
 .btn{
@@ -195,19 +199,19 @@ TEXTOS
 ====================================================== */
 
 .section-title{
-    margin-bottom:24px;
+    margin-bottom:20px;
 }
 
 .section-text{
     max-width:760px;
-    margin-bottom:30px;
+    margin-bottom:10px;
 }
 
 .divider{
     width:90px;
     height:1px;
     background:var(--borgona);
-    margin:26px 0;
+    margin:20px 0;
 }
 
 /* ======================================================
@@ -297,11 +301,13 @@ RESPONSIVE
 @media (max-width:768px){
 
     .section{
-        padding:35px 0;
+        padding-top:35px;
+        padding-bottom:5px;
     }
 
     .section-small{
-        padding:30px 0 60px;
+        padding-top:15px;
+        padding-bottom:50px;
     }
 
     h1{
@@ -313,18 +319,18 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(70px);
+        transform:translateY(140px);
     }
 
     .hero p{
         font-size:1.15rem;
-        margin-bottom:90px;
+        margin-bottom:30px;
     }
 
     .buttons{
         flex-direction:column;
         align-items:center;
-        margin-top:70px;
+        margin-top:120px;
     }
 
     .btn{
@@ -358,11 +364,11 @@ RESPONSIVE
 
     .hero p{
         font-size:1rem;
-        margin-bottom:110px;
+        margin-bottom:20px;
     }
 
     .buttons{
-        margin-top:90px;
+        margin-top:140px;
     }
 
     .card-content{
