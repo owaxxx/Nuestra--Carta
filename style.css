@@ -141,8 +141,8 @@ HERO
     position:relative;
     z-index:2;
 
-    /* SUBE TEXTO PRINCIPAL */
-    transform:translateY(-40px);
+    /* SUBE TITULAR Y TEXTO */
+    transform:translateY(-120px);
 }
 
 .hero h1{
@@ -165,8 +165,8 @@ BOTONES
     gap:22px;
     justify-content:center;
 
-    /* MANTIENE BOTONES ABAJO */
-    margin-top:180px;
+    /* BAJA SOLO BOTONES */
+    margin-top:240px;
 }
 
 .btn{
@@ -321,7 +321,7 @@ RESPONSIVE
     }
 
     .hero-content{
-        transform:translateY(-20px);
+        transform:translateY(-70px);
     }
 
     .hero p{
@@ -332,7 +332,7 @@ RESPONSIVE
     .buttons{
         flex-direction:column;
         align-items:center;
-        margin-top:160px;
+        margin-top:190px;
     }
 
     .btn{
@@ -362,6 +362,10 @@ RESPONSIVE
 
     .hero{
         padding:0 18px;
+    }
+
+    .hero-content{
+        transform:translateY(-50px);
     }
 
     .hero p{
