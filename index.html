@@ -1,299 +1,529 @@
-<!DOCTYPE html>
-<html lang="es">
+/* ======================================================
+LA MANYOSA — SISTEMA VISUAL PREMIUM
+====================================================== */
 
-<head>
+:root{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    --pergamino:#F3EBDD;
+    --borgona:#6E0F1F;
+    --borgona-hover:#530916;
 
-<title>La Manyosa — Fortaleza Gastronómica Medieval</title>
+    --negro:#1E1E1E;
 
-<meta
-name="description"
-content="Cocina al fuego, horno de leña y experiencias gastronómicas románticas en una auténtica fortaleza medieval cerca de Barcelona.">
+    --texto:#2D2B28;
+    --texto-claro:#E9E1D6;
 
-<link rel="stylesheet" href="style.css">
+    --shadow-soft:
+    0 8px 30px rgba(0,0,0,.06);
 
-</head>
+    --shadow-medium:
+    0 18px 50px rgba(0,0,0,.12);
 
-<body>
+}
 
-<!-- ======================================================
+/* ======================================================
+RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--pergamino);
+
+    color:var(--texto);
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    line-height:1.7;
+
+    -webkit-font-smoothing:antialiased;
+
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ======================================================
+TIPOGRAFÍA
+====================================================== */
+
+h1,h2,h3{
+
+    font-weight:400;
+
+    letter-spacing:.4px;
+
+    color:var(--negro);
+}
+
+h1{
+
+    font-size:5rem;
+
+    line-height:1.02;
+}
+
+h2{
+
+    font-size:3rem;
+
+    line-height:1.15;
+}
+
+h3{
+
+    font-size:1.7rem;
+}
+
+p{
+    font-size:1.05rem;
+}
+
+/* ======================================================
+LAYOUT
+====================================================== */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+}
+
+.section{
+
+    padding:90px 0;
+}
+
+.section-small{
+
+    padding:50px 0 90px;
+}
+
+/* ======================================================
 NAVBAR
-====================================================== -->
+====================================================== */
 
-<nav class="navbar">
+.navbar{
 
-    <div class="container nav-inner">
+    position:absolute;
 
-        <a href="index.html" class="logo">
-        La Manyosa
-        </a>
+    top:0;
 
-        <div class="nav-links">
+    left:0;
 
-            <a href="especialidades.html">
-            Especialidades
-            </a>
+    width:100%;
 
-            <a href="brasas.html">
-            Brasas
-            </a>
+    z-index:20;
 
-            <a href="bodega.html">
-            Bodega
-            </a>
+    padding:28px 0;
+}
 
-            <a href="carta.html">
-            Carta
-            </a>
+.nav-inner{
 
-        </div>
+    display:flex;
 
-    </div>
+    justify-content:space-between;
 
-</nav>
+    align-items:center;
+}
 
-<!-- ======================================================
+.logo{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1.5rem;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:.92rem;
+
+    opacity:.9;
+}
+
+/* ======================================================
 HERO
-====================================================== -->
+====================================================== */
 
-<header class="hero">
+.hero{
 
-    <div class="hero-content">
+    min-height:100vh;
 
-        <h1>
-        Fortaleza gastronómica medieval
-        </h1>
+    display:flex;
 
-        <p>
-        Fuego, piedra y cocina auténtica concebida para
-        experiencias gastronómicas sin prisa.
-        </p>
+    align-items:center;
 
-        <div class="buttons">
+    justify-content:center;
 
-            <a
-            href="especialidades.html"
-            class="btn btn-primary">
+    text-align:center;
 
-            VER ESPECIALIDADES
+    position:relative;
 
-            </a>
+    overflow:hidden;
 
-            <a
-            href="carta.html"
-            class="btn btn-secondary">
+    background:
+    linear-gradient(
+    rgba(0,0,0,.28),
+    rgba(0,0,0,.52)
+    ),
 
-            VER CARTA COMPLETA
+    url("assets/img/hero.jpg");
 
-            </a>
+    background-size:cover;
 
-        </div>
+    background-position:center;
+}
 
-    </div>
+.hero-content{
 
-</header>
+    width:min(980px,90%);
 
-<!-- ======================================================
-INTRO
-====================================================== -->
+    position:relative;
 
-<section class="section">
+    z-index:2;
 
-    <div class="container">
+    transform:translateY(-20px);
+}
 
-        <h2 class="section-title">
-        Cocina al fuego y tradición reinterpretada
-        </h2>
+.hero h1{
 
-        <div class="divider"></div>
+    color:white;
 
-        <p class="section-text">
+    margin-bottom:28px;
+}
 
-        La Manyosa une gastronomía emocional, brasas,
-        horno de leña y atmósfera medieval en una experiencia
-        concebida para compartir en pareja o disfrutar
-        sin prisa en el interior de una auténtica fortaleza.
+.hero p{
 
-        </p>
+    color:var(--texto-claro);
 
-    </div>
+    font-size:1.32rem;
 
-</section>
+    margin-bottom:70px;
+}
 
-<!-- ======================================================
-ESPECIALIDADES
-====================================================== -->
+/* ======================================================
+BOTONES
+====================================================== */
 
-<section class="section-small">
+.buttons{
 
-    <div class="container">
+    display:flex;
 
-        <div class="grid-3">
+    gap:22px;
 
-            <article class="card">
+    justify-content:center;
 
-                <img
-                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
-                alt="Lechazo al horno de leña">
+    margin-top:40px;
+}
 
-                <div class="card-content">
+.btn{
 
-                    <h3>
-                    Lechazo al horno
-                    </h3>
+    display:inline-flex;
 
-                    <p>
+    align-items:center;
 
-                    Cocinado lentamente para preservar
-                    el sabor más auténtico de la tradición.
+    justify-content:center;
 
-                    </p>
+    text-decoration:none;
 
-                    <a
-                    href="especialidades.html"
-                    class="card-link">
+    padding:18px 38px;
 
-                    DESCUBRIR →
+    transition:.3s ease;
 
-                    </a>
+    letter-spacing:1px;
 
-                </div>
+    font-size:.92rem;
 
-            </article>
+    min-width:280px;
+}
 
-            <article class="card">
+.btn-primary{
 
-                <img
-                src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200&auto=format&fit=crop"
-                alt="Cocina a las brasas">
+    background:var(--borgona);
 
-                <div class="card-content">
+    color:white;
+}
 
-                    <h3>
-                    Cocina a las brasas
-                    </h3>
+.btn-primary:hover{
 
-                    <p>
+    background:var(--borgona-hover);
+}
 
-                    Fuego abierto, cortes seleccionados
-                    y cocina contundente en una atmósfera cálida.
+.btn-secondary{
 
-                    </p>
+    border:1px solid rgba(255,255,255,.45);
 
-                    <a
-                    href="brasas.html"
-                    class="card-link">
+    color:white;
 
-                    VER BRASAS →
+    background:rgba(255,255,255,.03);
+}
 
-                    </a>
+/* ======================================================
+TEXTOS
+====================================================== */
 
-                </div>
+.section-title{
 
-            </article>
+    margin-bottom:24px;
+}
 
-            <article class="card">
+.section-text{
 
-                <img
-                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
-                alt="Bodega medieval">
+    max-width:760px;
 
-                <div class="card-content">
+    margin-bottom:40px;
+}
 
-                    <h3>
-                    Bodega & vino
-                    </h3>
+.divider{
 
-                    <p>
+    width:90px;
 
-                    Una selección pensada para acompañar
-                    experiencias gastronómicas pausadas.
+    height:1px;
 
-                    </p>
+    background:var(--borgona);
 
-                    <a
-                    href="bodega.html"
-                    class="card-link">
+    margin:26px 0;
+}
 
-                    EXPLORAR →
+/* ======================================================
+CARDS
+====================================================== */
 
-                    </a>
+.grid-3{
 
-                </div>
+    display:grid;
 
-            </article>
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
 
-        </div>
+    gap:35px;
+}
 
-    </div>
+.card{
 
-</section>
+    background:white;
 
-<!-- ======================================================
-ESCAPADA ROMÁNTICA
-====================================================== -->
+    overflow:hidden;
 
-<section class="section dark-section">
+    box-shadow:var(--shadow-soft);
 
-    <div class="container">
+    transition:.35s ease;
+}
 
-        <div class="experience-block">
+.card:hover{
 
-            <div>
+    transform:translateY(-4px);
 
-                <h2 class="section-title">
-                Escapada romántica gastronómica
-                </h2>
+    box-shadow:var(--shadow-medium);
+}
 
-                <div class="divider"></div>
+.card img{
 
-                <p class="section-text">
+    width:100%;
 
-                Una experiencia donde gastronomía,
-                intimidad y fortaleza medieval se unen
-                para crear una estancia difícil de olvidar.
+    height:320px;
 
-                </p>
+    object-fit:cover;
+}
 
-                <a
-                href="escapada-romantica.html"
-                class="btn btn-primary">
+.card-content{
 
-                DESCUBRIR LA EXPERIENCIA
+    padding:35px;
+}
 
-                </a>
+.card h3{
 
-            </div>
+    margin-bottom:18px;
+}
 
-            <div>
+.card p{
 
-                <img
-                class="feature-image"
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1400&auto=format&fit=crop"
-                alt="Escapada romántica gastronómica">
+    margin-bottom:28px;
+}
 
-            </div>
+.card-link{
 
-        </div>
+    text-decoration:none;
 
-    </div>
+    color:var(--borgona);
 
-</section>
+    letter-spacing:1px;
 
-<!-- ======================================================
+    font-size:.9rem;
+}
+
+/* ======================================================
+DARK SECTION
+====================================================== */
+
+.dark-section{
+
+    background:var(--negro);
+
+    color:var(--texto-claro);
+}
+
+.dark-section h2{
+
+    color:white;
+}
+
+.experience-block{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(400px,1fr));
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.feature-image{
+
+    width:100%;
+
+    height:700px;
+
+    object-fit:cover;
+}
+
+/* ======================================================
 FOOTER
-====================================================== -->
+====================================================== */
 
-<footer class="footer">
+.footer{
 
-    <p>
-    La Manyosa · Fortaleza gastronómica medieval · Barcelona
-    </p>
+    background:#151515;
 
-</footer>
+    color:#B4AA9A;
 
-</body>
+    text-align:center;
 
-</html>
+    padding:55px 20px;
+
+    font-size:.9rem;
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media (max-width:768px){
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-small{
+        padding:30px 0 60px;
+    }
+
+    h1{
+        font-size:3.2rem;
+    }
+
+    h2{
+        font-size:2.3rem;
+    }
+
+    .hero-content{
+
+        transform:translateY(-40px);
+    }
+
+    .hero p{
+
+        font-size:1.15rem;
+
+        margin-bottom:90px;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        margin-top:70px;
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:390px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .feature-image{
+        height:420px;
+    }
+
+}
+
+@media (max-width:520px){
+
+    h1{
+        font-size:2.7rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .hero{
+
+        padding:0 18px;
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+        margin-bottom:110px;
+    }
+
+    .buttons{
+
+        margin-top:90px;
+    }
+
+    .card-content{
+        padding:28px;
+    }
+
+}
