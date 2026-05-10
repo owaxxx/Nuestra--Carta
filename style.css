@@ -35,13 +35,21 @@ img{
     margin:auto;
 }
 
+/* ======================================================
+SECCIONES
+====================================================== */
+
 .section{
-    padding:90px 0;
+    padding:70px 0;
 }
 
 .section-small{
     padding:50px 0 90px;
 }
+
+/* ======================================================
+TIPOGRAFÍA
+====================================================== */
 
 h1,h2,h3{
     font-weight:400;
@@ -65,6 +73,10 @@ h3{
 p{
     font-size:1.05rem;
 }
+
+/* ======================================================
+NAVBAR
+====================================================== */
 
 .navbar{
     position:absolute;
@@ -98,6 +110,10 @@ p{
     font-size:.92rem;
 }
 
+/* ======================================================
+HERO
+====================================================== */
+
 .hero{
     min-height:100vh;
     display:flex;
@@ -122,7 +138,7 @@ p{
     width:min(980px,90%);
     position:relative;
     z-index:2;
-    transform:translateY(-20px);
+    transform:translateY(40px);
 }
 
 .hero h1{
@@ -135,6 +151,10 @@ p{
     font-size:1.32rem;
     margin-bottom:70px;
 }
+
+/* ======================================================
+BOTONES
+====================================================== */
 
 .buttons{
     display:flex;
@@ -152,6 +172,7 @@ p{
     letter-spacing:1px;
     font-size:.92rem;
     min-width:280px;
+    transition:.3s ease;
 }
 
 .btn-primary{
@@ -159,11 +180,19 @@ p{
     color:white;
 }
 
+.btn-primary:hover{
+    background:var(--borgona-hover);
+}
+
 .btn-secondary{
     border:1px solid rgba(255,255,255,.45);
     color:white;
     background:rgba(255,255,255,.03);
 }
+
+/* ======================================================
+TEXTOS
+====================================================== */
 
 .section-title{
     margin-bottom:24px;
@@ -180,6 +209,10 @@ p{
     background:var(--borgona);
     margin:26px 0;
 }
+
+/* ======================================================
+CARDS
+====================================================== */
 
 .grid-3{
     display:grid;
@@ -218,6 +251,10 @@ p{
     font-size:.9rem;
 }
 
+/* ======================================================
+SECCIÓN OSCURA
+====================================================== */
+
 .dark-section{
     background:var(--negro);
     color:var(--texto-claro);
@@ -241,6 +278,10 @@ p{
     object-fit:cover;
 }
 
+/* ======================================================
+FOOTER
+====================================================== */
+
 .footer{
     background:#151515;
     color:#B4AA9A;
@@ -249,10 +290,14 @@ p{
     font-size:.9rem;
 }
 
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
 @media (max-width:768px){
 
     .section{
-        padding:60px 0;
+        padding:50px 0;
     }
 
     .section-small{
@@ -268,7 +313,7 @@ p{
     }
 
     .hero-content{
-        transform:translateY(-40px);
+        transform:translateY(20px);
     }
 
     .hero p{
