@@ -140,6 +140,9 @@ HERO
     width:min(980px,90%);
     position:relative;
     z-index:2;
+
+    /* SUBE TEXTO PRINCIPAL */
+    transform:translateY(-40px);
 }
 
 .hero h1{
@@ -162,7 +165,7 @@ BOTONES
     gap:22px;
     justify-content:center;
 
-    /* SOLO BAJA LOS BOTONES */
+    /* MANTIENE BOTONES ABAJO */
     margin-top:180px;
 }
 
@@ -317,6 +320,10 @@ RESPONSIVE
         font-size:2.3rem;
     }
 
+    .hero-content{
+        transform:translateY(-20px);
+    }
+
     .hero p{
         font-size:1.15rem;
         margin-bottom:30px;
@@ -325,8 +332,6 @@ RESPONSIVE
     .buttons{
         flex-direction:column;
         align-items:center;
-
-        /* SOLO BOTONES MOBILE */
         margin-top:160px;
     }
 
