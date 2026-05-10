@@ -1,33 +1,17 @@
 /* ======================================================
 LA MANYOSA — SISTEMA VISUAL PREMIUM
-CSS EDITORIAL EXPERIENCIAL
-====================================================== */
-
-/* ======================================================
-VARIABLES
 ====================================================== */
 
 :root{
 
     --pergamino:#F3EBDD;
-    --pergamino-oscuro:#E6DAC6;
-
     --borgona:#6E0F1F;
     --borgona-hover:#530916;
 
     --negro:#1E1E1E;
-    --negro-suave:#2A2A2A;
 
     --texto:#2D2B28;
     --texto-claro:#E9E1D6;
-
-    --borde:#D8CCBA;
-
-    --space-xs:10px;
-    --space-s:20px;
-    --space-m:40px;
-    --space-l:80px;
-    --space-xl:120px;
 
     --shadow-soft:
     0 8px 30px rgba(0,0,0,.06);
@@ -80,46 +64,37 @@ img{
 TIPOGRAFÍA
 ====================================================== */
 
-h1,h2,h3,h4{
+h1,h2,h3{
 
     font-weight:400;
 
-    letter-spacing:.5px;
+    letter-spacing:.4px;
 
     color:var(--negro);
 }
 
 h1{
 
-    font-size:4.2rem;
+    font-size:5rem;
 
-    line-height:1.05;
+    line-height:1.02;
 }
 
 h2{
 
-    font-size:2.8rem;
+    font-size:3rem;
 
-    line-height:1.2;
+    line-height:1.15;
 }
 
 h3{
 
     font-size:1.7rem;
-
-    line-height:1.3;
 }
 
 p{
 
     font-size:1.05rem;
-}
-
-.small-text{
-
-    font-size:.92rem;
-
-    opacity:.85;
 }
 
 /* ======================================================
@@ -135,16 +110,12 @@ LAYOUT
 
 .section{
 
-    padding:
-    var(--space-xl)
-    0;
+    padding:90px 0;
 }
 
 .section-small{
 
-    padding:
-    var(--space-l)
-    0;
+    padding:50px 0 90px;
 }
 
 /* ======================================================
@@ -163,7 +134,7 @@ NAVBAR
 
     z-index:20;
 
-    padding:30px 0;
+    padding:28px 0;
 }
 
 .nav-inner{
@@ -182,8 +153,6 @@ NAVBAR
     text-decoration:none;
 
     font-size:1.5rem;
-
-    letter-spacing:1px;
 }
 
 .nav-links{
@@ -201,16 +170,7 @@ NAVBAR
 
     font-size:.92rem;
 
-    letter-spacing:1px;
-
     opacity:.9;
-
-    transition:.3s ease;
-}
-
-.nav-links a:hover{
-
-    opacity:1;
 }
 
 /* ======================================================
@@ -235,10 +195,9 @@ HERO
 
     background:
     linear-gradient(
-    rgba(0,0,0,.25),
-    rgba(0,0,0,.45)
+    rgba(0,0,0,.28),
+    rgba(0,0,0,.52)
     ),
-
     url("assets/img/hero.jpg");
 
     background-size:cover;
@@ -246,81 +205,31 @@ HERO
     background-position:center;
 }
 
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-    rgba(0,0,0,0),
-    rgba(0,0,0,.25)
-    );
-}
-
 .hero-content{
 
-    width:min(850px,90%);
+    width:min(980px,90%);
 
     position:relative;
 
     z-index:2;
+
+    transform:translateY(-20px);
 }
 
 .hero h1{
 
     color:white;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .hero p{
 
     color:var(--texto-claro);
 
-    font-size:1.3rem;
+    font-size:1.32rem;
 
-    margin-bottom:45px;
-}
-
-/* ======================================================
-ENLACE FUNCIONAL HERO
-====================================================== */
-
-.hero-menu-link{
-
-    margin-top:24px;
-
-    text-align:center;
-}
-
-.hero-menu-link a{
-
-    color:rgba(255,255,255,.82);
-
-    text-decoration:none;
-
-    text-transform:uppercase;
-
-    letter-spacing:.12em;
-
-    font-size:.82rem;
-
-    transition:.25s ease;
-
-    border-bottom:1px solid transparent;
-
-    padding-bottom:2px;
-}
-
-.hero-menu-link a:hover{
-
-    opacity:.7;
-
-    border-color:rgba(255,255,255,.4);
+    margin-bottom:70px;
 }
 
 /* ======================================================
@@ -331,11 +240,11 @@ BOTONES
 
     display:flex;
 
-    gap:20px;
+    gap:22px;
 
     justify-content:center;
 
-    flex-wrap:wrap;
+    margin-top:40px;
 }
 
 .btn{
@@ -348,8 +257,7 @@ BOTONES
 
     text-decoration:none;
 
-    padding:
-    16px 34px;
+    padding:18px 38px;
 
     transition:.3s ease;
 
@@ -357,9 +265,7 @@ BOTONES
 
     font-size:.92rem;
 
-    border-radius:2px;
-
-    cursor:pointer;
+    min-width:280px;
 }
 
 .btn-primary{
@@ -372,41 +278,32 @@ BOTONES
 .btn-primary:hover{
 
     background:var(--borgona-hover);
-
-    transform:translateY(-2px);
 }
 
 .btn-secondary{
 
-    border:1px solid rgba(255,255,255,.55);
+    border:1px solid rgba(255,255,255,.45);
 
     color:white;
-}
 
-.btn-secondary:hover{
-
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
 }
 
 /* ======================================================
-TEXTOS DE SECCIÓN
+TEXTOS
 ====================================================== */
 
 .section-title{
 
-    margin-bottom:25px;
+    margin-bottom:24px;
 }
 
 .section-text{
 
     max-width:760px;
 
-    margin-bottom:55px;
+    margin-bottom:40px;
 }
-
-/* ======================================================
-DIVIDER
-====================================================== */
 
 .divider{
 
@@ -416,13 +313,11 @@ DIVIDER
 
     background:var(--borgona);
 
-    margin:
-    30px
-    0;
+    margin:26px 0;
 }
 
 /* ======================================================
-GRIDS
+CARDS
 ====================================================== */
 
 .grid-3{
@@ -434,20 +329,6 @@ GRIDS
 
     gap:35px;
 }
-
-.grid-2{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(420px,1fr));
-
-    gap:40px;
-}
-
-/* ======================================================
-CARDS
-====================================================== */
 
 .card{
 
@@ -513,20 +394,10 @@ SECCIÓN OSCURA
     color:var(--texto-claro);
 }
 
-.dark-section h2,
-.dark-section h3{
+.dark-section h2{
 
     color:white;
 }
-
-.dark-section .divider{
-
-    background:var(--borgona);
-}
-
-/* ======================================================
-BLOQUE EXPERIENCIAL
-====================================================== */
 
 .experience-block{
 
@@ -535,14 +406,10 @@ BLOQUE EXPERIENCIAL
     grid-template-columns:
     repeat(auto-fit,minmax(400px,1fr));
 
-    gap:35px;
+    gap:50px;
 
     align-items:center;
 }
-
-/* ======================================================
-IMAGEN DESTACADA
-====================================================== */
 
 .feature-image{
 
@@ -551,8 +418,6 @@ IMAGEN DESTACADA
     height:700px;
 
     object-fit:cover;
-
-    box-shadow:var(--shadow-medium);
 }
 
 /* ======================================================
@@ -567,38 +432,14 @@ FOOTER
 
     text-align:center;
 
-    padding:60px 20px;
+    padding:55px 20px;
 
-    font-size:.92rem;
+    font-size:.9rem;
 }
 
 /* ======================================================
 RESPONSIVE
 ====================================================== */
-
-@media (max-width:1100px){
-
-    h1{
-        font-size:4rem;
-    }
-
-    h2{
-        font-size:2.4rem;
-    }
-
-}
-
-@media (max-width:900px){
-
-    .experience-block{
-        grid-template-columns:1fr;
-    }
-
-    .feature-image{
-        height:500px;
-    }
-
-}
 
 @media (max-width:768px){
 
@@ -607,37 +448,39 @@ RESPONSIVE
     }
 
     .section-small{
-        padding:45px 0;
+        padding:30px 0 60px;
     }
 
     h1{
-        font-size:2.9rem;
+        font-size:3.2rem;
     }
 
     h2{
-        font-size:2rem;
+        font-size:2.3rem;
+    }
+
+    .hero-content{
+        transform:translateY(-40px);
     }
 
     .hero p{
-        font-size:1.05rem;
+        font-size:1.15rem;
+        margin-bottom:90px;
     }
 
     .buttons{
         flex-direction:column;
         align-items:center;
+        margin-top:70px;
     }
 
     .btn{
         width:100%;
-        max-width:320px;
+        max-width:390px;
     }
 
     .nav-links{
         display:none;
-    }
-
-    .card img{
-        height:240px;
     }
 
     .feature-image{
@@ -649,19 +492,28 @@ RESPONSIVE
 @media (max-width:520px){
 
     h1{
-        font-size:2.3rem;
+        font-size:2.7rem;
     }
 
     h2{
-        font-size:1.7rem;
+        font-size:2rem;
+    }
+
+    .hero{
+        padding:0 18px;
+    }
+
+    .hero p{
+        font-size:1rem;
+        margin-bottom:110px;
+    }
+
+    .buttons{
+        margin-top:90px;
     }
 
     .card-content{
         padding:28px;
-    }
-
-    .hero{
-        padding:0 20px;
     }
 
 }
