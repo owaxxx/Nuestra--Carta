@@ -398,12 +398,41 @@ SEGUNDA SECCIÓN OSCURA
 ====================================================== */
 
 .romantic-section{
-    background:var(--negro-profundo);
+    position:relative;
 
-    border-top:
-    1px solid rgba(255,255,255,.05);
+    background:
+    linear-gradient(
+        to bottom,
+        #232323 0%,
+        var(--negro-profundo) 140px
+    );
 
-    padding-top:120px;
+    padding-top:140px;
+}
+
+/* LÍNEA EDITORIAL PREMIUM */
+
+.romantic-section::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:78%;
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
 }
 
 /* ======================================================
