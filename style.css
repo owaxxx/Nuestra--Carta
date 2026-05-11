@@ -2,15 +2,17 @@
     --pergamino:#F3EBDD;
     --borgona:#6E0F1F;
     --borgona-hover:#530916;
-    --negro:#1E1E1E;
+    --negro:#1D1C1C;
+    --negro-profundo:#181818;
+
     --texto:#2D2B28;
     --texto-claro:#E9E1D6;
 
     --shadow-soft:
-    0 8px 30px rgba(0,0,0,.06);
+    0 10px 30px rgba(0,0,0,.06);
 
     --shadow-medium:
-    0 18px 50px rgba(0,0,0,.12);
+    0 22px 60px rgba(0,0,0,.16);
 }
 
 *{
@@ -25,6 +27,7 @@ html{
 
 body{
     background:var(--pergamino);
+
     color:var(--texto);
 
     font-family:
@@ -48,25 +51,28 @@ TIPOGRAFÍA
 
 h1,h2,h3{
     font-weight:400;
+
     letter-spacing:.4px;
 }
 
 h1{
     font-size:6rem;
+
     line-height:.95;
 }
 
 h2{
-    font-size:3.2rem;
-    line-height:1.15;
+    font-size:3.25rem;
+
+    line-height:1.12;
 }
 
 h3{
-    font-size:1.7rem;
+    font-size:1.75rem;
 }
 
 p{
-    font-size:1.08rem;
+    font-size:1.05rem;
 }
 
 /* ======================================================
@@ -75,11 +81,12 @@ LAYOUT
 
 .container{
     width:min(1240px,90%);
+
     margin:auto;
 }
 
 .section{
-    padding:90px 0;
+    padding:110px 0;
 }
 
 .section-small{
@@ -100,7 +107,7 @@ NAVBAR
 
     z-index:20;
 
-    padding:32px 0;
+    padding:34px 0;
 }
 
 .nav-inner{
@@ -116,7 +123,7 @@ NAVBAR
 
     text-decoration:none;
 
-    font-size:1.6rem;
+    font-size:1.55rem;
 }
 
 .nav-links{
@@ -130,9 +137,15 @@ NAVBAR
 
     text-decoration:none;
 
-    font-size:.95rem;
+    font-size:.92rem;
 
-    opacity:.92;
+    opacity:.9;
+
+    transition:.3s ease;
+}
+
+.nav-links a:hover{
+    opacity:1;
 }
 
 /* ======================================================
@@ -156,8 +169,8 @@ HERO
 
     background:
     linear-gradient(
-        rgba(0,0,0,.28),
-        rgba(0,0,0,.58)
+        rgba(0,0,0,.34),
+        rgba(0,0,0,.62)
     ),
     url("assets/img/fortaleza-gastronomica-medieval.webp");
 
@@ -185,7 +198,7 @@ HERO
 .hero p{
     color:var(--texto-claro);
 
-    font-size:1.4rem;
+    font-size:1.38rem;
 
     max-width:980px;
 
@@ -201,9 +214,9 @@ BOTONES
 
     justify-content:center;
 
-    gap:24px;
+    gap:22px;
 
-    margin-top:160px;
+    margin-top:150px;
 }
 
 .btn{
@@ -217,9 +230,9 @@ BOTONES
 
     padding:20px 44px;
 
-    min-width:320px;
+    min-width:310px;
 
-    font-size:.95rem;
+    font-size:.92rem;
 
     letter-spacing:1px;
 
@@ -230,6 +243,8 @@ BOTONES
     background:var(--borgona);
 
     color:white;
+
+    border:1px solid transparent;
 }
 
 .btn-primary:hover{
@@ -237,11 +252,15 @@ BOTONES
 }
 
 .btn-secondary{
-    border:1px solid rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.25);
 
     color:white;
 
     background:rgba(255,255,255,.03);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.06);
 }
 
 /* ======================================================
@@ -253,11 +272,11 @@ TEXTOS
 }
 
 .section-text{
-    max-width:780px;
+    max-width:760px;
 }
 
 .divider{
-    width:100px;
+    width:90px;
 
     height:1px;
 
@@ -276,9 +295,9 @@ CARDS
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:36px;
+    gap:34px;
 
-    margin-top:70px;
+    margin-top:80px;
 }
 
 .card{
@@ -292,7 +311,7 @@ CARDS
 }
 
 .card:hover{
-    transform:translateY(-4px);
+    transform:translateY(-6px);
 
     box-shadow:var(--shadow-medium);
 }
@@ -300,13 +319,13 @@ CARDS
 .card img{
     width:100%;
 
-    height:360px;
+    height:320px;
 
     object-fit:cover;
 }
 
 .card-content{
-    padding:38px;
+    padding:34px;
 }
 
 .card h3{
@@ -315,6 +334,8 @@ CARDS
 
 .card p{
     margin-bottom:28px;
+
+    color:#4A4540;
 }
 
 .card-link{
@@ -322,13 +343,13 @@ CARDS
 
     color:var(--borgona);
 
-    font-size:.92rem;
+    font-size:.9rem;
 
     letter-spacing:1px;
 }
 
 /* ======================================================
-SECCIÓN OSCURA
+SECCIONES OSCURAS
 ====================================================== */
 
 .dark-section{
@@ -336,7 +357,7 @@ SECCIÓN OSCURA
 
     color:var(--texto-claro);
 
-    padding:140px 0;
+    padding:110px 0;
 }
 
 .dark-section h2{
@@ -349,11 +370,11 @@ SECCIÓN OSCURA
     grid-template-columns:
     1fr 1fr;
 
-    gap:120px;
+    gap:100px;
 
     align-items:center;
 
-    margin-bottom:140px;
+    margin-bottom:90px;
 }
 
 .experience-block:last-child{
@@ -363,7 +384,7 @@ SECCIÓN OSCURA
 .feature-image{
     width:100%;
 
-    height:760px;
+    height:680px;
 
     object-fit:cover;
 
@@ -373,20 +394,16 @@ SECCIÓN OSCURA
 }
 
 /* ======================================================
-ROMANTIC SECTION
+SEGUNDA SECCIÓN OSCURA
 ====================================================== */
 
 .romantic-section{
-    position:relative;
+    background:var(--negro-profundo);
 
-    padding-top:220px;
+    border-top:
+    1px solid rgba(255,255,255,.05);
 
-    background:
-    linear-gradient(
-        to bottom,
-        #1E1E1E 0%,
-        #181818 100%
-    );
+    padding-top:120px;
 }
 
 /* ======================================================
@@ -396,13 +413,16 @@ FOOTER
 .footer{
     background:#101010;
 
-    color:#B4AA9A;
+    color:#8E8578;
 
     text-align:center;
 
-    padding:90px 20px;
+    padding:70px 20px;
 
-    font-size:.92rem;
+    font-size:.88rem;
+
+    border-top:
+    1px solid rgba(255,255,255,.04);
 }
 
 /* ======================================================
@@ -417,6 +437,10 @@ RESPONSIVE
 
     h2{
         font-size:2.4rem;
+    }
+
+    .section{
+        padding:90px 0;
     }
 
     .grid-3{
@@ -440,7 +464,7 @@ RESPONSIVE
 
         align-items:center;
 
-        margin-top:120px;
+        margin-top:100px;
     }
 
     .btn{
@@ -448,7 +472,7 @@ RESPONSIVE
     }
 
     .romantic-section{
-        padding-top:120px;
+        padding-top:90px;
     }
 
 }
