@@ -2,6 +2,7 @@
     --pergamino:#F3EBDD;
     --borgona:#6E0F1F;
     --borgona-hover:#530916;
+
     --negro:#1D1C1C;
     --negro-profundo:#181818;
 
@@ -374,7 +375,7 @@ SECCIONES OSCURAS
 
     align-items:center;
 
-    margin-bottom:90px;
+    margin-bottom:70px;
 }
 
 .experience-block:last-child{
@@ -481,7 +482,7 @@ RESPONSIVE
 
         gap:50px;
 
-        margin-bottom:90px;
+        margin-bottom:70px;
     }
 
     .feature-image{
@@ -501,7 +502,7 @@ RESPONSIVE
     }
 
     .romantic-section{
-        padding-top:90px;
+        padding-top:80px;
     }
 
 }
