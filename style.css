@@ -349,14 +349,49 @@ CARDS
     color:#4A4540;
 }
 
+/* ======================================================
+BOTONES DESCUBRIR PREMIUM
+====================================================== */
+
 .card-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:
+    12px
+    18px;
+
+    border:
+    1px solid rgba(110,15,31,.22);
+
+    background:
+    rgba(110,15,31,.03);
+
+    backdrop-filter:blur(4px);
+
     text-decoration:none;
 
     color:var(--borgona);
 
-    font-size:.9rem;
+    font-size:.82rem;
 
-    letter-spacing:1px;
+    letter-spacing:1.4px;
+
+    transition:.3s ease;
+}
+
+.card-link:hover{
+    background:
+    rgba(110,15,31,.08);
+
+    border:
+    1px solid rgba(110,15,31,.38);
+
+    transform:
+    translateY(-1px);
 }
 
 /* ======================================================
@@ -667,6 +702,14 @@ MOBILE
 
     .card-content{
         padding:24px;
+    }
+
+    .card-link{
+        width:100%;
+
+        justify-content:center;
+
+        padding:14px 18px;
     }
 
     .dark-section{
