@@ -377,7 +377,32 @@ ROMANTIC SECTION
 ====================================================== */
 
 .romantic-section{
-    padding-top:40px;
+    position:relative;
+
+    padding-top:220px;
+}
+
+.romantic-section::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:82%;
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
 }
 
 /* ======================================================
@@ -436,6 +461,10 @@ RESPONSIVE
 
     .btn{
         min-width:280px;
+    }
+
+    .romantic-section{
+        padding-top:120px;
     }
 
 }
