@@ -91,7 +91,7 @@ LAYOUT
 }
 
 .section-small{
-    padding:20px 0 120px;
+    padding:20px 0 70px;
 }
 
 /* ======================================================
@@ -358,7 +358,7 @@ SECCIONES OSCURAS
 
     color:var(--texto-claro);
 
-    padding:110px 0;
+    padding:85px 0;
 }
 
 .dark-section h2{
@@ -408,7 +408,7 @@ SEGUNDA SECCIÓN OSCURA
         var(--negro-profundo) 140px
     );
 
-    padding-top:110px;
+    padding-top:80px;
 }
 
 /* LÍNEA EDITORIAL PREMIUM */
@@ -470,7 +470,11 @@ RESPONSIVE
     }
 
     .section{
-        padding:90px 0;
+        padding:70px 0;
+    }
+
+    .section-small{
+        padding:20px 0 50px;
     }
 
     .grid-3{
@@ -501,8 +505,12 @@ RESPONSIVE
         min-width:280px;
     }
 
+    .dark-section{
+        padding:70px 0;
+    }
+
     .romantic-section{
-        padding-top:80px;
+        padding-top:70px;
     }
 
 }
