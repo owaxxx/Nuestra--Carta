@@ -1,0 +1,389 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --pergamino:#F3EBDD;
+    --borgona:#6E0F1F;
+    --borgona-hover:#530916;
+    --negro:#1E1E1E;
+    --texto:#2D2B28;
+    --texto-claro:#E9E1D6;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:var(--pergamino);
+    color:var(--texto);
+    line-height:1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-lechazo{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.60)),
+        url('../assets/img/lechazo-asado-horno-lena.webp');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.55)
+    );
+}
+
+.navbar{
+    position:relative;
+    z-index:2;
+    padding:40px 80px;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:1.9rem;
+    font-weight:600;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:820px;
+
+    padding:
+        140px
+        80px
+        120px;
+}
+
+.eyebrow{
+    display:inline-block;
+
+    color:#D8B98C;
+
+    letter-spacing:.18em;
+    font-size:.85rem;
+
+    margin-bottom:26px;
+}
+
+.hero-content h1{
+    color:white;
+
+    font-size:6rem;
+    line-height:.95;
+
+    margin-bottom:28px;
+}
+
+.hero-content p{
+    color:white;
+
+    font-size:1.4rem;
+
+    max-width:600px;
+
+    margin-bottom:42px;
+}
+
+.btn-primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--borgona);
+    color:white;
+
+    text-decoration:none;
+
+    padding:
+        18px
+        34px;
+
+    transition:.3s ease;
+}
+
+.btn-primary:hover{
+    background:var(--borgona-hover);
+}
+
+/* =========================
+   STORY SECTION
+========================= */
+
+.story-section{
+    padding:
+        140px
+        80px;
+
+    background:var(--pergamino);
+}
+
+.story-container{
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+
+    align-items:center;
+}
+
+.section-tag{
+    display:inline-block;
+
+    font-size:.8rem;
+    letter-spacing:.18em;
+
+    color:#8E6C4A;
+
+    margin-bottom:24px;
+}
+
+.story-text h2{
+    font-size:4rem;
+    line-height:1.05;
+
+    margin-bottom:34px;
+
+    color:#2A211B;
+}
+
+.story-text p{
+    font-size:1.1rem;
+    margin-bottom:28px;
+
+    max-width:650px;
+}
+
+.story-image img{
+    width:100%;
+    height:760px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+/* =========================
+   FIRE SECTION
+========================= */
+
+.fire-section{
+    position:relative;
+
+    min-height:85vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:
+        120px
+        80px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+        url('../assets/img/parrilla-brasa-medieval.webp');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.fire-overlay{
+    position:absolute;
+    inset:0;
+}
+
+.fire-content{
+    position:relative;
+    z-index:2;
+
+    max-width:760px;
+}
+
+.light{
+    color:#D6B58A;
+}
+
+.fire-content h2{
+    color:white;
+
+    font-size:4.5rem;
+    line-height:1;
+
+    margin-bottom:30px;
+}
+
+.fire-content p{
+    color:var(--texto-claro);
+
+    font-size:1.15rem;
+
+    margin-bottom:40px;
+
+    max-width:650px;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta{
+    position:relative;
+
+    background:black;
+
+    padding:
+        180px
+        80px;
+
+    text-align:center;
+}
+
+.final-cta-overlay{
+    position:absolute;
+    inset:0;
+}
+
+.final-cta-content{
+    position:relative;
+    z-index:2;
+
+    max-width:950px;
+    margin:auto;
+}
+
+.final-cta-content h2{
+    color:white;
+
+    font-size:5rem;
+    line-height:.95;
+
+    margin:
+        24px
+        0
+        34px;
+}
+
+.final-cta-content p{
+    color:#D7D0C6;
+
+    font-size:1.2rem;
+
+    max-width:760px;
+    margin:
+        0 auto 42px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:black;
+
+    padding:
+        34px
+        20px;
+
+    text-align:center;
+}
+
+.footer p{
+    color:#8A8177;
+    font-size:.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:980px){
+
+    .hero-content{
+        padding:
+            120px
+            40px
+            90px;
+    }
+
+    .hero-content h1{
+        font-size:4rem;
+    }
+
+    .story-container{
+        grid-template-columns:1fr;
+    }
+
+    .story-text h2,
+    .fire-content h2,
+    .final-cta-content h2{
+        font-size:3rem;
+    }
+
+    .story-section,
+    .fire-section,
+    .final-cta{
+        padding:
+            100px
+            40px;
+    }
+
+    .story-image img{
+        height:520px;
+    }
+
+    .navbar{
+        padding:
+            30px
+            40px;
+    }
+}
+
+@media(max-width:640px){
+
+    .hero-content h1{
+        font-size:3.1rem;
+    }
+
+    .hero-content p{
+        font-size:1.1rem;
+    }
+
+    .story-text h2,
+    .fire-content h2,
+    .final-cta-content h2{
+        font-size:2.3rem;
+    }
+
+    .btn-primary{
+        width:100%;
+    }
+}s
