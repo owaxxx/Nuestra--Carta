@@ -286,6 +286,13 @@ TEXTOS
     max-width:760px;
 }
 
+/* ======================================================
+ESPACIADO BOTONES EXPERIENCE
+====================================================== */
+
+.experience-block .btn{
+    margin-top:38px;
+}
 .divider{
     width:90px;
 
