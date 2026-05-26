@@ -58,4 +58,46 @@
     --feature-image-height:680px;
     --feature-image-height-tablet:560px;
     --feature-image-height-mobile:420px;
+
+}
+
+/* ======================================================
+RESET GLOBAL
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+/* ======================================================
+BASE
+====================================================== */
+
+body{
+    font-family:Georgia, serif;
+
+    background:var(--pergamino);
+
+    color:var(--texto);
+
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+
+    display:block;
+}
+
+a{
+    color:inherit;
+
+    text-decoration:none;
 }

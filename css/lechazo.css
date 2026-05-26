@@ -1,0 +1,764 @@
+/* ======================================================
+LECHAZO PAGE
+====================================================== */
+
+.hero-lechazo{
+    position:relative;
+
+    min-height:78vh;
+
+    display:flex;
+    flex-direction:column;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.42)),
+        url('../assets/img/horno-lena-tradicional.webp');
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.08),
+        rgba(0,0,0,.46)
+    );
+}
+
+/* ======================================================
+NAVBAR
+====================================================== */
+
+.navbar{
+    position:relative;
+    z-index:2;
+
+    padding:
+        34px
+        70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.logo{
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1.8rem;
+    font-weight:600;
+}
+
+/* ======================================================
+EDITORIAL BACK LINK
+====================================================== */
+
+.back-link{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:fit-content;
+
+    margin:auto;
+
+    color:#D8B98C;
+
+    font-size:.7rem;
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    opacity:.78;
+
+    transition:.3s ease;
+}
+
+.back-link:hover{
+
+    opacity:1;
+}
+
+.navbar .back-link{
+
+    margin-top:6px;
+
+    font-size:.64rem;
+
+    opacity:.82;
+
+    padding:
+        8px
+        14px;
+
+    background:rgba(0,0,0,.22);
+
+    backdrop-filter:blur(2px);
+
+    border:1px solid rgba(216,185,140,.14);
+}
+
+.final-back{
+
+    margin-top:34px;
+}
+
+.final-back .back-link{
+
+    font-size:.76rem;
+
+    opacity:.9;
+}
+
+/* ======================================================
+HERO CONTENT
+====================================================== */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:760px;
+
+    padding:
+        90px
+        70px
+        90px;
+}
+
+.eyebrow{
+    display:inline-block;
+
+    color:#D8B98C;
+
+    letter-spacing:.18em;
+
+    font-size:.78rem;
+
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    color:white;
+
+    font-size:5.3rem;
+
+    line-height:.92;
+
+    margin-bottom:22px;
+
+    max-width:520px;
+}
+
+.hero-content p{
+    color:white;
+
+    font-size:1.18rem;
+
+    line-height:1.55;
+
+    max-width:520px;
+
+    margin-bottom:34px;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.btn-primary{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:var(--borgona);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:
+        16px
+        32px;
+
+    min-width:220px;
+
+    transition:.3s ease;
+}
+
+.btn-primary:hover{
+    background:var(--borgona-hover);
+}
+
+/* ======================================================
+STORY SECTION
+====================================================== */
+
+.story-section{
+    padding:
+        90px
+        70px;
+
+    background:var(--pergamino);
+}
+
+.story-container{
+    max-width:1320px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.section-tag{
+    display:inline-block;
+
+    font-size:.72rem;
+
+    letter-spacing:.18em;
+
+    color:#8E6C4A;
+
+    margin-bottom:18px;
+}
+
+.story-text h2{
+    font-size:3.4rem;
+
+    line-height:1;
+
+    margin-bottom:26px;
+
+    color:#2A211B;
+}
+
+.story-text p{
+    font-size:1.02rem;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+    max-width:560px;
+}
+
+.story-image img{
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+}
+
+/* ======================================================
+FIRE SECTION
+====================================================== */
+
+.fire-section{
+    position:relative;
+
+    min-height:62vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:
+        90px
+        70px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+        url('../assets/img/parrilla-brasa-medieval.webp');
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.fire-overlay{
+    position:absolute;
+    inset:0;
+}
+
+.fire-content{
+    position:relative;
+    z-index:2;
+
+    max-width:640px;
+}
+
+.light{
+    color:#D6B58A;
+}
+
+.fire-content h2{
+    color:white;
+
+    font-size:3.8rem;
+
+    line-height:.95;
+
+    margin-bottom:24px;
+
+    max-width:540px;
+}
+
+.fire-content p{
+    color:var(--texto-claro);
+
+    font-size:1.05rem;
+
+    line-height:1.6;
+
+    max-width:560px;
+}
+
+/* ======================================================
+FINAL CTA
+====================================================== */
+
+.final-cta{
+    position:relative;
+
+    background:black;
+
+    padding:
+        100px
+        40px;
+
+    text-align:center;
+}
+
+.final-cta-overlay{
+    position:absolute;
+    inset:0;
+}
+
+.final-cta-content{
+    position:relative;
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+}
+
+.final-cta-content h2{
+    color:white;
+
+    font-size:4rem;
+
+    line-height:.94;
+
+    margin:
+        20px
+        0
+        24px;
+}
+
+.final-cta-content p{
+    color:#D7D0C6;
+
+    font-size:1.08rem;
+
+    line-height:1.6;
+
+    max-width:620px;
+
+    margin:
+        0 auto 34px;
+}
+
+/* ======================================================
+FOOTER
+====================================================== */
+
+.footer{
+    background:black;
+
+    padding:
+        28px
+        20px;
+
+    text-align:center;
+}
+
+.footer p{
+    color:#8A8177;
+
+    font-size:.82rem;
+}
+
+/* ======================================================
+RESPONSIVE TABLET
+====================================================== */
+
+@media(max-width:980px){
+
+    .navbar{
+        padding:
+            26px
+            26px;
+    }
+
+    .logo{
+        font-size:1.55rem;
+    }
+
+    .hero-content{
+        padding:
+            70px
+            26px
+            60px;
+    }
+
+    .hero-content h1{
+        font-size:4.2rem;
+
+        line-height:.92;
+
+        max-width:420px;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+
+        margin-bottom:28px;
+
+        max-width:360px;
+    }
+
+    .story-section{
+        padding:
+            58px
+            26px;
+    }
+
+    .story-text h2{
+        font-size:2.8rem;
+
+        margin-bottom:22px;
+    }
+
+    .story-text p{
+        font-size:1rem;
+
+        margin-bottom:18px;
+    }
+
+    .story-image img{
+        height:320px;
+    }
+
+    .fire-section{
+        min-height:auto;
+
+        padding:
+            70px
+            26px;
+    }
+
+    .fire-content h2{
+        font-size:3rem;
+
+        max-width:420px;
+    }
+
+    .fire-content p{
+        font-size:1rem;
+    }
+
+    .final-cta{
+        padding:
+            70px
+            26px;
+    }
+
+    .final-cta-content h2{
+        font-size:3rem;
+
+        line-height:.98;
+    }
+
+    .final-cta-content p{
+        font-size:1rem;
+    }
+
+}
+
+/* ======================================================
+RESPONSIVE MOBILE
+====================================================== */
+
+@media(max-width:640px){
+
+    .hero-lechazo{
+
+        min-height:auto;
+
+        background-position:center center;
+    }
+
+    .navbar{
+
+        padding:
+            20px
+            24px;
+
+        text-align:center;
+    }
+
+    .logo{
+
+        font-size:2rem;
+    }
+
+    .hero-content{
+
+        padding:
+            68px
+            24px
+            72px;
+
+        max-width:100%;
+
+        margin:auto;
+
+        text-align:center;
+    }
+
+    .eyebrow{
+
+        font-size:.68rem;
+
+        letter-spacing:.16em;
+
+        margin-bottom:16px;
+    }
+
+    .hero-content h1{
+
+        font-size:3.45rem;
+
+        line-height:.9;
+
+        letter-spacing:-0.03em;
+
+        margin:
+            0 auto 26px;
+
+        max-width:340px;
+    }
+
+    .hero-content p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        margin:
+            0 auto 32px;
+
+        max-width:300px;
+    }
+
+    .btn-primary{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:
+            18px
+            20px;
+    }
+
+    /* ======================================================
+    STORY
+    ====================================================== */
+
+    .story-section{
+
+        padding:
+            54px
+            24px;
+    }
+
+    .story-container{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:30px;
+    }
+
+    .story-text{
+
+        text-align:center;
+    }
+
+    .section-tag{
+
+        margin-bottom:18px;
+    }
+
+    .story-text h2{
+
+        font-size:2.65rem;
+
+        line-height:.95;
+
+        margin:
+            0 auto 20px;
+
+        max-width:340px;
+    }
+
+    .story-text p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+        margin:
+            0 auto 18px;
+
+        max-width:320px;
+    }
+
+    .story-image img{
+
+        width:100%;
+
+        height:auto;
+
+        aspect-ratio:4/3;
+
+        object-fit:cover;
+    }
+
+    /* ======================================================
+    FIRE SECTION
+    ====================================================== */
+
+    .fire-section{
+
+        min-height:auto;
+
+        align-items:flex-start;
+
+        padding:
+            64px
+            24px;
+    }
+
+    .fire-content{
+
+        max-width:100%;
+
+        text-align:center;
+
+        margin:auto;
+    }
+
+    .fire-content h2{
+
+        font-size:2.7rem;
+
+        line-height:.92;
+
+        margin:
+            0 auto 18px;
+
+        max-width:340px;
+    }
+
+    .fire-content p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        max-width:320px;
+
+        margin:auto;
+    }
+
+    /* ======================================================
+    FINAL CTA
+    ====================================================== */
+
+    .final-cta{
+
+        padding:
+            64px
+            24px;
+    }
+
+    .final-cta-content h2{
+
+        font-size:2.7rem;
+
+        line-height:.92;
+
+        max-width:340px;
+
+        margin:
+            0 auto 22px;
+    }
+
+    .final-cta-content p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        max-width:320px;
+
+        margin:auto;
+    }
+
+    /* ======================================================
+    FOOTER
+    ====================================================== */
+
+    .footer{
+
+        padding:
+            24px
+            20px;
+    }
+
+}

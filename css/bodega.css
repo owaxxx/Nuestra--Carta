@@ -1,0 +1,802 @@
+/* ======================================================
+   HERO
+====================================================== */
+
+.bodega-hero{
+
+    position:relative;
+
+    min-height:72vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 8% 80px;
+
+    background-image:url('../assets/img/bodega-piedra-velas-romantico.webp');
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+}
+
+.bodega-overlay{
+
+    position:absolute;
+    inset:0;
+
+    z-index:1;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.52) 45%,
+        rgba(0,0,0,0.18) 100%
+    );
+}
+
+.bodega-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:560px;
+
+    transform:translateY(-40px);
+
+    color:var(--pergamino);
+}
+
+.bodega-subtitle{
+
+    margin-bottom:18px;
+
+    font-size:0.9rem;
+    letter-spacing:0.35em;
+    text-transform:uppercase;
+
+    color:#D7C2A3;
+}
+
+.bodega-content h1{
+
+    margin-bottom:24px;
+
+    font-size:clamp(3.6rem,7vw,6.6rem);
+    line-height:0.92;
+
+    font-weight:400;
+
+    color:var(--pergamino);
+}
+
+.hero-divider{
+
+    width:90px;
+    height:1px;
+
+    margin-bottom:28px;
+
+    background:#B8915E;
+}
+
+.bodega-description{
+
+    max-width:340px;
+
+    font-size:1.18rem;
+    line-height:1.8;
+
+    color:#E7DCCB;
+}
+
+/* ======================================================
+   BOTON VOLVER
+====================================================== */
+
+.bodega-back-home{
+
+    position:fixed;
+
+    top:26px;
+    left:26px;
+
+    z-index:999;
+
+    padding:12px 18px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:rgba(0,0,0,0.18);
+    backdrop-filter:blur(10px);
+
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+
+    color:#F3EBDD;
+
+    transition:all 0.3s ease;
+}
+
+.bodega-back-home:hover{
+
+    background:rgba(110,15,31,0.92);
+
+    border-color:rgba(255,255,255,0.08);
+}
+
+/* ======================================================
+   CARTA
+====================================================== */
+
+.bodega-carta{
+
+    padding:110px 8% 120px;
+
+    background:var(--pergamino);
+}
+
+.bodega-intro{
+
+    max-width:760px;
+
+    margin:0 auto 100px;
+
+    text-align:center;
+}
+
+.section-divider{
+
+    width:90px;
+    height:1px;
+
+    margin:0 auto 34px;
+
+    background:#B8915E;
+}
+
+.bodega-intro p{
+
+    font-size:1.28rem;
+    line-height:1.95;
+
+    color:var(--negro);
+}
+
+/* ======================================================
+   FEATURED
+====================================================== */
+
+.vino-featured{
+
+    max-width:1120px;
+
+    margin:0 auto 110px;
+
+    display:flex;
+
+    background:#4B0C18;
+
+    overflow:hidden;
+}
+
+.vino-featured-image{
+
+    position:relative;
+
+    width:42%;
+
+    min-height:420px;
+
+    background-image:url('../assets/img/abadia-mantrus-fuego-idilico.webp');
+    background-size:cover;
+    background-position:center;
+}
+
+.vino-badge{
+
+    position:absolute;
+
+    top:0;
+    left:38px;
+
+    padding:18px 16px 28px;
+
+    background:linear-gradient(
+        180deg,
+        #7A1626 0%,
+        #3E0E15 100%
+    );
+
+    color:#F3EBDD;
+
+    font-size:0.76rem;
+    line-height:1.8;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+.vino-badge::after{
+
+    content:'';
+
+    position:absolute;
+
+    bottom:-18px;
+    left:0;
+
+    width:100%;
+    height:20px;
+
+    background:#3E0E15;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+}
+
+.vino-featured-content{
+
+    width:58%;
+
+    padding:70px 70px 60px;
+
+    color:#F3EBDD;
+}
+
+.vino-featured-label{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    font-size:0.88rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+
+    color:#D7B78A;
+}
+
+.vino-featured-content h2{
+
+    margin-bottom:24px;
+
+    font-size:3rem;
+    line-height:1.05;
+    font-weight:400;
+
+    color:#F3EBDD;
+}
+
+.vino-featured-content p{
+
+    max-width:420px;
+
+    font-size:1.08rem;
+    line-height:1.9;
+
+    color:#E7DCCB;
+}
+
+.vino-featured-price{
+
+    margin-top:34px;
+
+    font-size:2rem;
+
+    color:#D7B78A;
+}
+
+/* ======================================================
+   TITULOS
+====================================================== */
+
+.vino-title{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:42px;
+
+    font-size:2.3rem;
+    font-weight:400;
+
+    color:var(--borgona);
+}
+
+.vino-title svg{
+
+    width:30px;
+    height:30px;
+
+    opacity:0.75;
+}
+
+/* ======================================================
+   LISTA VINOS
+====================================================== */
+
+.vino-categoria{
+
+    max-width:920px;
+
+    margin:0 auto 80px;
+}
+
+.vino-item{
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap:24px;
+
+    padding:32px 0;
+
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.vino-info{
+
+    max-width:560px;
+}
+
+.vino-info h3{
+
+    margin-bottom:10px;
+
+    font-size:1.18rem;
+    font-weight:500;
+    line-height:1.45;
+
+    color:var(--negro);
+}
+
+.vino-info span{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:0.82rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+
+    color:#8B7A68;
+}
+
+.vino-precio{
+
+    margin-left:auto;
+
+    flex-shrink:0;
+
+    padding-top:4px;
+
+    font-size:1rem;
+    font-weight:500;
+
+    color:var(--borgona);
+}
+
+.vino-casa{
+
+    max-width:920px;
+
+    margin:50px auto 0;
+
+    padding-top:28px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-top:1px solid rgba(0,0,0,0.08);
+
+    font-size:0.95rem;
+
+    color:#6B6258;
+}
+
+.vino-casa span{
+
+    color:var(--borgona);
+}
+
+/* ======================================================
+   EXPERIENCIA VINOS
+====================================================== */
+
+.vino-extra-box{
+
+    max-width:920px;
+
+    margin:90px auto 0;
+
+    padding:34px 40px;
+
+    display:flex;
+    align-items:center;
+    gap:34px;
+
+    border:1px solid rgba(139,106,67,0.18);
+
+    background:rgba(255,255,255,0.22);
+}
+
+.vino-extra-icon{
+
+    flex-shrink:0;
+
+    color:#7E6442;
+}
+
+.vino-extra-icon svg{
+
+    width:44px;
+    height:44px;
+
+    opacity:0.82;
+}
+
+.vino-extra-text{
+
+    max-width:680px;
+
+    font-size:1rem;
+    line-height:1.9;
+
+    color:#4E443B;
+}
+
+/* ======================================================
+   CTA FINAL SIMPLE
+====================================================== */
+
+.cta-final-simple{
+
+    padding:150px 7% 120px;
+
+    text-align:center;
+
+    background:#050505;
+}
+
+.cta-final-simple-content{
+
+    max-width:900px;
+
+    margin:0 auto;
+}
+
+.cta-final-simple-content span{
+
+    display:block;
+
+    margin-bottom:26px;
+
+    font-size:0.92rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+
+    color:#D2B48C;
+}
+
+.cta-final-simple-content h2{
+
+    margin-bottom:34px;
+
+    font-size:clamp(3rem,7vw,5.8rem);
+    line-height:0.92;
+    font-weight:600;
+
+    color:#F3EBDD;
+}
+
+.cta-final-simple-content p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:1.2rem;
+    line-height:1.9;
+
+    color:#E7DCCB;
+}
+
+.cta-final-button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:42px;
+
+    padding:18px 42px;
+
+    background:var(--borgona);
+
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+
+    font-size:0.92rem;
+    font-weight:600;
+
+    color:#F3EBDD;
+
+    transition:all 0.3s ease;
+}
+
+.cta-final-button:hover{
+
+    background:#530916;
+
+    transform:translateY(-2px);
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.bodega-footer{
+
+    padding:70px 7% 50px;
+
+    text-align:center;
+
+    background:#050505;
+}
+
+.bodega-footer p{
+
+    font-size:0.92rem;
+    letter-spacing:0.12em;
+    line-height:1.8;
+
+    color:#BDA88B;
+
+    opacity:0.88;
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media(max-width:768px){
+
+    .bodega-hero{
+
+        min-height:78vh;
+
+        padding:100px 7% 70px;
+
+        background-position:72% center;
+    }
+
+    .bodega-content{
+
+        transform:translateY(-60px);
+
+        max-width:100%;
+    }
+
+    .bodega-subtitle{
+
+        margin-bottom:18px;
+
+        font-size:0.88rem;
+        letter-spacing:0.28em;
+    }
+
+    .bodega-content h1{
+
+        width:100%;
+
+        max-width:none;
+
+        margin:0 0 24px 0;
+
+        font-size:5rem;
+        line-height:0.88;
+
+        text-align:left;
+    }
+
+    .hero-divider{
+
+        margin-bottom:24px;
+    }
+
+    .bodega-description{
+
+        max-width:290px;
+
+        font-size:1rem;
+        line-height:1.75;
+    }
+
+    .bodega-back-home{
+
+        top:16px;
+        left:16px;
+
+        padding:9px 14px;
+
+        font-size:0.68rem;
+    }
+
+    .bodega-carta{
+
+        padding:80px 7% 90px;
+    }
+
+    .bodega-intro{
+
+        margin-bottom:70px;
+    }
+
+    .bodega-intro p{
+
+        font-size:1rem;
+        line-height:1.85;
+    }
+
+    .vino-featured{
+
+        flex-direction:column;
+
+        margin-bottom:80px;
+    }
+
+    .vino-featured-image{
+
+        width:100%;
+
+        min-height:260px;
+    }
+
+    .vino-featured-content{
+
+        width:100%;
+
+        padding:30px 24px 26px;
+    }
+
+    .vino-featured-content h2{
+
+        margin-bottom:16px;
+
+        font-size:2rem;
+        line-height:1.05;
+    }
+
+    .vino-featured-content p{
+
+        margin-bottom:18px;
+
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+
+    .vino-featured-price{
+
+        margin-top:0;
+
+        font-size:1.5rem;
+    }
+
+    .vino-title{
+
+        gap:10px;
+
+        margin-bottom:28px;
+
+        font-size:1.8rem;
+    }
+
+    .vino-title svg{
+
+        width:24px;
+        height:24px;
+    }
+
+    .vino-categoria{
+
+        margin-bottom:60px;
+    }
+
+    .vino-item{
+
+        gap:18px;
+
+        padding:24px 0;
+    }
+
+    .vino-info h3{
+
+        font-size:1.02rem;
+        line-height:1.45;
+    }
+
+    .vino-info span{
+
+        font-size:0.76rem;
+    }
+
+    .vino-precio{
+
+        font-size:0.95rem;
+    }
+
+    .vino-casa{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .vino-extra-box{
+
+        margin-top:70px;
+
+        padding:24px;
+
+        gap:18px;
+
+        align-items:flex-start;
+    }
+
+    .vino-extra-icon svg{
+
+        width:34px;
+        height:34px;
+    }
+
+    .vino-extra-text{
+
+        font-size:0.92rem;
+        line-height:1.7;
+    }
+
+    .cta-final-simple{
+
+        padding:110px 7% 90px;
+    }
+
+    .cta-final-simple-content h2{
+
+        font-size:3.8rem;
+        line-height:0.9;
+    }
+
+    .cta-final-simple-content p{
+
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .cta-final-button{
+
+        width:auto;
+
+        padding:18px 34px;
+
+        margin-top:34px;
+    }
+
+    .bodega-footer{
+
+        padding:46px 7% 38px;
+    }
+
+    .bodega-footer p{
+
+        font-size:0.8rem;
+        line-height:1.7;
+    }
+
+}

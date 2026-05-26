@@ -1,0 +1,640 @@
+/* ======================================================
+ESMORZARS
+====================================================== */
+
+.esmorzars-section{
+
+    background-color:var(--pergamino);
+}
+
+/* ======================================================
+HERO
+====================================================== */
+
+.hero-esmorzars{
+
+    padding:
+        90px
+        26px
+        40px;
+
+    text-align:center;
+}
+
+/* ======================================================
+VOLVER
+====================================================== */
+
+.back-to-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-top:28px;
+}
+
+.back-to-menu a{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    font-size:.82rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    color:#7A4938;
+
+    opacity:.78;
+
+    transition:.3s ease;
+}
+
+.back-to-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:100%;
+
+    height:1px;
+
+    background:rgba(122,73,56,.28);
+
+    transition:.3s ease;
+}
+
+.back-to-menu a:hover{
+
+    opacity:1;
+}
+
+.back-to-menu a:hover::after{
+
+    background:rgba(122,73,56,.6);
+}
+
+.esmorzars-intro{
+
+    max-width:980px;
+
+    margin:auto;
+}
+
+/* ======================================================
+EDITORIAL HERO
+====================================================== */
+
+.manyosa-title{
+
+    font-size:4rem;
+
+    line-height:1;
+
+    margin:
+        18px
+        0;
+
+    color:#241B17;
+}
+
+.manyosa-subtitle{
+
+    display:block;
+
+    margin-bottom:38px;
+
+    letter-spacing:.18em;
+
+    font-size:1rem;
+
+    color:#7A4938;
+}
+
+.esmorzars-intro h1{
+
+    font-size:5.1rem;
+
+    line-height:.92;
+
+    letter-spacing:-0.04em;
+
+    margin-bottom:34px;
+
+    color:#241B17;
+}
+
+.hero-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:34px;
+}
+
+.hero-divider .line{
+
+    width:160px;
+
+    height:1px;
+
+    background:#7A4938;
+}
+
+.hero-divider .fleur{
+
+    font-size:1.6rem;
+
+    color:#7A4938;
+}
+
+.hero-claim{
+
+    letter-spacing:.12em;
+
+    font-size:1.2rem;
+
+    color:#7A4938;
+}
+
+/* ======================================================
+MENU
+====================================================== */
+
+.esmorzars-menu{
+
+    padding:
+        40px
+        26px
+        40px;
+}
+
+.esmorzars-container{
+
+    max-width:1120px;
+
+    margin:auto;
+}
+
+.esmorzars-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:
+        0
+        80px;
+}
+
+.esmorzars-column{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.esmorzars-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(110,15,31,.12),
+            transparent
+        );
+}
+
+.esmorzars-row{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap:24px;
+
+    align-items:start;
+
+    padding:
+        34px
+        0;
+}
+
+.esmorzars-info h2{
+
+    font-size:1rem;
+
+    line-height:1.45;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+    color:#2A211B;
+}
+
+.esmorzars-info p{
+
+    font-size:.98rem;
+
+    line-height:1.8;
+
+    color:#5C544C;
+}
+
+.esmorzars-price{
+
+    white-space:nowrap;
+
+    padding-top:2px;
+
+    font-size:.95rem;
+
+    letter-spacing:.04em;
+
+    color:#6E0F1F;
+}
+
+/* ======================================================
+CASTILLO
+====================================================== */
+
+.esmorzars-castle-mobile{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    line-height:0;
+}
+
+.esmorzars-castle-mobile img{
+
+    width:100%;
+
+    display:block;
+
+    margin-top:-2px;
+}
+
+/* ======================================================
+FADE ENTRE CARTA Y CASTILLO
+====================================================== */
+
+.castle-fade{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:180px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--pergamino) 0%,
+            rgba(243,235,221,.96) 18%,
+            rgba(243,235,221,.82) 38%,
+            rgba(243,235,221,.45) 68%,
+            rgba(243,235,221,0) 100%
+        );
+}
+
+/* ======================================================
+CTA
+====================================================== */
+
+.final-cta{
+
+    background:black;
+
+    padding:
+        110px
+        26px;
+
+    text-align:center;
+}
+
+.final-cta-content{
+
+    max-width:760px;
+
+    margin:auto;
+}
+
+.light{
+
+    color:#D6B58A;
+}
+
+.final-cta-content h2{
+
+    color:white;
+
+    font-size:4rem;
+
+    line-height:.94;
+
+    letter-spacing:-0.03em;
+
+    margin:
+        18px
+        0
+        24px;
+}
+
+.final-cta-content p{
+
+    max-width:620px;
+
+    margin:
+        0 auto 34px;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    color:#D7D0C6;
+}
+
+/* ======================================================
+BUTTON
+====================================================== */
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:220px;
+
+    padding:
+        16px
+        34px;
+
+    background:var(--borgona);
+
+    color:white;
+
+    text-decoration:none;
+
+    letter-spacing:.06em;
+
+    transition:.3s ease;
+}
+
+.btn-primary:hover{
+
+    background:var(--borgona-hover);
+}
+
+/* ======================================================
+FOOTER
+====================================================== */
+
+.footer{
+
+    background:black;
+
+    padding:
+        28px
+        20px;
+
+    text-align:center;
+}
+
+.footer p{
+
+    color:#8A8177;
+
+    font-size:.82rem;
+
+    letter-spacing:.04em;
+}
+
+/* ======================================================
+TABLET
+====================================================== */
+
+@media(max-width:980px){
+
+    .hero-esmorzars{
+
+        padding:
+            90px
+            26px
+            40px;
+    }
+
+    .manyosa-title{
+
+        font-size:3rem;
+    }
+
+    .esmorzars-intro h1{
+
+        font-size:5rem;
+    }
+
+    .hero-divider .line{
+
+        width:120px;
+    }
+
+    .esmorzars-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ======================================================
+MOBILE
+====================================================== */
+
+@media(max-width:640px){
+
+    .hero-esmorzars{
+
+        padding:
+            70px
+            22px
+            30px;
+    }
+
+    .back-to-menu{
+
+        padding-top:20px;
+    }
+
+    .back-to-menu a{
+
+        font-size:.72rem;
+
+        letter-spacing:.10em;
+    }
+
+    .manyosa-title{
+
+        font-size:2.6rem;
+    }
+
+    .manyosa-subtitle{
+
+        font-size:.72rem;
+
+        letter-spacing:.16em;
+    }
+
+    .esmorzars-intro h1{
+
+        font-size:3.4rem;
+
+        line-height:.9;
+    }
+
+    .hero-divider{
+
+        gap:10px;
+
+        margin-bottom:24px;
+    }
+
+    .hero-divider .line{
+
+        width:70px;
+    }
+
+    .hero-claim{
+
+        font-size:.82rem;
+
+        line-height:1.5;
+    }
+
+    .esmorzars-menu{
+
+        padding:
+            20px
+            22px
+            20px;
+    }
+
+    .esmorzars-grid{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+    }
+
+    .esmorzars-row{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:
+            24px
+            0;
+    }
+
+    .esmorzars-info h2{
+
+        font-size:1.05rem;
+
+        line-height:1.35;
+    }
+
+    .esmorzars-info p{
+
+        font-size:.98rem;
+
+        line-height:1.9;
+    }
+
+    .esmorzars-price{
+
+        padding-top:0;
+
+        font-size:1rem;
+    }
+
+    .castle-fade{
+
+        height:45px;
+    }
+
+    .esmorzars-castle-mobile img{
+
+        object-position:center top;
+    }
+
+    .final-cta{
+
+        padding:
+            80px
+            22px;
+    }
+
+    .final-cta-content h2{
+
+        font-size:2.8rem;
+
+        line-height:.95;
+    }
+
+    .final-cta-content p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+    }
+
+    .btn-primary{
+
+        width:100%;
+    }
+
+}
