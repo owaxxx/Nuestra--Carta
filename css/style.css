@@ -48,17 +48,17 @@ h1{
 }
 
 h2{
-    font-size:3.25rem;
+    font-size:3rem;
 
-    line-height:1.12;
+    line-height:1.08;
 }
 
 h3{
-    font-size:1.75rem;
+    font-size:1.6rem;
 }
 
 p{
-    font-size:1.05rem;
+    font-size:1.02rem;
 }
 
 /* ======================================================
@@ -72,11 +72,11 @@ LAYOUT
 }
 
 .section{
-    padding:var(--section-space) 0;
+    padding:60px 0;
 }
 
 .section-small{
-    padding:20px 0 var(--section-space-small);
+    padding:10px 0 50px;
 }
 
 /* ======================================================
@@ -143,7 +143,7 @@ HERO
 ====================================================== */
 
 .hero{
-    min-height:100vh;
+    min-height:92vh;
 
     display:flex;
 
@@ -176,7 +176,7 @@ HERO
 
     z-index:2;
 
-    transform:translateY(-40px);
+    transform:translateY(-20px);
 
     margin:auto;
 }
@@ -184,15 +184,15 @@ HERO
 .hero h1{
     color:white;
 
-    margin-bottom:34px;
+    margin-bottom:26px;
 }
 
 .hero p{
     color:var(--texto-claro);
 
-    font-size:1.38rem;
+    font-size:1.22rem;
 
-    max-width:980px;
+    max-width:860px;
 
     margin:auto;
 }
@@ -210,7 +210,7 @@ BOTONES PRINCIPALES
 
     gap:var(--gap-md);
 
-    margin-top:150px;
+    margin-top:90px;
 }
 
 .btn{
@@ -224,11 +224,11 @@ BOTONES PRINCIPALES
 
     text-align:center;
 
-    padding:20px 44px;
+    padding:18px 38px;
 
-    min-width:310px;
+    min-width:280px;
 
-    font-size:.92rem;
+    font-size:.82rem;
 
     letter-spacing:1px;
 
@@ -264,11 +264,15 @@ TEXTOS
 ====================================================== */
 
 .section-title{
-    margin-bottom:26px;
+    margin-bottom:18px;
+
+    max-width:760px;
 }
 
 .section-text{
-    max-width:760px;
+    max-width:620px;
+
+    line-height:1.72;
 }
 
 /* ======================================================
@@ -276,17 +280,17 @@ ESPACIADO BOTONES EXPERIENCE
 ====================================================== */
 
 .experience-block .btn{
-    margin-top:38px;
+    margin-top:28px;
 }
 
 .divider{
-    width:90px;
+    width:70px;
 
     height:1px;
 
     background:var(--borgona);
 
-    margin:var(--gap-lg) 0;
+    margin:18px 0;
 }
 
 /* ======================================================
@@ -297,12 +301,46 @@ CARDS
     display:grid;
 
     grid-template-columns:
-    repeat(3,1fr);
+    1.35fr 1fr 1fr;
 
-    gap:var(--gap-xl);
+    gap:26px;
 
-    margin-top:55px;
+    margin-top:42px;
 }
+
+/* ======================================================
+CARD DESTACADA LECHAZO
+====================================================== */
+
+.card-featured{
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 42px rgba(0,0,0,.12);
+}
+
+.card-featured img{
+    height:340px;
+}
+
+.card-featured .card-content{
+    padding:24px;
+}
+
+.card-featured h3{
+    font-size:2rem;
+
+    margin-bottom:16px;
+}
+
+.card-featured p{
+    font-size:1.05rem;
+
+    line-height:1.65;
+}
+
+/* ======================================================
+CARDS GENERALES
+====================================================== */
 
 .card{
     background:white;
@@ -323,25 +361,25 @@ CARDS
 .card img{
     width:100%;
 
-    height:320px;
+    height:280px;
 
     object-fit:cover;
 }
 
 .card-content{
-    padding:20px;
+    padding:18px;
 }
 
 .card h3{
-    margin-bottom:18px;
+    margin-bottom:14px;
 }
 
 .card p{
-    margin-bottom:18px;
+    margin-bottom:16px;
 
     color:#4A4540;
 
-    line-height:1.55;
+    line-height:1.5;
 }
 
 /* ======================================================
@@ -374,8 +412,8 @@ BOTONES CARD PREMIUM
     gap:10px;
 
     padding:
-    12px
-    18px;
+    11px
+    16px;
 
     border:
     1px solid rgba(110,15,31,.18);
@@ -387,9 +425,9 @@ BOTONES CARD PREMIUM
 
     text-decoration:none;
 
-    font-size:.78rem;
+    font-size:.72rem;
 
-    letter-spacing:1.6px;
+    letter-spacing:1.5px;
 
     text-transform:uppercase;
 
@@ -427,7 +465,7 @@ SECCIONES OSCURAS
 
     color:var(--texto-claro);
 
-    padding:85px 0;
+    padding:60px 0;
 }
 
 .dark-section h2{
@@ -440,11 +478,11 @@ SECCIONES OSCURAS
     grid-template-columns:
     1fr 1fr;
 
-    gap:26px;
+    gap:18px;
 
     align-items:center;
 
-    margin-bottom:70px;
+    margin-bottom:42px;
 }
 
 .experience-block:last-child{
@@ -454,7 +492,7 @@ SECCIONES OSCURAS
 .feature-image{
     width:100%;
 
-    height:var(--feature-image-height);
+    height:520px;
 
     object-fit:cover;
 
@@ -477,7 +515,7 @@ SEGUNDA SECCIÓN OSCURA
         var(--negro-profundo) 140px
     );
 
-    padding-top:80px;
+    padding-top:55px;
 }
 
 .romantic-section::before{
@@ -514,9 +552,9 @@ FOOTER
 
     text-align:center;
 
-    padding:70px 20px;
+    padding:45px 20px;
 
-    font-size:.88rem;
+    font-size:.82rem;
 
     border-top:
     1px solid rgba(255,255,255,.04);

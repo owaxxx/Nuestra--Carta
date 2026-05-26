@@ -59,7 +59,7 @@ MOBILE
     }
 
     .logo{
-        font-size:1.3rem;
+        font-size:1.25rem;
 
         text-align:center;
     }
@@ -86,8 +86,8 @@ MOBILE
         min-height:auto;
 
         padding:
-        160px 0
-        70px;
+        145px 0
+        65px;
     }
 
     .hero-content{
@@ -109,7 +109,7 @@ MOBILE
     h1{
         font-size:3rem;
 
-        line-height:.95;
+        line-height:.94;
 
         text-align:center;
 
@@ -139,7 +139,7 @@ MOBILE
 
         gap:14px;
 
-        margin-top:36px;
+        margin-top:34px;
     }
 
     .btn{
@@ -163,9 +163,9 @@ MOBILE
     }
 
     h2{
-        font-size:2.3rem;
+        font-size:2.2rem;
 
-        line-height:1.1;
+        line-height:1.08;
     }
 
     h3{
@@ -194,6 +194,10 @@ MOBILE
         gap:22px;
 
         margin-top:40px;
+    }
+
+    .card{
+        width:100%;
     }
 
     .card img{
@@ -268,8 +272,8 @@ MOBILE
 
     .hero{
         padding:
-        150px 0
-        70px;
+        130px 0
+        60px;
     }
 
     h1{
