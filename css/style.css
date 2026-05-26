@@ -1,5 +1,4 @@
 @import url('./variables.css');
-@import url('./responsive.css');
 
 *{
     margin:0;
@@ -28,6 +27,7 @@ body{
 
 img{
     max-width:100%;
+
     display:block;
 }
 
@@ -50,15 +50,19 @@ h1{
 h2{
     font-size:3rem;
 
-    line-height:1.08;
+    line-height:1.04;
+
+    letter-spacing:-.5px;
 }
 
 h3{
-    font-size:1.6rem;
+    font-size:1.7rem;
+
+    line-height:1.15;
 }
 
 p{
-    font-size:1.02rem;
+    font-size:1.04rem;
 }
 
 /* ======================================================
@@ -72,11 +76,11 @@ LAYOUT
 }
 
 .section{
-    padding:60px 0;
+    padding:70px 0;
 }
 
 .section-small{
-    padding:10px 0 50px;
+    padding:20px 0 70px;
 }
 
 /* ======================================================
@@ -179,12 +183,30 @@ HERO
     transform:translateY(-20px);
 
     margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
 }
 
 .hero h1{
     color:white;
 
-    margin-bottom:26px;
+    width:100%;
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+    margin-bottom:30px;
+
+    text-align:center;
 }
 
 .hero p{
@@ -192,9 +214,13 @@ HERO
 
     font-size:1.22rem;
 
-    max-width:860px;
+    line-height:1.7;
+
+    max-width:760px;
 
     margin:auto;
+
+    text-align:center;
 }
 
 /* ======================================================
@@ -210,7 +236,7 @@ BOTONES PRINCIPALES
 
     gap:var(--gap-md);
 
-    margin-top:90px;
+    margin-top:70px;
 }
 
 .btn{
@@ -270,9 +296,9 @@ TEXTOS
 }
 
 .section-text{
-    max-width:620px;
+    max-width:680px;
 
-    line-height:1.72;
+    line-height:1.78;
 }
 
 /* ======================================================
@@ -280,7 +306,7 @@ ESPACIADO BOTONES EXPERIENCE
 ====================================================== */
 
 .experience-block .btn{
-    margin-top:28px;
+    margin-top:32px;
 }
 
 .divider{
@@ -305,7 +331,7 @@ CARDS
 
     gap:26px;
 
-    margin-top:42px;
+    margin-top:48px;
 }
 
 /* ======================================================
@@ -323,7 +349,7 @@ CARD DESTACADA LECHAZO
 }
 
 .card-featured .card-content{
-    padding:24px;
+    padding:28px;
 }
 
 .card-featured h3{
@@ -333,9 +359,9 @@ CARD DESTACADA LECHAZO
 }
 
 .card-featured p{
-    font-size:1.05rem;
+    font-size:1.08rem;
 
-    line-height:1.65;
+    line-height:1.7;
 }
 
 /* ======================================================
@@ -367,11 +393,11 @@ CARDS GENERALES
 }
 
 .card-content{
-    padding:18px;
+    padding:22px;
 }
 
 .card h3{
-    margin-bottom:14px;
+    margin-bottom:16px;
 }
 
 .card p{
@@ -379,7 +405,7 @@ CARDS GENERALES
 
     color:#4A4540;
 
-    line-height:1.5;
+    line-height:1.65;
 }
 
 /* ======================================================
@@ -412,8 +438,8 @@ BOTONES CARD PREMIUM
     gap:10px;
 
     padding:
-    11px
-    16px;
+    12px
+    18px;
 
     border:
     1px solid rgba(110,15,31,.18);
@@ -465,7 +491,7 @@ SECCIONES OSCURAS
 
     color:var(--texto-claro);
 
-    padding:60px 0;
+    padding:80px 0;
 }
 
 .dark-section h2{
@@ -478,11 +504,11 @@ SECCIONES OSCURAS
     grid-template-columns:
     1fr 1fr;
 
-    gap:18px;
+    gap:26px;
 
     align-items:center;
 
-    margin-bottom:42px;
+    margin-bottom:52px;
 }
 
 .experience-block:last-child{
@@ -515,7 +541,7 @@ SEGUNDA SECCIÓN OSCURA
         var(--negro-profundo) 140px
     );
 
-    padding-top:55px;
+    padding-top:70px;
 }
 
 .romantic-section::before{
@@ -558,4 +584,345 @@ FOOTER
 
     border-top:
     1px solid rgba(255,255,255,.04);
+}
+
+/* ======================================================
+TABLET
+====================================================== */
+
+@media(max-width:1180px){
+
+    h1{
+        font-size:5rem;
+    }
+
+    h2{
+        font-size:2.8rem;
+    }
+
+    .container{
+        width:min(92%,1100px);
+    }
+
+    .grid-3{
+        grid-template-columns:1fr 1fr;
+
+        gap:24px;
+    }
+
+    .card-featured{
+        grid-column:span 2;
+    }
+
+    .card img{
+        height:260px;
+    }
+
+    .card-featured img{
+        height:340px;
+    }
+
+    .feature-image{
+        height:560px;
+    }
+
+}
+
+/* ======================================================
+MOBILE
+====================================================== */
+
+@media(max-width:980px){
+
+    .navbar{
+        padding:22px 0;
+    }
+
+    .nav-inner{
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:18px;
+    }
+
+    .logo{
+        font-size:1.7rem;
+
+        text-align:center;
+    }
+
+    .nav-links{
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:18px;
+    }
+
+    .nav-links a{
+        font-size:.8rem;
+
+        letter-spacing:.6px;
+
+        opacity:.88;
+    }
+
+    .hero{
+        min-height:auto;
+
+        padding:
+        150px 0
+        75px;
+    }
+
+    h1{
+        font-size:4rem !important;
+
+        line-height:.98;
+
+        text-align:center;
+
+        letter-spacing:-1px;
+
+        text-wrap:balance;
+
+        word-break:keep-all;
+
+        overflow-wrap:normal;
+
+        hyphens:none;
+    }
+
+    .hero h1{
+        width:100%;
+
+        max-width:900px;
+
+        margin-inline:auto;
+
+        margin-bottom:30px;
+
+        text-align:center;
+    }
+
+    .hero p{
+        font-size:1.18rem;
+
+        line-height:1.55;
+
+        max-width:90%;
+    }
+
+    .buttons{
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        width:100%;
+
+        gap:16px;
+
+        margin-top:42px;
+    }
+
+    .btn{
+        width:100%;
+
+        min-width:auto;
+
+        max-width:100%;
+
+        padding:20px 24px;
+
+        font-size:.9rem;
+    }
+
+    .section{
+        padding:58px 0;
+    }
+
+    .section-small{
+        padding:0 0 52px;
+    }
+
+    .section:first-of-type{
+        padding-top:42px;
+    }
+
+    h2{
+        font-size:3.1rem;
+
+        line-height:.96;
+
+        letter-spacing:-.5px;
+    }
+
+    h3{
+        font-size:2rem;
+    }
+
+    p{
+        font-size:1.08rem;
+
+        line-height:1.75;
+    }
+
+    .section-title{
+        margin-bottom:20px;
+    }
+
+    .divider{
+        margin:24px 0;
+    }
+
+    .section-text{
+        max-width:100%;
+    }
+
+    .grid-3{
+        grid-template-columns:1fr;
+
+        gap:34px;
+
+        margin-top:50px;
+    }
+
+    .card-featured{
+        grid-column:auto;
+
+        transform:none;
+    }
+
+    .card img,
+    .card-featured img{
+        height:300px;
+    }
+
+    .card-content,
+    .card-featured .card-content{
+        padding:28px;
+    }
+
+    .card-featured h3,
+    .card h3{
+        font-size:2rem;
+    }
+
+    .card-featured p,
+    .card p{
+        font-size:1.05rem;
+    }
+
+    .card-link{
+        width:100%;
+
+        justify-content:center;
+
+        padding:16px 20px;
+    }
+
+    .dark-section{
+        padding:80px 0;
+    }
+
+    .experience-block{
+        grid-template-columns:1fr;
+
+        gap:42px;
+
+        margin-bottom:70px;
+    }
+
+    .feature-image{
+        height:460px;
+
+        width:100%;
+    }
+
+    .romantic-section{
+        padding-top:70px;
+    }
+
+    .footer{
+        padding:50px 20px;
+
+        font-size:.82rem;
+    }
+
+}
+
+/* ======================================================
+SMALL MOBILE
+====================================================== */
+
+@media(max-width:480px){
+
+    .container{
+        width:90%;
+    }
+
+    .navbar{
+        padding:18px 0;
+    }
+
+    .logo{
+        font-size:1.45rem;
+    }
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:.68rem;
+    }
+
+    .hero{
+        padding:
+        135px 0
+        65px;
+    }
+
+    h1{
+        font-size:3rem !important;
+
+        line-height:.98;
+    }
+
+    h2{
+        font-size:2.5rem;
+    }
+
+    h3{
+        font-size:1.7rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .btn{
+        font-size:.82rem;
+    }
+
+    .feature-image{
+        height:360px;
+    }
+
+    .card img,
+    .card-featured img{
+        height:240px;
+    }
+
 }
