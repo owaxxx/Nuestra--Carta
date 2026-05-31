@@ -505,12 +505,20 @@ LECHAZO
 
     overflow: hidden;
 
+    border:
+        1px solid rgba(214,161,93,0.08);
+
     background:
         linear-gradient(
             135deg,
-            #120d09,
-            #1b130e
+            #1b0d07 0%,
+            #24120b 42%,
+            #130905 100%
         );
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,0.42),
+        0 0 0 1px rgba(214,161,93,0.06);
 
 }
 
@@ -678,10 +686,6 @@ PARA COMPARTIR
         );
 
 }
-
-/* ======================================================
-SCROLL HORIZONTAL
-====================================================== */
 
 .compartir-grid {
 
