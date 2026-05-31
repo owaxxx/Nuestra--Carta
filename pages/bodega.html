@@ -4,324 +4,562 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bodega Medieval | La Manyosa</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bodega.css">
+    <title>
+        Bodega Medieval | La Manyosa
+    </title>
+
+    <meta name="description"
+        content="Tintos, blancos, cavas y vinos seleccionados para acompañar cocina al fuego dentro de una auténtica fortaleza medieval.">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="../css/variables.css">
+
+    <link rel="stylesheet"
+        href="../css/style.css">
+
+    <link rel="stylesheet"
+        href="../css/bodega.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- LUCIDE -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
-<body>
-
-    <!-- VOLVER -->
-
-    <a href="../index.html" class="bodega-back-home">
-        ← Volver a la carta
-    </a>
+<body class="bodega-page">
 
     <!-- HERO -->
 
     <section class="bodega-hero">
 
-        <div class="bodega-overlay"></div>
+        <a href="../index.html"
+            class="bodega-back-home">
 
-        <div class="bodega-content">
+            ← Volver a la carta
 
-            <p class="bodega-subtitle">
+        </a>
+
+        <div class="bodega-hero-content">
+
+            <span class="hero-mini">
                 LA MANYOSA
-            </p>
+            </span>
 
             <h1>
-                Bodega Medieval
+                Bodega<br>
+                Medieval.
             </h1>
 
             <div class="hero-divider"></div>
 
-            <p class="bodega-description">
-                Vinos para acompañar fuego, piedra y cocina lenta.
+            <p class="hero-description">
+
+                Vinos para acompañar fuego,
+                piedra y cocina lenta.
+
             </p>
 
         </div>
 
     </section>
 
-    <!-- CARTA -->
+    <!-- ESENCIAS -->
 
-    <section class="bodega-carta">
+    <section class="bodega-esencias">
 
-        <div class="bodega-intro">
+        <div class="esencias-box">
 
-            <div class="section-divider"></div>
+            <div class="esencias-title">
 
-            <p>
-                Una selección breve pensada para acompañar brasas,
-                lechazo y sobremesas largas dentro de la fortaleza.
-            </p>
+                <span>
+                    NUESTRAS ESENCIAS
+                </span>
 
-        </div>
+                <div class="esencias-divider"></div>
 
-        <!-- DESTACADO -->
+            </div>
 
-        <div class="vino-featured">
+            <div class="esencias-grid">
 
-            <div class="vino-featured-image">
+                <div class="esencia-item">
 
-                <div class="vino-badge">
-                    Selección<br>Manyosa
+                    <div class="esencia-icon">
+                        <i data-lucide="grape"></i>
+                    </div>
+
+                    <p>
+                        Tintos con carácter
+                    </p>
+
+                </div>
+
+                <div class="esencia-item">
+
+                    <div class="esencia-icon">
+                        <i data-lucide="wine"></i>
+                    </div>
+
+                    <p>
+                        Blancos frescos y aromáticos
+                    </p>
+
+                </div>
+
+                <div class="esencia-item">
+
+                    <div class="esencia-icon">
+                        <i data-lucide="castle"></i>
+                    </div>
+
+                    <p>
+                        Vinos de la tierra
+                    </p>
+
+                </div>
+
+                <div class="esencia-item">
+
+                    <div class="esencia-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <p>
+                        Para cada ocasión
+                    </p>
+
                 </div>
 
             </div>
 
-            <div class="vino-featured-content">
+        </div>
 
-                <span class="vino-featured-label">
-                    Ribera del Duero
+    </section>
+
+    <!-- FEATURED -->
+
+    <section class="featured-wine">
+
+        <div class="featured-content">
+
+            <div class="featured-text">
+
+                <span class="featured-label">
+                    SELECCIÓN MANYOSA
                 </span>
 
                 <h2>
-                    Abadía Mantrús Crianza
+                    Abadía Mantrús<br>
+                    Crianza
                 </h2>
 
+                <div class="featured-divider"></div>
+
                 <p>
-                    Elegante, cálido y perfecto para acompañar
-                    el lechazo al horno de leña.
+
+                    Elegante, cálido y perfecto
+                    para acompañar el lechazo
+                    al horno de leña.
+
                 </p>
 
-                <div class="vino-featured-price">
-                    11,50€
+                <div class="featured-price">
+                    11,50 €
                 </div>
 
             </div>
 
+            <div class="featured-image"></div>
+
         </div>
+
+    </section>
+
+    <!-- CATEGORÍAS -->
+
+    <section class="bodega-categorias">
 
         <!-- TINTOS -->
 
-        <div class="vino-categoria">
+        <article class="vino-card tintos-card expanded-card">
 
-            <h2 class="vino-title">
+            <div class="vino-card-overlay"></div>
 
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 10C32 18 22 24 22 35C22 43 26 48 32 48C38 48 42 43 42 35C42 24 32 18 32 10Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M32 48V58" stroke="currentColor" stroke-width="2"/>
-                    <path d="M24 58H40" stroke="currentColor" stroke-width="2"/>
-                </svg>
+            <div class="vino-card-top">
 
-                Tintos
+                <div class="vino-card-title">
 
-            </h2>
+                    <i data-lucide="droplets"></i>
 
-            <div class="vino-item">
+                    <h3>
+                        Tintos
+                    </h3>
 
-                <div class="vino-info">
-                    <h3>Llanto de Uva Reserva</h3>
-                    <span>Somontano</span>
-                </div>
-
-                <div class="vino-precio">
-                    13,50€
                 </div>
 
             </div>
 
-            <div class="vino-item">
+            <div class="vino-list">
 
-                <div class="vino-info">
-                    <h3>Viña Albina Reserva</h3>
-                    <span>Rioja</span>
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Llanto de Uva Reserva
+                        </h4>
+
+                        <span>
+                            Somontano
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        13,50 €
+                    </strong>
+
                 </div>
 
-                <div class="vino-precio">
-                    15,50€
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Viña Albina Reserva
+                        </h4>
+
+                        <span>
+                            Rioja
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        15,50 €
+                    </strong>
+
+                </div>
+
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Abadía Mantrús Crianza
+                        </h4>
+
+                        <span>
+                            Ribera del Duero
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        11,50 €
+                    </strong>
+
+                </div>
+
+                <!-- FUTUROS VINOS -->
+
+                <div class="vino-extra">
+
                 </div>
 
             </div>
 
-            <div class="vino-item">
+            <button class="vino-more toggle-vinos">
 
-                <div class="vino-info">
-                    <h3>Abadía Mantrús Crianza</h3>
-                    <span>Ribera del Duero</span>
-                </div>
+                VER MÁS TINTOS →
 
-                <div class="vino-precio">
-                    11,50€
-                </div>
+            </button>
 
-            </div>
-
-        </div>
+        </article>
 
         <!-- BLANCOS -->
 
-        <div class="vino-categoria">
+        <article class="vino-card blancos-card expanded-card">
 
-            <h2 class="vino-title">
+            <div class="vino-card-overlay"></div>
 
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 14H40L36 30C35 34 34 38 34 42V58H30V42C30 38 29 34 28 30L24 14Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M24 22H40" stroke="currentColor" stroke-width="2"/>
-                </svg>
+            <div class="vino-card-top">
 
-                Blancos
+                <div class="vino-card-title">
 
-            </h2>
+                    <i data-lucide="wine"></i>
 
-            <div class="vino-item">
+                    <h3>
+                        Blancos
+                    </h3>
 
-                <div class="vino-info">
-                    <h3>Viña Esmeralda</h3>
-                    <span>Penedès</span>
-                </div>
-
-                <div class="vino-precio">
-                    15,50€
                 </div>
 
             </div>
 
-            <div class="vino-item">
+            <div class="vino-list">
 
-                <div class="vino-info">
-                    <h3>Goleta Azul Verdejo</h3>
-                    <span>Rueda</span>
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Viña Esmeralda
+                        </h4>
+
+                        <span>
+                            Penedès
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        15,50 €
+                    </strong>
+
                 </div>
 
-                <div class="vino-precio">
-                    11,50€
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Goleta Azul Verdejo
+                        </h4>
+
+                        <span>
+                            Rueda
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        11,50 €
+                    </strong>
+
+                </div>
+
+                <!-- FUTUROS VINOS -->
+
+                <div class="vino-extra">
+
                 </div>
 
             </div>
 
-        </div>
+            <button class="vino-more toggle-vinos">
+
+                VER MÁS BLANCOS →
+
+            </button>
+
+        </article>
 
         <!-- CAVAS -->
 
-        <div class="vino-categoria">
+        <article class="vino-card cavas-card expanded-card">
 
-            <h2 class="vino-title">
+            <div class="vino-card-overlay"></div>
 
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 8V20" stroke="currentColor" stroke-width="2"/>
-                    <path d="M26 20H38L36 36C35 42 34 48 34 54V58H30V54C30 48 29 42 28 36L26 20Z" stroke="currentColor" stroke-width="2"/>
-                </svg>
+            <div class="vino-card-top">
 
-                Cavas & Rosados
+                <div class="vino-card-title">
 
-            </h2>
+                    <i data-lucide="martini"></i>
 
-            <div class="vino-item">
+                    <h3>
+                        Cavas & Rosados
+                    </h3>
 
-                <div class="vino-info">
-                    <h3>Llàgrima d'Or Brut Nature</h3>
-                    <span>Cava</span>
-                </div>
-
-                <div class="vino-precio">
-                    16,50€
                 </div>
 
             </div>
 
-            <div class="vino-item">
+            <div class="vino-list">
 
-                <div class="vino-info">
-                    <h3>Codorníu Clásico Brut Nature</h3>
-                    <span>Cava</span>
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Llàgrima d'Or Brut Nature
+                        </h4>
+
+                        <span>
+                            Cava
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        16,50 €
+                    </strong>
+
                 </div>
 
-                <div class="vino-precio">
-                    12,50€
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Codorníu Clásico Brut Nature
+                        </h4>
+
+                        <span>
+                            Cava
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        12,50 €
+                    </strong>
+
+                </div>
+
+                <div class="vino-item">
+
+                    <div class="vino-info">
+
+                        <h4>
+                            Conde de Caralt Brut Nature
+                        </h4>
+
+                        <span>
+                            Cava
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        13,50 €
+                    </strong>
+
+                </div>
+
+                <!-- EXTRA -->
+
+                <div class="vino-extra">
+
+                    <div class="vino-item">
+
+                        <div class="vino-info">
+
+                            <h4>
+                                Mateus
+                            </h4>
+
+                            <span>
+                                Rosado
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            11,50 €
+                        </strong>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="vino-item">
+            <button class="vino-more toggle-vinos">
 
-                <div class="vino-info">
-                    <h3>Conde de Caralt Brut Nature</h3>
-                    <span>Cava</span>
-                </div>
+                VER MÁS CAVAS & ROSADOS →
 
-                <div class="vino-precio">
-                    13,50€
-                </div>
+            </button>
 
-            </div>
+        </article>
 
-            <div class="vino-item">
+    </section>
 
-                <div class="vino-info">
-                    <h3>Mateus Rosé</h3>
-                    <span>Portugal</span>
-                </div>
+    <!-- VINO CASA -->
 
-                <div class="vino-precio">
-                    11,50€
-                </div>
+    <section class="vino-casa-banner">
 
-            </div>
-
-        </div>
-
-        <!-- VINO CASA -->
-
-        <div class="vino-casa">
-
-            <p>
-                Vino tinto de la casa · Rioja
-            </p>
+        <div class="vino-casa-content">
 
             <span>
-                7,50€
+                NUESTRO VINO DE CASA
             </span>
 
-        </div>
+            <h2>
+                Vino de la Casa
+            </h2>
 
-        <!-- EXPERIENCIA -->
+            <p>
 
-        <div class="vino-extra-box">
+                El compañero perfecto
+                para compartir largas comidas
+                y buenos momentos.
 
-            <div class="vino-extra-icon">
+            </p>
 
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M20 16C20 10 24 6 32 6C40 6 44 10 44 16C44 22 40 28 32 36C24 28 20 22 20 16Z" stroke="currentColor" stroke-width="2"/>
-
-                    <path d="M32 36V58" stroke="currentColor" stroke-width="2"/>
-
-                    <path d="M24 58H40" stroke="currentColor" stroke-width="2"/>
-
-                    <path d="M14 26C10 30 8 34 8 38C8 46 14 52 22 52" stroke="currentColor" stroke-width="2"/>
-
-                    <path d="M50 26C54 30 56 34 56 38C56 46 50 52 42 52" stroke="currentColor" stroke-width="2"/>
-
-                </svg>
-
-            </div>
-
-            <div class="vino-extra-text">
-
-                Pregunte a nuestro equipo por vinos especiales y
-                recomendaciones para acompañar su experiencia en La Manyosa.
-
+            <div class="vino-casa-price">
+                7,50 €
             </div>
 
         </div>
 
     </section>
 
-    <!-- CTA FINAL SIMPLE -->
+    <!-- EXPERIENCIAS -->
 
-    <section class="cta-final-simple">
+    <section class="vino-experiencias">
 
-        <div class="cta-final-simple-content">
+        <div class="vino-experiencias-content">
 
             <span>
-                Fortaleza Medieval La Manyosa
+                EXPERIENCIAS
+            </span>
+
+            <h2>
+
+                Descubre nuestra experiencia
+                en torno al vino
+
+            </h2>
+
+            <p>
+
+                Catas privadas,
+                maridajes al fuego
+                y momentos únicos
+                dentro de la fortaleza.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CTA FINAL -->
+
+    <section class="bodega-final-cta">
+
+        <div class="bodega-final-content">
+
+            <span>
+                FORTALEZA MEDIEVAL LA MANYOSA
             </span>
 
             <h2>
@@ -329,11 +567,18 @@
             </h2>
 
             <p>
-                Brasas, horno de leña, vinos y cocina catalana tradicional dentro de la fortaleza.
+
+                Brasas, horno de leña,
+                vinos y cocina catalana tradicional
+                dentro de la fortaleza.
+
             </p>
 
-            <a href="../index.html" class="cta-final-button">
-                Ver carta
+            <a href="../index.html"
+                class="final-btn">
+
+                VER CARTA
+
             </a>
 
         </div>
@@ -345,10 +590,33 @@
     <footer class="bodega-footer">
 
         <p>
-            Fortaleza Medieval La Manyosa
+            Fortaleza Medieval La Manyosa · Barcelona
         </p>
 
     </footer>
+
+    <!-- LUCIDE -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- EXPAND VINOS -->
+
+    <script>
+
+        document.querySelectorAll('.toggle-vinos').forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                button.closest('.expanded-card')
+                    .classList.toggle('active');
+
+            });
+
+        });
+
+    </script>
 
 </body>
 

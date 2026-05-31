@@ -68,8 +68,8 @@ HERO
     background-image:
         linear-gradient(
             to top,
-            rgba(0,0,0,.78),
-            rgba(0,0,0,.32)
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.34)
         ),
         url("../assets/img/horno-lena-tradicional.webp");
 
@@ -91,8 +91,8 @@ HERO
     background:
         radial-gradient(
             circle at bottom right,
-            rgba(255,120,20,.14),
-            transparent 40%
+            rgba(255,120,20,.16),
+            transparent 42%
         );
 }
 
@@ -115,7 +115,7 @@ HERO CONTENT
     padding:
         5rem
         1.5rem
-        4rem;
+        8rem;
 }
 
 .hero-subtitle{
@@ -262,21 +262,25 @@ LECHAZO MONUMENTO
 
 .lechazo-monumento{
 
+    position:relative;
+
+    z-index:8;
+
+    margin-top:-7rem;
+
     padding:
         0
         1rem
-        2.4rem;
+        2.8rem;
 
-    margin-top:-1.4rem;
-
-    position:relative;
-
-    z-index:5;
-
-    background:#0f0f0f;
+    background:transparent;
 }
 
 .lechazo-content{
+
+    position:relative;
+
+    z-index:2;
 
     display:grid;
 
@@ -292,7 +296,7 @@ LECHAZO MONUMENTO
 
     overflow:hidden;
 
-    border-radius:28px;
+    border-radius:30px;
 
     border:
         1px solid rgba(214,161,93,.08);
@@ -306,7 +310,7 @@ LECHAZO MONUMENTO
         );
 
     box-shadow:
-        0 18px 50px rgba(0,0,0,.42),
+        0 28px 70px rgba(0,0,0,.58),
         0 0 0 1px rgba(214,161,93,.06);
 }
 
@@ -414,7 +418,7 @@ LECHAZO MONUMENTO
 
     position:relative;
 
-    min-height:320px;
+    min-height:360px;
 }
 
 .lechazo-image{
@@ -429,7 +433,7 @@ LECHAZO MONUMENTO
             rgba(0,0,0,.04),
             rgba(0,0,0,.32)
         ),
-        url("../assets/img/lechazo-asado-horno-lena.webp");
+        url("../assets/img/lechazo-horno-lena.webp");
 
     background-size:cover;
 
@@ -605,6 +609,12 @@ FINAL CTA
 .final-buttons{
 
     margin-top:2rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 }
 
 /* ======================================================
@@ -654,18 +664,60 @@ FOOTER
 
 .footer{
 
+    position:relative;
+
     padding:
-        2.5rem
-        1rem;
+        5rem
+        1.5rem
+        4rem;
 
-    background:#0a0a0a;
-
-    color:
-        rgba(255,255,255,.42);
+    background:
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            #000000 100%
+        );
 
     text-align:center;
 
-    font-size:.78rem;
+    overflow:hidden;
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:72%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(214,161,93,.14),
+            transparent
+        );
+}
+
+.footer p{
+
+    color:
+        rgba(247,241,232,.46);
+
+    font-size:.9rem;
+
+    letter-spacing:.01em;
+
+    line-height:1.8;
 }
 
 /* ======================================================
@@ -732,7 +784,7 @@ MOBILE
         padding:
             4.5rem
             1.4rem
-            4rem;
+            7rem;
     }
 
     .hero-content h1{
@@ -750,6 +802,11 @@ MOBILE
         max-width:320px;
     }
 
+    .lechazo-monumento{
+
+        margin-top:-5rem;
+    }
+
     .lechazo-content{
 
         grid-template-columns:1fr;
@@ -759,7 +816,7 @@ MOBILE
 
         order:-1;
 
-        min-height:220px;
+        min-height:260px;
     }
 
     .lechazo-text{
