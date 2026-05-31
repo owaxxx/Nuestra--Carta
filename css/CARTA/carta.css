@@ -2,518 +2,513 @@
 RESET
 ====================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
+body{
 
-    background: #0f0f0f;
+    background:#0b0b0b;
 
-    color: #f7f1e8;
+    color:#f7f1e8;
 
-    font-family: Georgia, serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-    overflow-x: hidden;
+    overflow-x:hidden;
+}
 
+img{
+
+    width:100%;
+
+    display:block;
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
 }
 
 /* ======================================================
 GLOBAL
 ====================================================== */
 
-img {
+.carta-page{
 
-    width: 100%;
-
-    display: block;
-
-}
-
-a {
-
-    text-decoration: none;
-
-}
-
-.carta-page {
-
-    width: 100%;
-
+    width:100%;
 }
 
 /* ======================================================
 HERO
 ====================================================== */
 
-.hero {
+.hero{
 
-    position: relative;
+    position:relative;
 
-    min-height: 72vh;
+    min-height:82vh;
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    overflow: hidden;
+    overflow:hidden;
 
     background-image:
         linear-gradient(
             to top,
-            rgba(0,0,0,0.78),
-            rgba(0,0,0,0.34)
+            rgba(0,0,0,.78),
+            rgba(0,0,0,.34)
         ),
         url("../../assets/img/CARTA/fortaleza-gastronomica-medieval-fuego-vino.webp");
 
-    background-size: cover;
+    background-size:cover;
 
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
 
-    background-position: center;
-
+    background-position:72% center;
 }
 
-.hero::after {
+.hero::after{
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    inset: 0;
+    inset:0;
 
     background:
         radial-gradient(
             circle at bottom right,
-            rgba(255,120,20,0.14),
-            transparent 40%
+            rgba(255,120,20,.14),
+            transparent 42%
         );
-
-}
-
-@media (max-width: 768px) {
-
-    .hero {
-
-        min-height: 72vh;
-
-        background-position: 72% center;
-
-    }
-
 }
 
 /* ======================================================
 HERO CONTENT
 ====================================================== */
 
-.hero-content {
+.hero-content{
 
-    position: relative;
+    position:relative;
 
-    z-index: 2;
+    z-index:2;
 
-    width: 100%;
+    width:100%;
 
-    max-width: 1100px;
+    max-width:1100px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
     padding:
         5rem
         1.5rem
         4rem;
-
 }
 
-.hero-subtitle {
+.hero-subtitle{
 
-    display: inline-block;
+    display:inline-block;
 
-    margin-bottom: 1.4rem;
+    margin-bottom:1.4rem;
 
     padding:
-        0.42rem
-        0.8rem;
+        .42rem
+        .8rem;
 
     border:
-        1px solid rgba(255,255,255,0.10);
+        1px solid rgba(255,255,255,.10);
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255,255,255,.03);
 
-    font-size: 0.68rem;
+    font-size:.68rem;
 
-    letter-spacing: 0.22em;
+    letter-spacing:.22em;
 
-    text-transform: uppercase;
+    text-transform:uppercase;
 
-    color: rgba(255,255,255,0.72);
+    color:
+        rgba(255,255,255,.72);
 
     transition:
-        all 0.3s ease;
-
+        all .3s ease;
 }
 
-.hero-subtitle:hover {
+.hero-subtitle:hover{
 
     border-color:
-        rgba(214,161,93,0.34);
+        rgba(214,161,93,.34);
 
     color:
         #d6a15d;
-
 }
 
-.hero-content h1 {
+.hero-content h1{
 
-    font-size: clamp(4rem, 14vw, 6.2rem);
+    font-size:
+        clamp(4rem,14vw,6.2rem);
 
-    line-height: 0.9;
+    line-height:.9;
 
-    letter-spacing: -0.07em;
+    letter-spacing:-.07em;
 
-    font-weight: 400;
+    font-weight:400;
 
-    color: #f7f1e8;
+    color:#f7f1e8;
 
     text-shadow:
-        0 10px 30px rgba(0,0,0,0.32);
-
+        0 10px 30px rgba(0,0,0,.32);
 }
 
-.hero-highlight {
+.hero-highlight{
 
-    margin-top: 1rem;
+    margin-top:1rem;
 
-    font-size: clamp(2rem, 7vw, 3rem);
+    font-size:
+        clamp(2rem,7vw,3rem);
 
-    line-height: 0.94;
+    line-height:.94;
 
-    letter-spacing: -0.05em;
+    letter-spacing:-.05em;
 
-    color: #d2ad7c;
-
+    color:#d2ad7c;
 }
 
-.hero-content p {
+.hero-content p{
 
-    margin-top: 1.5rem;
+    margin-top:1.5rem;
 
-    max-width: 500px;
+    max-width:500px;
 
-    font-size: 1rem;
+    font-size:1rem;
 
-    line-height: 1.75;
+    line-height:1.75;
 
-    color: rgba(255,255,255,0.82);
-
+    color:
+        rgba(255,255,255,.82);
 }
 
 /* ======================================================
 BUTTONS
 ====================================================== */
 
-.buttons {
+.buttons{
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    gap: 0.8rem;
+    gap:.8rem;
 
-    margin-top: 2rem;
-
+    margin-top:2rem;
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary{
 
-    display: inline-flex;
+    display:inline-flex;
 
-    align-items: center;
+    align-items:center;
 
-    justify-content: center;
+    justify-content:center;
 
-    gap: 0.8rem;
+    gap:.7rem;
 
-    width: 100%;
+    width:100%;
 
     padding:
         1rem
         1.8rem;
 
-    border-radius: 16px;
+    border-radius:16px;
 
-    text-transform: uppercase;
+    text-transform:uppercase;
 
-    letter-spacing: 0.14em;
+    letter-spacing:.14em;
 
-    font-size: 0.76rem;
+    font-size:.76rem;
 
-    font-weight: 600;
+    font-weight:600;
 
     transition:
-        all 0.3s ease;
-
+        all .3s ease;
 }
 
-.btn-primary {
+.btn-primary{
 
-    background: #8b1028;
+    background:#8b1028;
 
     border:
         1px solid #8b1028;
 
-    color: #f7f1e8;
-
+    color:#f7f1e8;
 }
 
-.btn-secondary {
+.btn-primary:hover{
+
+    background:#6E0F1F;
+}
+
+.btn-secondary{
 
     border:
-        1px solid rgba(214,161,93,0.14);
+        1px solid rgba(214,161,93,.14);
 
     background:
-        rgba(255,255,255,0.02);
+        rgba(255,255,255,.02);
 
     color:
-        rgba(247,241,232,0.82);
+        rgba(247,241,232,.82);
 
     backdrop-filter:
         blur(4px);
+}
 
+.btn-secondary:hover{
+
+    border:
+        1px solid rgba(214,161,93,.28);
+
+    background:
+        rgba(255,255,255,.05);
+}
+
+.btn-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 }
 
 /* ======================================================
 ESENCIAS
 ====================================================== */
 
-.esencias {
+.esencias{
 
-    position: relative;
+    position:relative;
 
-    margin-top: -1.4rem;
+    z-index:5;
+
+    margin-top:-5.5rem;
 
     padding:
         0
         1rem
-        3rem;
+        2rem;
 
-    z-index: 5;
-
+    background:transparent;
 }
 
-.esencias-card {
+.esencias-card{
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
     padding:
-        1.8rem
-        1rem
-        1.4rem;
+        1.5rem
+        1rem;
+
+    border-radius:34px;
+
+    border:
+        1px solid rgba(214,161,93,.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4ede1 0%,
+            #efe4d4 100%
+        );
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.18);
+}
+
+.section-heading{
+
+    text-align:center;
+}
+
+.section-heading span{
+
+    display:inline-block;
+
+    color:#8b5e34;
+
+    font-size:.74rem;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+}
+
+.heading-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:.8rem;
+}
+
+.heading-divider span{
+
+    position:relative;
+
+    width:96px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c48b54,
+            transparent
+        );
+}
+
+.heading-divider span::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    border:
+        2px solid #c48b54;
+
+    background:#efe4d4;
+}
+
+.esencias-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:0;
+
+    margin-top:1.8rem;
+}
+
+.esencia-item{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        .4rem
+        .6rem;
+}
+
+.esencia-item:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:10%;
+    right:0;
+
+    width:1px;
+
+    height:80%;
 
     background:
         linear-gradient(
             to bottom,
-            #f6f1e8,
-            #efe7da
+            transparent,
+            rgba(196,139,84,.42),
+            transparent
         );
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,0.16);
-
 }
 
-.section-heading {
+.esencia-icon{
 
-    text-align: center;
+    width:42px;
 
-    margin-bottom: 1.8rem;
+    margin:
+        0 auto
+        .8rem;
 
+    color:#8b5e34;
 }
 
-.section-heading span {
+.esencia-item p{
 
-    font-size: 1rem;
+    font-size:.82rem;
 
-    letter-spacing: 0.16em;
+    line-height:1.32;
 
-    color: #2a2118;
-
-}
-
-.heading-divider {
-
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 0.8rem;
-
-}
-
-.heading-divider span {
-
-    position: relative;
-
-    width: 80px;
-
-    height: 1px;
-
-    background: #b88a52;
-
-}
-
-.heading-divider span::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 9px;
-    height: 9px;
-
-    border:
-        2px solid #b88a52;
-
-    border-radius: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    background: #f6f1e8;
-
-}
-
-.esencias-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 0.3rem;
-
-}
-
-.esencia-item {
-
-    position: relative;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding:
-        0
-        0.3rem;
-
-}
-
-.esencia-item:not(:first-child)::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 50%;
-
-    width: 1px;
-
-    height: 70px;
-
-    background:
-        rgba(184,138,82,0.32);
-
-    transform:
-        translateY(-50%);
-
-}
-
-.esencia-icon {
-
-    width: 42px;
-
-    height: 42px;
-
-    margin-bottom: 0.4rem;
-
-    color: #1f1b16;
-
-}
-
-.esencia-icon svg {
-
-    width: 100%;
-    height: 100%;
-
-}
-
-.esencia-item p {
-
-    font-size: 0.82rem;
-
-    line-height: 1.15;
-
-    color: #1f1b16;
-
+    color:#2d2118;
 }
 
 /* ======================================================
 LECHAZO
 ====================================================== */
 
-.lechazo-monumento {
+.lechazo-monumento{
 
     padding:
         0
         1rem
-        2.4rem;
+        2.6rem;
 
-    background:
-        #0f0f0f;
-
+    background:#0b0b0b;
 }
 
-.lechazo-content {
+.lechazo-content{
 
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-        1.1fr
+        1fr
         1fr;
 
-    align-items: stretch;
+    align-items:stretch;
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
-    border-radius: 28px;
+    overflow:hidden;
 
-    overflow: hidden;
+    border-radius:34px;
 
     border:
-        1px solid rgba(214,161,93,0.08);
+        1px solid rgba(214,161,93,.08);
 
     background:
         linear-gradient(
@@ -524,67 +519,62 @@ LECHAZO
         );
 
     box-shadow:
-        0 18px 50px rgba(0,0,0,0.42),
-        0 0 0 1px rgba(214,161,93,0.06);
-
+        0 18px 50px rgba(0,0,0,.42);
 }
 
-.lechazo-text {
+.lechazo-text{
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    justify-content: center;
+    justify-content:center;
 
     padding:
+        2rem
         1.8rem
-        1.5rem
-        1.7rem;
-
+        1.9rem;
 }
 
-.lechazo-label {
+.lechazo-label{
 
-    margin-bottom: 0.8rem;
+    margin-bottom:.8rem;
 
-    color: #d6a15d;
+    color:#d6a15d;
 
-    font-size: 0.7rem;
+    font-size:.7rem;
 
-    letter-spacing: 0.22em;
+    letter-spacing:.22em;
 
-    text-transform: uppercase;
-
+    text-transform:uppercase;
 }
 
-.lechazo-text h2 {
+.lechazo-text h2{
 
-    font-size: clamp(2.8rem, 9vw, 4.8rem);
+    font-size:
+        clamp(4.4rem,14vw,7rem);
 
-    line-height: 0.88;
+    line-height:.84;
 
-    letter-spacing: -0.07em;
+    letter-spacing:-.085em;
 
-    font-weight: 400;
-
+    font-weight:400;
 }
 
-.lechazo-divider {
+.lechazo-divider{
 
     margin:
         1.2rem
         0;
-
 }
 
-.lechazo-divider span {
+.lechazo-divider span{
 
-    display: block;
+    display:block;
 
-    width: 70px;
+    width:72px;
 
-    height: 2px;
+    height:2px;
 
     background:
         linear-gradient(
@@ -592,446 +582,450 @@ LECHAZO
             #d6a15d,
             transparent
         );
-
 }
 
-.lechazo-description {
+.lechazo-description{
 
-    max-width: 360px;
+    max-width:390px;
 
-    font-size: 0.95rem;
+    font-size:1rem;
 
-    line-height: 1.75;
+    line-height:1.75;
 
-    color: rgba(247,241,232,0.80);
-
+    color:
+        rgba(247,241,232,.82);
 }
 
-.lechazo-price {
+.lechazo-price{
 
-    margin-top: 1.3rem;
+    margin-top:1.4rem;
 
-    font-size: 2rem;
+    font-size:2rem;
 
-    color: #f7f1e8;
+    line-height:1.1;
 
-    letter-spacing: -0.04em;
+    color:#f7f1e8;
 
+    letter-spacing:-.04em;
 }
 
-.lechazo-price span {
+.lechazo-price span{
 
-    margin-left: 0.25rem;
+    margin-left:.35rem;
 
-    font-size: 0.86rem;
+    font-size:1rem;
 
-    color: rgba(247,241,232,0.54);
-
+    color:#d6a15d;
 }
 
-.lechazo-visual {
+.lechazo-visual{
 
-    position: relative;
+    position:relative;
 
-    min-height: 320px;
-
+    min-height:520px;
 }
 
-.lechazo-image {
+.lechazo-image{
 
-    position: absolute;
+    position:absolute;
 
-    inset: 0;
+    inset:0;
 
     background-image:
         linear-gradient(
             to left,
-            rgba(0,0,0,0.04),
-            rgba(0,0,0,0.32)
+            rgba(0,0,0,.04),
+            rgba(0,0,0,.14)
         ),
         url("../../assets/img/CARTA/lechazo-horno-lena.webp");
 
-    background-size: cover;
+    background-size:cover;
 
-    background-position: center;
+    background-repeat:no-repeat;
 
+    background-position:center;
 }
 
 /* ======================================================
-PARA COMPARTIR
+COMPARTIR
 ====================================================== */
 
-.compartir-section {
+.compartir-section{
 
     padding:
         0
         1rem
         3rem;
 
-    background:
-        #0f0f0f;
-
+    background:#0b0b0b;
 }
 
-.compartir-card {
+.compartir-card{
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: 0 auto;
+    margin:0 auto;
+}
 
-    padding:
-        1.8rem
-        1rem
-        1rem;
+.compartir-grid{
 
-    border-radius: 28px;
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:1rem;
+
+    margin-top:1.8rem;
+}
+
+.compartir-item{
+
+    overflow:hidden;
+
+    border-radius:24px;
 
     background:
         linear-gradient(
-            to bottom,
-            #f6f1e8,
-            #efe7da
+            135deg,
+            #1b0d07 0%,
+            #24120b 42%,
+            #130905 100%
         );
 
-}
-
-.compartir-grid {
-
-    display: flex;
-
-    gap: 0.7rem;
-
-    overflow-x: auto;
-
-    scroll-snap-type: x mandatory;
-
-    padding-bottom: 0.4rem;
-
-    -webkit-overflow-scrolling: touch;
-
-}
-
-.compartir-grid::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-.compartir-item {
-
-    flex: 0 0 58%;
-
-    scroll-snap-align: start;
-
-    overflow: hidden;
-
-    border-radius: 20px;
-
-    background:
-        #f8f3ea;
-
     border:
-        1px solid rgba(60,40,20,0.12);
-
+        1px solid rgba(214,161,93,.08);
 }
 
-.compartir-item.featured {
+.compartir-image img{
 
-    flex: 0 0 72%;
+    height:220px;
 
+    object-fit:cover;
 }
 
-.compartir-image {
-
-    aspect-ratio: 1 / 0.72;
-
-    overflow: hidden;
-
-}
-
-.compartir-image img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-}
-
-.compartir-info {
+.compartir-info{
 
     padding:
-        0.9rem
-        0.8rem
-        1rem;
-
-    text-align: center;
-
+        1.2rem
+        1rem
+        1.3rem;
 }
 
-.compartir-info h3 {
+.compartir-info h3{
 
-    font-size: 0.92rem;
+    font-size:2rem;
 
-    line-height: 1.1;
+    line-height:.95;
 
-    font-weight: 400;
-
-    color: #2b2219;
-
+    letter-spacing:-.05em;
 }
 
-.compartir-price {
+.compartir-price{
 
-    margin-top: 0.55rem;
+    margin-top:1rem;
 
-    font-size: 1.3rem;
+    color:#d6a15d;
 
-    color: #9a6430;
-
-    letter-spacing: -0.04em;
-
+    font-size:1rem;
 }
 
-/* ======================================================
-BODEGA
-====================================================== */
+.bodega-banner{
 
-.bodega-banner {
+    position:relative;
 
-    position: relative;
+    overflow:hidden;
 
-    overflow: hidden;
+    display:flex;
 
-    display: flex;
+    align-items:flex-end;
 
-    align-items: flex-end;
+    margin-top:2rem;
 
-    margin-top: 1rem;
+    min-height:260px;
 
-    min-height: 190px;
-
-    border-radius: 24px;
+    border-radius:30px;
 
     background:
         linear-gradient(
             to right,
-            rgba(0,0,0,0.84) 0%,
-            rgba(0,0,0,0.42) 38%,
-            rgba(0,0,0,0.08) 100%
+            rgba(0,0,0,.84) 0%,
+            rgba(0,0,0,.38) 36%,
+            rgba(0,0,0,.06) 100%
         ),
         url("../../assets/img/CARTA/vino-medieval-bodega-romantica.webp");
 
-    background-size: cover;
+    background-size:cover;
 
-    background-repeat: no-repeat;
-
-    background-position: center 34%;
-
+    background-position:center;
 }
 
-.bodega-overlay {
+.bodega-overlay{
 
-    position: absolute;
+    position:absolute;
 
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at right center,
-            rgba(255,120,20,0.08),
-            transparent 45%
-        );
-
+    inset:0;
 }
 
-.bodega-content {
+.bodega-content{
 
-    position: relative;
+    position:relative;
 
-    z-index: 2;
+    z-index:2;
 
-    width: 100%;
+    width:100%;
 
     padding:
-        1.5rem
-        1.3rem;
-
+        2rem
+        1.6rem;
 }
 
-.bodega-label {
+.bodega-label{
 
-    display: inline-block;
+    display:inline-block;
 
-    margin-bottom: 0.55rem;
+    margin-bottom:.55rem;
 
-    color: #d6a15d;
+    color:#d6a15d;
 
-    font-size: 0.66rem;
+    font-size:.62rem;
 
-    letter-spacing: 0.22em;
+    letter-spacing:.22em;
 
-    text-transform: uppercase;
-
+    text-transform:uppercase;
 }
 
-.bodega-content h2 {
+.bodega-content h2{
 
-    max-width: 230px;
+    max-width:340px;
 
-    font-size: 1.85rem;
+    font-size:
+        clamp(2.4rem,5vw,4rem);
 
-    line-height: 0.94;
+    line-height:.88;
 
-    letter-spacing: -0.05em;
-
-    font-weight: 400;
-
-    color: #f7f1e8;
-
+    letter-spacing:-.06em;
 }
 
-.bodega-link {
+.bodega-link{
 
-    display: inline-flex;
+    display:inline-flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 0.5rem;
+    gap:.45rem;
 
-    margin-top: 0.9rem;
+    margin-top:1rem;
 
-    color: #d6a15d;
+    color:#d6a15d;
 
-    font-size: 0.74rem;
+    font-size:.72rem;
 
-    letter-spacing: 0.16em;
+    letter-spacing:.16em;
 
+    text-transform:uppercase;
+}
+
+/* ======================================================
+FOOTER
+====================================================== */
+
+.footer{
+
+    padding:
+        5rem
+        1rem
+        3rem;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            #0a0a0a 100%
+        );
+}
+
+.footer-inner{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding-top:2rem;
+
+    border-top:
+        1px solid rgba(214,161,93,.08);
+
+    text-align:center;
+}
+
+.footer p{
+
+    color:
+        rgba(255,255,255,.42);
+
+    font-size:.78rem;
+
+    letter-spacing:.04em;
 }
 
 /* ======================================================
 DESKTOP
 ====================================================== */
 
-@media (min-width: 981px) {
+@media(min-width:981px){
 
-    .hero {
+    .buttons{
 
-        min-height: 88vh;
-
-    }
-
-    .buttons {
-
-        flex-direction: row;
-
+        flex-direction:row;
     }
 
     .btn-primary,
-    .btn-secondary {
+    .btn-secondary{
 
-        width: auto;
+        width:auto;
 
-        min-width: 240px;
-
+        min-width:240px;
     }
 
-    .compartir-grid {
+}
 
-        display: grid;
+/* ======================================================
+TABLET
+====================================================== */
+
+@media(max-width:980px){
+
+    .compartir-grid{
 
         grid-template-columns:
-            1.15fr
-            1.15fr
-            0.85fr
-            0.85fr;
-
-        overflow: visible;
-
+            repeat(2,1fr);
     }
 
-    .compartir-item,
-    .compartir-item.featured {
+    .lechazo-content{
 
-        flex: unset;
+        grid-template-columns:1fr;
+    }
 
+    .lechazo-visual{
+
+        order:-1;
+
+        min-height:300px;
     }
 
 }
 
 /* ======================================================
-LECHAZO MOBILE
+MOBILE
 ====================================================== */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-    .lechazo-content {
+    .hero{
 
-        grid-template-columns: 1fr;
-
+        background-position:72% center;
     }
 
-    .lechazo-visual {
-
-        order: -1;
-
-        min-height: 220px;
-
-    }
-
-    .lechazo-text {
+    .hero-content{
 
         padding:
-            1.5rem
+            4.5rem
             1.4rem
-            1.6rem;
-
+            4rem;
     }
 
-    .lechazo-text h2 {
+    .hero-content h1{
 
-        font-size: 4rem;
-
+        font-size:4rem;
     }
 
-    .lechazo-description {
+    .hero-highlight{
 
-        max-width: 100%;
+        font-size:2.4rem;
+    }
 
-        font-size: 1rem;
+    .hero-content p{
 
+        max-width:320px;
+    }
+
+    .esencias-grid{
+
+        grid-template-columns:
+            repeat(4,1fr);
+    }
+
+    .lechazo-text{
+
+        padding:
+            1.6rem
+            1.4rem
+            1.7rem;
+    }
+
+    .lechazo-text h2{
+
+        font-size:5.2rem;
+    }
+
+    .lechazo-visual{
+
+        min-height:260px;
+    }
+
+    .compartir-grid{
+
+        display:flex;
+
+        gap:1rem;
+
+        overflow-x:auto;
+
+        padding-bottom:.5rem;
+
+        scroll-snap-type:x mandatory;
+    }
+
+    .compartir-item{
+
+        min-width:260px;
+
+        scroll-snap-align:start;
+    }
+
+    .bodega-banner{
+
+        min-height:200px;
     }
 
 }
 
-/* ======================================================
-SMALL MOBILE
-====================================================== */
+@media(max-width:420px){
 
-@media (max-width: 420px) {
+    .hero-content h1{
 
-    .hero-content h1 {
-
-        font-size: 3.8rem;
-
+        font-size:3.5rem;
     }
 
-    .hero-highlight {
+    .hero-highlight{
 
-        font-size: 2.4rem;
-
+        font-size:2.1rem;
     }
 
-    .compartir-item {
+    .lechazo-text h2{
 
-        flex: 0 0 62%;
-
+        font-size:4.3rem;
     }
 
-    .compartir-item.featured {
+    .lechazo-price{
 
-        flex: 0 0 78%;
+        font-size:1.6rem;
+    }
 
+    .lechazo-price span{
+
+        font-size:.92rem;
     }
 
 }

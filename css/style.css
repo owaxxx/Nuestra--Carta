@@ -125,7 +125,9 @@ NAVBAR
 .nav-links{
     display:flex;
 
-    gap:34px;
+    gap:28px;
+
+    align-items:center;
 }
 
 .nav-links a{
@@ -137,7 +139,52 @@ NAVBAR
 
     text-transform:uppercase;
 
-    opacity:.9;
+    opacity:.78;
+
+    transition:
+    opacity .3s ease,
+    color .3s ease,
+    border .3s ease,
+    background .3s ease;
+}
+
+.nav-links a:hover{
+
+    opacity:1;
+}
+
+/* ======================================================
+CTA RESERVA NAVBAR
+====================================================== */
+
+.nav-links a.reserva-link{
+
+    color:#f0d3a2;
+
+    opacity:1;
+
+    padding:
+    .55rem
+    1rem;
+
+    border:
+    1px solid rgba(240,211,162,.22);
+
+    border-radius:999px;
+
+    background:
+    rgba(110,15,31,.24);
+
+    backdrop-filter:blur(4px);
+}
+
+.nav-links a.reserva-link:hover{
+
+    background:
+    rgba(110,15,31,.42);
+
+    border:
+    1px solid rgba(240,211,162,.34);
 }
 
 /* ======================================================
@@ -163,7 +210,7 @@ HERO
         rgba(0,0,0,.30),
         rgba(0,0,0,.70)
     ),
-    url("../assets/img/fortaleza-gastronomica-medieval.webp");
+    url("/assets/img/fortaleza-gastronomica-medieval.webp");
 
     background-size:cover;
 
@@ -479,17 +526,17 @@ BODEGA
     background:
     linear-gradient(
         to right,
-        rgba(0,0,0,.88) 0%,
-        rgba(0,0,0,.48) 40%,
-        rgba(0,0,0,.08) 100%
+        rgba(0,0,0,.78) 0%,
+        rgba(0,0,0,.34) 36%,
+        rgba(0,0,0,.04) 100%
     ),
-    url("../assets/img/bodega-vino-medieval.webp");
+    url("/assets/img/bodega-vino-medieval.webp");
 
     background-size:cover;
 
     background-repeat:no-repeat;
 
-    background-position:74% center;
+    background-position:center;
 
     box-shadow:
     0 20px 60px rgba(0,0,0,.16);
@@ -504,8 +551,8 @@ BODEGA
     background:
     radial-gradient(
         circle at right center,
-        rgba(255,120,20,.08),
-        transparent 45%
+        rgba(255,120,20,.06),
+        transparent 42%
     );
 }
 
@@ -548,6 +595,9 @@ BODEGA
     letter-spacing:-.075em;
 
     color:#f7f1e8;
+
+    text-shadow:
+    0 8px 24px rgba(0,0,0,.22);
 }
 
 .bodega-link{
@@ -677,11 +727,90 @@ EXPERIENCIAS
     margin-top:1.3rem;
 }
 
-.dark-card img{
+/* ======================================================
+ENCUADRES EDITORIALES
+====================================================== */
+
+.esmorzars-card img{
 
     height:260px;
 
     object-fit:cover;
+
+    object-position:center 52%;
+}
+
+.romantic-card img{
+
+    height:260px;
+
+    object-fit:cover;
+
+    object-position:center 70%;
+}
+
+/* ======================================================
+RESERVA FINAL
+====================================================== */
+
+.reserva-final{
+
+    padding:
+    5rem
+    0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #0f0f0f 0%,
+        #140b08 100%
+    );
+
+    color:#f7f1e8;
+
+    text-align:center;
+}
+
+.reserva-inner{
+
+    max-width:720px;
+}
+
+.reserva-label{
+
+    display:inline-block;
+
+    margin-bottom:.9rem;
+
+    color:#d6a15d;
+
+    font-size:.7rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+}
+
+.reserva-final h2{
+
+    margin-bottom:1.2rem;
+}
+
+.reserva-final p{
+
+    max-width:560px;
+
+    margin:
+    0 auto
+    2rem;
+
+    color:
+    rgba(247,241,232,.78);
+}
+
+.reserva-final .btn{
+
+    min-width:280px;
 }
 
 /* ======================================================
@@ -742,23 +871,36 @@ TABLET
         grid-template-columns:1fr;
     }
 
-    .dark-card img{
-
-        height:220px;
-    }
-
     .card img{
 
         height:220px;
     }
 
+    .esmorzars-card img{
+
+        height:220px;
+
+        object-position:center 40%;
+    }
+
+    .romantic-card img{
+
+        height:220px;
+
+        object-position:center 36%;
+    }
+
     .bodega-banner-index{
 
         min-height:180px;
-
-        background-position:78% center;
     }
 
+    .reserva-final{
+
+        padding:
+        4rem
+        0;
+    }
 }
 
 /* ======================================================
@@ -776,17 +918,28 @@ MOBILE
 
         flex-direction:column;
 
-        gap:14px;
+        gap:18px;
     }
 
     .nav-links{
 
-        gap:16px;
+        gap:12px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
     }
 
     .nav-links a{
 
-        font-size:.64rem;
+        font-size:.62rem;
+    }
+
+    .nav-links a.reserva-link{
+
+        padding:
+        .5rem
+        .9rem;
     }
 
     .hero{
@@ -830,9 +983,18 @@ MOBILE
         height:190px;
     }
 
-    .dark-card img{
+    .esmorzars-card img{
 
         height:190px;
+
+        object-position:center 50%;
+    }
+
+    .romantic-card img{
+
+        height:190px;
+
+        object-position:center 56%;
     }
 
     .card-content,
@@ -871,4 +1033,17 @@ MOBILE
         4rem;
     }
 
+    .reserva-final{
+
+        padding:
+        3.5rem
+        0;
+    }
+
+    .reserva-final .btn{
+
+        width:100%;
+
+        min-width:auto;
+    }
 }
