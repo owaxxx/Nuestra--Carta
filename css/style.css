@@ -239,22 +239,28 @@ HERO
 
     position:relative;
 
-    min-height:100vh;
+    min-height:920px;
+
+    max-height:1100px;
+
+    height:100vh;
 
     display:flex;
 
-    align-items:center;
+    align-items:flex-start;
 
     justify-content:center;
 
     overflow:hidden;
+
+    padding-top:180px;
 
     background:
     url("/assets/img/fortaleza-gastronomica-medieval.webp");
 
     background-size:cover;
 
-    background-position:center;
+    background-position:center center;
 }
 
 .hero-overlay{
@@ -291,7 +297,7 @@ HERO
 
     z-index:2;
 
-    width:min(980px,90%);
+    width:min(900px,90%);
 
     text-align:center;
 }
@@ -940,6 +946,10 @@ TABLET
     .hero{
 
         min-height:auto;
+
+        max-height:none;
+
+        height:auto;
 
         padding:
         150px
