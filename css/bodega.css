@@ -45,7 +45,9 @@ button{
 
     position:relative;
 
-    min-height:100vh;
+    min-height:920px;
+
+    max-height:1100px;
 
     display:flex;
     align-items:center;
@@ -187,20 +189,49 @@ button{
     margin-bottom:38px;
 }
 
-.hero-divider{
+/* =========================================================
+   DIVIDERS
+========================================================= */
+
+.hero-divider,
+.featured-divider,
+.esencias-divider{
 
     position:relative;
 
-    width:260px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:96px;
+
+    height:16px;
+}
+
+.hero-divider::before,
+.featured-divider::before,
+.esencias-divider::before{
+
+    content:"";
+
+    width:96px;
+
     height:1px;
 
     background:
-    rgba(220,175,100,0.42);
-
-    margin-bottom:38px;
+        linear-gradient(
+            to right,
+            transparent,
+            #c48b54,
+            transparent
+        );
 }
 
-.hero-divider::before{
+.hero-divider::after,
+.featured-divider::after,
+.esencias-divider::after{
 
     content:"";
 
@@ -209,17 +240,53 @@ button{
     left:50%;
     top:50%;
 
-    width:14px;
-    height:14px;
+    transform:
+        translate(-50%,-50%);
+
+    width:10px;
+    height:10px;
 
     border-radius:50%;
 
-    border:2px solid #d7ab68;
+    border:
+        2px solid #c48b54;
+}
+
+/* HERO */
+
+.hero-divider{
+
+    margin-bottom:38px;
+}
+
+.hero-divider::after{
 
     background:#0f0907;
+}
 
-    transform:
-    translate(-50%,-50%);
+/* FEATURED */
+
+.featured-divider{
+
+    margin-bottom:24px;
+}
+
+.featured-divider::after{
+
+    background:#130905;
+}
+
+/* ESENCIAS */
+
+.esencias-divider{
+
+    margin:
+        18px auto 0;
+}
+
+.esencias-divider::after{
+
+    background:#120907;
 }
 
 .hero-description{
@@ -263,7 +330,7 @@ button{
         rgba(10,5,4,0.76)
     );
 
-    border:1px solid rgba(212,174,119,0.05);
+    border:1px solid rgba(212,174,119,0.16);
 
     border-radius:28px;
 
@@ -291,42 +358,6 @@ button{
 
     letter-spacing:0.24em;
     text-transform:uppercase;
-}
-
-.esencias-divider{
-
-    position:relative;
-
-    width:120px;
-    height:1px;
-
-    margin:
-    18px auto 0;
-
-    background:
-    rgba(212,174,119,0.3);
-}
-
-.esencias-divider::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    width:12px;
-    height:12px;
-
-    border-radius:50%;
-
-    border:2px solid #d4ae77;
-
-    background:#120907;
-
-    transform:
-    translate(-50%,-50%);
 }
 
 .esencias-grid{
@@ -416,7 +447,7 @@ button{
     overflow:hidden;
 
     border:
-    1px solid rgba(212,174,119,0.08);
+    1px solid rgba(212,174,119,0.16);
 
     box-shadow:
     0 30px 70px rgba(0,0,0,0.42);
@@ -459,42 +490,6 @@ button{
     color:#fffaf4;
 
     margin-bottom:24px;
-}
-
-.featured-divider{
-
-    position:relative;
-
-    width:120px;
-    height:1px;
-
-    margin-bottom:24px;
-
-    background:
-    rgba(212,174,119,0.35);
-}
-
-.featured-divider::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    width:12px;
-    height:12px;
-
-    border-radius:50%;
-
-    border:
-    2px solid #d7ad74;
-
-    background:#130905;
-
-    transform:
-    translate(-50%,-50%);
 }
 
 .featured-text p{
@@ -555,10 +550,10 @@ button{
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:14px;
+    gap:12px;
 
     padding:
-    0 7vw 110px;
+    0 7vw 70px;
 }
 
 .vino-card{
@@ -567,30 +562,22 @@ button{
 
     overflow:hidden;
 
-    border-radius:22px;
+    border-radius:24px;
 
-    min-height:360px;
-
-    padding:
-    26px 28px 24px;
+    min-height:500px;
 
     display:flex;
     flex-direction:column;
 
-    justify-content:space-between;
-
     background:#110605;
 
     border:
-    1px solid rgba(212,174,119,0.10);
+    1px solid rgba(212,174,119,0.16);
 
     box-shadow:
-    0 18px 40px rgba(0,0,0,0.28);
+    0 18px 40px rgba(0,0,0,0.34),
+    0 0 0 1px rgba(212,174,119,0.03);
 }
-
-/* =========================================================
-   IMAGEN SUPERIOR
-========================================================= */
 
 .tintos-card::before,
 .blancos-card::before,
@@ -604,16 +591,12 @@ button{
     left:0;
     right:0;
 
-    height:22%;
+    height:145px;
 
     background-size:cover;
     background-position:center;
 
-    opacity:0.78;
-
-    filter:
-    brightness(1.12)
-    contrast(1.02);
+    opacity:0.82;
 
     z-index:0;
 }
@@ -636,10 +619,6 @@ button{
     url("../assets/img/BODEGA/Cavas-y-rosados---Espumosos-y-rosados-en-una-fortaleza-medieval.webp");
 }
 
-/* =========================================================
-   OVERLAY
-========================================================= */
-
 .vino-card-overlay{
 
     position:absolute;
@@ -648,22 +627,18 @@ button{
     left:0;
     right:0;
 
-    height:28%;
+    height:145px;
 
     background:
     linear-gradient(
         180deg,
-        rgba(0,0,0,0.04) 0%,
-        rgba(10,4,3,0.42) 68%,
-        rgba(17,6,5,1) 100%
+        rgba(0,0,0,0.12) 0%,
+        rgba(0,0,0,0.22) 35%,
+        rgba(17,6,5,0.92) 100%
     );
 
     z-index:1;
 }
-
-/* =========================================================
-   CONTENT
-========================================================= */
 
 .vino-card-top,
 .vino-list,
@@ -673,33 +648,40 @@ button{
     z-index:2;
 }
 
+.vino-card-top{
+
+    padding:
+    28px 34px 0;
+}
+
 .vino-card-title{
 
     display:flex;
     align-items:center;
 
     gap:14px;
-
-    padding-bottom:8px;
 }
 
 .vino-card-title svg{
 
-    width:22px;
-    height:22px;
+    width:24px;
+    height:24px;
 
-    stroke:#cfa36c;
-    stroke-width:1.6;
+    stroke:#d7ad74;
+    stroke-width:1.7;
 }
 
 .vino-card-title h3{
 
-    color:#f7efe7;
+    color:#fff7f0;
 
-    font-size:2rem;
+    font-size:3rem;
+
+    line-height:0.92;
+
+    letter-spacing:-0.02em;
+
     font-weight:500;
-
-    line-height:1;
 }
 
 .vino-list{
@@ -707,55 +689,46 @@ button{
     display:flex;
     flex-direction:column;
 
-    gap:26px;
+    gap:34px;
 
-    margin-top:26px;
-
-    margin-bottom:34px;
+    padding:
+    60px 34px 0;
 }
 
 .vino-item{
 
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
-
-    gap:16px;
+    gap:18px;
 }
 
 .vino-info h4{
 
     color:#f4ede7;
 
-    font-size:1.28rem;
+    font-size:1.48rem;
     font-weight:500;
 
-    line-height:1.1;
+    line-height:1.12;
 
-    margin-bottom:4px;
+    margin-bottom:6px;
 }
 
 .vino-info span{
 
     color:#c69557;
 
-    font-size:0.92rem;
-    font-weight:500;
+    font-size:1rem;
 }
 
 .vino-item strong{
 
     color:#d8a158;
 
-    font-size:1.1rem;
-    font-weight:600;
+    font-size:1.22rem;
 
     white-space:nowrap;
 }
-
-/* =========================================================
-   TOGGLE VINOS
-========================================================= */
 
 .vino-extra{
 
@@ -766,8 +739,8 @@ button{
     opacity:0;
 
     transition:
-    max-height 0.45s ease,
-    opacity 0.35s ease;
+    max-height .4s ease,
+    opacity .3s ease;
 }
 
 .expanded-card.active .vino-extra{
@@ -776,10 +749,15 @@ button{
 
     opacity:1;
 
-    margin-top:6px;
+    margin-top:10px;
 }
 
 .toggle-vinos{
+
+    margin-top:auto;
+
+    padding:
+    34px;
 
     background:none;
     border:none;
@@ -789,26 +767,310 @@ button{
     text-align:left;
 }
 
-/* =========================================================
-   CTA
-========================================================= */
-
 .vino-more{
 
     color:#cfa36c;
 
-    font-size:0.82rem;
+    font-size:0.78rem;
     font-weight:700;
 
-    letter-spacing:0.14em;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   VINO CASA
+========================================================= */
+
+.vino-casa-banner{
+
+    position:relative;
+
+    margin:
+    0 7vw 26px;
+
+    min-height:250px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    border:
+    1px solid rgba(212,174,119,0.16);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.34);
+
+    background-image:
+    linear-gradient(
+        90deg,
+        rgba(14,7,5,0.68) 0%,
+        rgba(14,7,5,0.42) 34%,
+        rgba(14,7,5,0.06) 100%
+    ),
+    url("../assets/img/BODEGA/Vino-de-la-casa---El-vino-para-compartir-en-una-fortaleza-medieval.webp");
+
+    background-size:cover;
+
+    background-position:center center;
+}
+
+.vino-casa-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:420px;
+
+    padding:
+    48px 54px;
+}
+
+.vino-casa-content span{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    color:#d7ad74;
+
+    font-size:0.72rem;
+    font-weight:600;
+
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+}
+
+.vino-casa-content h2{
+
+    color:#fff7f0;
+
+    font-size:clamp(2.2rem,4vw,3.8rem);
+
+    line-height:0.95;
+    font-weight:500;
+
+    margin-bottom:18px;
+}
+
+.vino-casa-content p{
+
+    color:#dcc5a7;
+
+    font-size:1.08rem;
+
+    line-height:1.45;
+
+    max-width:320px;
+
+    margin-bottom:24px;
+}
+
+.vino-casa-price{
+
+    color:#d7a05d;
+
+    font-size:2rem;
+    font-weight:500;
+}
+
+/* =========================================================
+   EXPERIENCIAS
+========================================================= */
+
+.vino-experiencias{
+
+    position:relative;
+
+    margin:
+    0 7vw 34px;
+
+    min-height:140px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    border:
+    1px solid rgba(212,174,119,0.16);
+
+    background-image:
+    linear-gradient(
+        180deg,
+        rgba(8,4,3,0.08) 0%,
+        rgba(8,4,3,0.38) 58%,
+        rgba(8,4,3,0.78) 100%
+    ),
+    url("../assets/img/BODEGA/Experiencias-del-vino---Catas-y-experiencias-en-una-fortaleza-medieval.webp");
+
+    background-size:cover;
+
+    background-position:center center;
+}
+
+.vino-experiencias-content{
+
+    position:relative;
+    z-index:2;
+
+    padding:
+    30px 40px;
+}
+
+.vino-experiencias-content span{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    color:#d7ad74;
+
+    font-size:0.68rem;
+    font-weight:600;
+
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+}
+
+.vino-experiencias-content h2{
+
+    color:#fff7f0;
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    line-height:0.9;
+    font-weight:500;
+}
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.bodega-final-cta{
+
+    padding:
+    46px 7vw 70px;
+}
+
+.bodega-final-content{
+
+    max-width:1120px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    padding:
+    72px 40px;
+
+    border-radius:26px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #2a0808 0%,
+        #170707 100%
+    );
+
+    border:
+    1px solid rgba(212,174,119,0.16);
+}
+
+.bodega-final-content span{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    color:#d7ad74;
+
+    font-size:0.72rem;
+    font-weight:600;
+
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+}
+
+.bodega-final-content h2{
+
+    color:#fff7f0;
+
+    font-size:3.4rem;
+
+    line-height:0.95;
+    font-weight:500;
+
+    margin-bottom:20px;
+}
+
+.bodega-final-content p{
+
+    max-width:540px;
+
+    margin:
+    0 auto 34px;
+
+    color:#dcc5a7;
+
+    font-size:1.08rem;
+
+    line-height:1.5;
+}
+
+.final-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:220px;
+
+    padding:
+    16px 34px;
+
+    border-radius:14px;
+
+    background:#8d1024;
+
+    color:#fff;
+
+    font-size:0.86rem;
+    font-weight:700;
+
+    letter-spacing:0.18em;
     text-transform:uppercase;
 
     transition:0.3s ease;
 }
 
-.vino-more:hover{
+.final-btn:hover{
 
-    opacity:0.72;
+    opacity:0.84;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.bodega-footer{
+
+    padding:
+    0 24px 34px;
+
+    text-align:center;
+}
+
+.bodega-footer p{
+
+    color:#8f7a68;
+
+    font-size:0.9rem;
 }
 
 /* =========================================================
@@ -820,13 +1082,6 @@ button{
     .bodega-categorias{
 
         grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
-    .vino-card{
-
-        min-height:auto;
     }
 }
 
@@ -875,6 +1130,8 @@ button{
 
         min-height:72vh;
 
+        max-height:none;
+
         align-items:flex-start;
 
         padding:
@@ -897,27 +1154,11 @@ button{
         max-width:220px;
     }
 
-    .hero-mini{
-
-        margin-bottom:18px;
-
-        font-size:0.74rem;
-    }
-
     .bodega-hero h1{
 
         font-size:3.9rem;
 
         line-height:0.88;
-
-        max-width:280px;
-
-        margin-bottom:30px;
-    }
-
-    .hero-divider{
-
-        width:150px;
 
         margin-bottom:30px;
     }
@@ -950,24 +1191,6 @@ button{
         padding:20px 10px;
     }
 
-    .esencia-icon{
-
-        margin-bottom:14px;
-    }
-
-    .esencia-icon svg{
-
-        width:28px;
-        height:28px;
-    }
-
-    .esencia-item p{
-
-        font-size:0.82rem;
-
-        line-height:1.25;
-    }
-
     .featured-wine{
 
         padding:
@@ -982,9 +1205,6 @@ button{
     .featured-image{
 
         min-height:220px;
-
-        background-position:
-        center 56%;
     }
 
     .featured-text{
@@ -993,106 +1213,54 @@ button{
         28px 24px 34px;
     }
 
-    .featured-label{
-
-        margin-bottom:12px;
-
-        font-size:0.62rem;
-
-        letter-spacing:0.22em;
-    }
-
-    .featured-text h2{
-
-        font-size:1.95rem;
-
-        line-height:0.96;
-
-        margin-bottom:16px;
-    }
-
-    .featured-divider{
-
-        width:84px;
-
-        margin-bottom:18px;
-    }
-
-    .featured-divider::before{
-
-        width:10px;
-        height:10px;
-    }
-
-    .featured-text p{
-
-        font-size:0.92rem;
-
-        line-height:1.38;
-
-        margin-bottom:22px;
-
-        max-width:260px;
-    }
-
-    .featured-price{
-
-        font-size:1.45rem;
-    }
-
     .bodega-categorias{
+
+        grid-template-columns:1fr;
 
         gap:14px;
 
         padding:
-        0 24px 80px;
+        0 24px 60px;
     }
 
     .vino-card{
 
-        border-radius:22px;
+        min-height:auto;
+    }
 
-        min-height:320px;
+    .vino-card-top{
 
         padding:
-        22px 22px 20px;
-    }
-
-    .vino-card-title{
-
-        gap:12px;
-    }
-
-    .vino-card-title svg{
-
-        width:18px;
-        height:18px;
+        24px 22px 0;
     }
 
     .vino-card-title h3{
 
-        font-size:1.7rem;
+        font-size:2rem;
+    }
+
+    .vino-card-title svg{
+
+        width:20px;
+        height:20px;
     }
 
     .vino-list{
 
-        gap:20px;
+        padding:
+        54px 22px 0;
 
-        margin-top:20px;
-
-        margin-bottom:24px;
+        gap:24px;
     }
 
     .vino-info h4{
 
-        font-size:1.06rem;
-
-        line-height:1.18;
+        font-size:1.12rem;
     }
 
     .vino-info span{
 
-        font-size:0.82rem;
+        font-size:0.84rem;
     }
 
     .vino-item strong{
@@ -1100,10 +1268,69 @@ button{
         font-size:1rem;
     }
 
-    .vino-more{
+    .toggle-vinos{
 
-        font-size:0.72rem;
+        padding:24px 22px;
+    }
 
-        letter-spacing:0.12em;
+    .vino-casa-banner{
+
+        margin:
+        0 24px 18px;
+
+        min-height:220px;
+    }
+
+    .vino-casa-content{
+
+        padding:
+        28px 24px;
+    }
+
+    .vino-experiencias{
+
+        margin:
+        0 24px 18px;
+
+        min-height:150px;
+    }
+
+    .vino-experiencias-content{
+
+        padding:
+        24px;
+    }
+
+    .bodega-final-cta{
+
+        padding:
+        24px 24px 60px;
+    }
+
+    .bodega-final-content{
+
+        padding:
+        54px 24px;
+    }
+
+    .bodega-final-content h2{
+
+        font-size:2.2rem;
+    }
+
+    .final-btn{
+
+        min-width:100%;
+    }
+
+    .vino-card,
+    .featured-content,
+    .vino-casa-banner,
+    .vino-experiencias,
+    .bodega-final-content,
+    .esencias-box{
+
+        border:
+        1px solid rgba(212,174,119,0.18);
     }
 }
