@@ -1,52 +1,130 @@
 :root{
 
     /* ======================================================
-    COLORES
+    PALETA PRINCIPAL
     ====================================================== */
 
+    --negro-profundo:#0F0F0F;
+    --negro-carbon:#161414;
+    --negro-piedra:#1D1B1A;
+    --negro-madera:#24120B;
+
     --pergamino:#F3EBDD;
+    --pergamino-oscuro:#D8CCBB;
 
     --borgona:#6E0F1F;
     --borgona-hover:#530916;
 
-    --negro:#1D1C1C;
-    --negro-profundo:#181818;
+    --oro-viejo:#D6A15D;
 
-    --texto:#2D2B28;
-    --texto-claro:#E9E1D6;
+    /* ======================================================
+    TEXTO
+    ====================================================== */
+
+    --texto-claro:#F5EFE6;
+
+    --texto-soft:
+    rgba(245,239,230,.78);
+
+    --texto-muted:
+    rgba(245,239,230,.58);
+
+    --texto-oscuro:#2A2826;
+
+    /* ======================================================
+    FONDOS
+    ====================================================== */
+
+    --bg-primary:
+    var(--negro-profundo);
+
+    --bg-secondary:
+    var(--negro-carbon);
+
+    --bg-card:
+    linear-gradient(
+        135deg,
+        #1B0D07 0%,
+        #24120B 42%,
+        #130905 100%
+    );
+
+    --bg-card-soft:
+    linear-gradient(
+        135deg,
+        #1A120E 0%,
+        #120907 100%
+    );
+
+    --bg-light:
+    var(--pergamino);
+
+    /* ======================================================
+    BORDES
+    ====================================================== */
+
+    --border-soft:
+    1px solid rgba(214,161,93,.08);
+
+    --border-medium:
+    1px solid rgba(214,161,93,.14);
+
+    --border-light:
+    1px solid rgba(255,255,255,.08);
 
     /* ======================================================
     SOMBRAS
     ====================================================== */
 
     --shadow-soft:
-    0 10px 30px rgba(0,0,0,.06);
+    0 14px 40px rgba(0,0,0,.12);
 
     --shadow-medium:
-    0 22px 60px rgba(0,0,0,.16);
+    0 22px 70px rgba(0,0,0,.22);
+
+    --shadow-heavy:
+    0 30px 90px rgba(0,0,0,.34);
+
+    /* ======================================================
+    OVERLAYS
+    ====================================================== */
+
+    --overlay-dark:
+    rgba(0,0,0,.48);
+
+    --overlay-heavy:
+    rgba(0,0,0,.72);
+
+    --overlay-warm:
+    rgba(255,120,20,.06);
 
     /* ======================================================
     SPACING
     ====================================================== */
 
-    --section-space:80px;
-    --section-space-mobile:60px;
+    --section-space:110px;
 
-    --section-space-small:70px;
+    --section-space-mobile:72px;
 
-    --gap-xl:34px;
-    --gap-lg:26px;
-    --gap-md:22px;
+    --section-space-small:80px;
+
+    --gap-xl:40px;
+    --gap-lg:30px;
+    --gap-md:24px;
     --gap-sm:18px;
 
     /* ======================================================
     RADIOS
     ====================================================== */
 
-    --radius-xl:18px;
+    --radius-xl:28px;
+
+    --radius-lg:22px;
+
+    --radius-md:16px;
 
     /* ======================================================
-    CONTAINERS
+    CONTAINER
     ====================================================== */
 
     --container-width:1240px;
@@ -56,48 +134,9 @@
     ====================================================== */
 
     --feature-image-height:680px;
+
     --feature-image-height-tablet:560px;
+
     --feature-image-height-mobile:420px;
 
-}
-
-/* ======================================================
-RESET GLOBAL
-====================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,
-body{
-    overflow-x:hidden;
-}
-
-/* ======================================================
-BASE
-====================================================== */
-
-body{
-    font-family:Georgia, serif;
-
-    background:var(--pergamino);
-
-    color:var(--texto);
-
-    line-height:1.7;
-}
-
-img{
-    max-width:100%;
-
-    display:block;
-}
-
-a{
-    color:inherit;
-
-    text-decoration:none;
 }

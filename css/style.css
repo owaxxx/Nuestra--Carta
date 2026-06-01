@@ -14,10 +14,20 @@ html{
     scroll-behavior:smooth;
 }
 
+html,
 body{
-    background:var(--pergamino);
+    overflow-x:hidden;
+}
 
-    color:var(--texto);
+/* ======================================================
+BASE
+====================================================== */
+
+body{
+
+    background:var(--bg-primary);
+
+    color:var(--texto-claro);
 
     font-family:
     Georgia,
@@ -25,8 +35,6 @@ body{
     serif;
 
     line-height:1.7;
-
-    overflow-x:hidden;
 }
 
 img{
@@ -52,23 +60,26 @@ h3{
 }
 
 h1{
-    font-size:clamp(4rem,9vw,6.4rem);
 
-    line-height:.9;
+    font-size:clamp(4rem,9vw,6.3rem);
 
-    letter-spacing:-.07em;
+    line-height:.88;
+
+    letter-spacing:-.075em;
 }
 
 h2{
-    font-size:clamp(2.4rem,5vw,4.2rem);
+
+    font-size:clamp(2.4rem,5vw,4rem);
 
     line-height:.94;
 
-    letter-spacing:-.06em;
+    letter-spacing:-.065em;
 }
 
 h3{
-    font-size:clamp(1.8rem,3vw,2.6rem);
+
+    font-size:clamp(1.8rem,3vw,2.5rem);
 
     line-height:.98;
 
@@ -76,9 +87,10 @@ h3{
 }
 
 p{
+
     font-size:1rem;
 
-    line-height:1.75;
+    line-height:1.78;
 }
 
 /* ======================================================
@@ -86,9 +98,41 @@ LAYOUT
 ====================================================== */
 
 .container{
+
     width:min(var(--container-width),90%);
 
     margin:auto;
+}
+
+/* ======================================================
+SECTION INTRO
+====================================================== */
+
+.section-intro{
+
+    max-width:760px;
+
+    margin-bottom:3rem;
+}
+
+.section-label{
+
+    display:inline-block;
+
+    margin-bottom:1rem;
+
+    color:var(--oro-viejo);
+
+    font-size:.68rem;
+
+    letter-spacing:.24em;
+
+    text-transform:uppercase;
+}
+
+.section-intro h2{
+
+    color:var(--texto-claro);
 }
 
 /* ======================================================
@@ -96,6 +140,7 @@ NAVBAR
 ====================================================== */
 
 .navbar{
+
     position:absolute;
 
     top:0;
@@ -105,47 +150,51 @@ NAVBAR
 
     z-index:20;
 
-    padding:28px 0;
+    padding:30px 0;
 }
 
 .nav-inner{
+
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
+
+    justify-content:space-between;
 }
 
 .logo{
+
     color:white;
 
     font-size:1.3rem;
+
+    letter-spacing:.03em;
 }
 
 .nav-links{
+
     display:flex;
 
-    gap:28px;
-
     align-items:center;
+
+    gap:28px;
 }
 
 .nav-links a{
+
     color:white;
 
-    font-size:.72rem;
+    font-size:.7rem;
 
-    letter-spacing:.12em;
+    letter-spacing:.14em;
 
     text-transform:uppercase;
 
-    opacity:.78;
+    opacity:.76;
 
     transition:
     opacity .3s ease,
-    color .3s ease,
-    border .3s ease,
-    background .3s ease;
+    transform .3s ease;
 }
 
 .nav-links a:hover{
@@ -153,29 +202,24 @@ NAVBAR
     opacity:1;
 }
 
-/* ======================================================
-CTA RESERVA NAVBAR
-====================================================== */
-
 .nav-links a.reserva-link{
 
-    color:#f0d3a2;
-
-    opacity:1;
-
     padding:
-    .55rem
-    1rem;
-
-    border:
-    1px solid rgba(240,211,162,.22);
+    .68rem
+    1.1rem;
 
     border-radius:999px;
 
     background:
     rgba(110,15,31,.24);
 
-    backdrop-filter:blur(4px);
+    border:var(--border-soft);
+
+    backdrop-filter:blur(6px);
+
+    color:#f0d3a2;
+
+    opacity:1;
 }
 
 .nav-links a.reserva-link:hover{
@@ -183,8 +227,8 @@ CTA RESERVA NAVBAR
     background:
     rgba(110,15,31,.42);
 
-    border:
-    1px solid rgba(240,211,162,.34);
+    transform:
+    translateY(-1px);
 }
 
 /* ======================================================
@@ -195,7 +239,7 @@ HERO
 
     position:relative;
 
-    min-height:88vh;
+    min-height:100vh;
 
     display:flex;
 
@@ -206,10 +250,6 @@ HERO
     overflow:hidden;
 
     background:
-    linear-gradient(
-        rgba(0,0,0,.30),
-        rgba(0,0,0,.70)
-    ),
     url("/assets/img/fortaleza-gastronomica-medieval.webp");
 
     background-size:cover;
@@ -217,9 +257,21 @@ HERO
     background-position:center;
 }
 
-.hero::after{
+.hero-overlay{
 
-    content:"";
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.34) 0%,
+        rgba(0,0,0,.76) 100%
+    );
+}
+
+.hero-glow{
 
     position:absolute;
 
@@ -239,9 +291,7 @@ HERO
 
     z-index:2;
 
-    width:min(1000px,90%);
-
-    margin:auto;
+    width:min(980px,90%);
 
     text-align:center;
 }
@@ -251,17 +301,18 @@ HERO
     color:white;
 
     text-shadow:
-    0 14px 40px rgba(0,0,0,.28);
+    0 16px 42px rgba(0,0,0,.32);
 }
 
 .hero p{
 
+    max-width:640px;
+
     margin:
-    1.6rem auto 0;
+    1.8rem auto 0;
 
-    max-width:620px;
-
-    color:rgba(255,255,255,.84);
+    color:
+    rgba(255,255,255,.82);
 }
 
 /* ======================================================
@@ -276,7 +327,7 @@ BOTONES
 
     gap:1rem;
 
-    margin-top:2.2rem;
+    margin-top:2.3rem;
 }
 
 .btn{
@@ -287,13 +338,13 @@ BOTONES
 
     justify-content:center;
 
+    min-width:240px;
+
     padding:
     1rem
     1.8rem;
 
-    min-width:240px;
-
-    border-radius:16px;
+    border-radius:14px;
 
     font-size:.76rem;
 
@@ -304,8 +355,7 @@ BOTONES
     transition:
     transform .3s ease,
     background .3s ease,
-    border .3s ease,
-    box-shadow .3s ease;
+    border .3s ease;
 }
 
 .btn:hover{
@@ -322,9 +372,6 @@ BOTONES
 
     border:
     1px solid rgba(255,255,255,.04);
-
-    box-shadow:
-    0 12px 34px rgba(0,0,0,.26);
 }
 
 .btn-primary:hover{
@@ -335,7 +382,7 @@ BOTONES
 .btn-secondary{
 
     background:
-    rgba(255,255,255,.03);
+    rgba(255,255,255,.04);
 
     color:white;
 
@@ -351,10 +398,18 @@ GASTRONOMÍA
 
 .gastronomia-section{
 
+    position:relative;
+
     padding:
-    3rem
-    0
-    4rem;
+    110px
+    0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #101010 0%,
+        #161414 100%
+    );
 }
 
 .gastronomia-grid{
@@ -365,7 +420,7 @@ GASTRONOMÍA
     1.2fr
     .8fr;
 
-    gap:1.4rem;
+    gap:1.2rem;
 }
 
 /* ======================================================
@@ -376,31 +431,28 @@ CARDS
 
     overflow:hidden;
 
-    border-radius:28px;
+    border-radius:20px;
 
-    background:
-    #f7f1e8;
+    background:var(--bg-card-soft);
 
-    box-shadow:
-    0 18px 50px rgba(0,0,0,.08);
+    border:var(--border-soft);
 
     transition:
     transform .35s ease,
-    box-shadow .35s ease;
+    border .35s ease;
 }
 
 .card:hover{
 
     transform:
-    translateY(-4px);
+    translateY(-3px);
 
-    box-shadow:
-    0 26px 70px rgba(0,0,0,.14);
+    border:var(--border-medium);
 }
 
 .card img{
 
-    height:260px;
+    height:280px;
 
     object-fit:cover;
 }
@@ -408,82 +460,55 @@ CARDS
 .card-content{
 
     padding:
-    1.6rem
-    1.4rem
-    1.8rem;
+    1.7rem
+    1.5rem
+    1.9rem;
 }
 
-.card-label{
-
-    display:inline-block;
-
-    margin-bottom:.8rem;
-
-    color:#d6a15d;
-
-    font-size:.68rem;
-
-    letter-spacing:.22em;
-
-    text-transform:uppercase;
-}
-
+.card-label,
 .card-label-dark{
 
     display:inline-block;
 
     margin-bottom:.8rem;
 
-    color:#8a5a32;
+    color:var(--oro-viejo);
 
-    font-size:.68rem;
+    font-size:.66rem;
 
-    letter-spacing:.22em;
+    letter-spacing:.24em;
 
     text-transform:uppercase;
 }
 
 .card-divider{
 
-    width:70px;
+    width:72px;
 
     height:2px;
 
     margin:
-    1.1rem
+    1.2rem
     0;
 
     background:
     linear-gradient(
         to right,
-        #d6a15d,
+        var(--oro-viejo),
         transparent
     );
 }
 
 .card-featured{
 
-    background:
-    linear-gradient(
-        135deg,
-        #1b0d07 0%,
-        #24120b 42%,
-        #130905 100%
-    );
+    background:var(--bg-card);
 
-    color:#f7f1e8;
-
-    border:
-    1px solid rgba(214,161,93,.08);
-
-    box-shadow:
-    0 18px 50px rgba(0,0,0,.24);
+    color:var(--texto-claro);
 }
 
 .card-featured p{
 
-    color:
-    rgba(247,241,232,.78);
+    color:var(--texto-soft);
 }
 
 .card-link{
@@ -494,13 +519,34 @@ CARDS
 
     margin-top:1rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
-    font-size:.74rem;
+    font-size:.72rem;
 
     letter-spacing:.16em;
 
     text-transform:uppercase;
+}
+
+/* ======================================================
+BRASAS CARD
+====================================================== */
+
+.brasas-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #18110D 0%,
+        #120907 100%
+    );
+
+    color:var(--texto-claro);
+}
+
+.brasas-card p{
+
+    color:var(--texto-soft);
 }
 
 /* ======================================================
@@ -517,29 +563,26 @@ BODEGA
 
     align-items:flex-end;
 
-    margin-top:1.5rem;
+    min-height:250px;
 
-    min-height:220px;
+    margin-top:1.2rem;
 
-    border-radius:28px;
+    border-radius:20px;
 
     background:
     linear-gradient(
         to right,
-        rgba(0,0,0,.78) 0%,
-        rgba(0,0,0,.34) 36%,
-        rgba(0,0,0,.04) 100%
+        rgba(0,0,0,.84) 0%,
+        rgba(0,0,0,.38) 42%,
+        rgba(0,0,0,.08) 100%
     ),
     url("/assets/img/bodega-vino-medieval.webp");
 
     background-size:cover;
 
-    background-repeat:no-repeat;
-
     background-position:center;
 
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.16);
+    border:var(--border-soft);
 }
 
 .bodega-overlay{
@@ -565,19 +608,19 @@ BODEGA
     width:100%;
 
     padding:
-    1.8rem
-    1.5rem;
+    2rem
+    1.8rem;
 }
 
 .bodega-label{
 
     display:inline-block;
 
-    margin-bottom:.55rem;
+    margin-bottom:.7rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
-    font-size:.62rem;
+    font-size:.66rem;
 
     letter-spacing:.22em;
 
@@ -586,15 +629,9 @@ BODEGA
 
 .bodega-content h2{
 
-    max-width:240px;
+    max-width:320px;
 
-    font-size:clamp(1.8rem,2.8vw,2.6rem);
-
-    line-height:.88;
-
-    letter-spacing:-.075em;
-
-    color:#f7f1e8;
+    color:var(--texto-claro);
 
     text-shadow:
     0 8px 24px rgba(0,0,0,.22);
@@ -606,11 +643,11 @@ BODEGA
 
     align-items:center;
 
-    gap:.45rem;
+    gap:.5rem;
 
-    margin-top:.9rem;
+    margin-top:1rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
     font-size:.72rem;
 
@@ -626,34 +663,31 @@ EXPERIENCIAS
 .experiencias-manyosa{
 
     padding:
-    4rem
-    0
-    5rem;
+    110px
+    0;
 
     background:
     linear-gradient(
         to bottom,
-        #161414 0%,
+        #141212 0%,
         #0f0f0f 100%
     );
-
-    color:#f7f1e8;
 }
 
 .experiencias-header{
 
-    margin-bottom:2rem;
+    margin-bottom:2.2rem;
 }
 
 .experiencias-header span{
 
     display:inline-block;
 
-    margin-bottom:.8rem;
+    margin-bottom:.9rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
-    font-size:.72rem;
+    font-size:.7rem;
 
     letter-spacing:.22em;
 
@@ -668,31 +702,25 @@ EXPERIENCIAS
     1fr
     1fr;
 
-    gap:1.4rem;
+    gap:1.2rem;
 }
 
 .dark-card{
 
     overflow:hidden;
 
-    border-radius:28px;
+    border-radius:20px;
 
-    background:
-    linear-gradient(
-        135deg,
-        #1b0d07 0%,
-        #130905 100%
-    );
+    background:var(--bg-card);
 
-    border:
-    1px solid rgba(214,161,93,.08);
+    border:var(--border-soft);
 }
 
 .experience-text{
 
     padding:
-    1.5rem
-    1.4rem;
+    1.6rem
+    1.5rem;
 }
 
 .experience-label{
@@ -701,7 +729,7 @@ EXPERIENCIAS
 
     margin-bottom:.8rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
     font-size:.66rem;
 
@@ -714,8 +742,7 @@ EXPERIENCIAS
 
     margin-top:1rem;
 
-    color:
-    rgba(247,241,232,.78);
+    color:var(--texto-soft);
 }
 
 .experience-text .btn{
@@ -724,16 +751,16 @@ EXPERIENCIAS
 
     min-width:auto;
 
-    margin-top:1.3rem;
+    margin-top:1.4rem;
 }
 
 /* ======================================================
-ENCUADRES EDITORIALES
+ENCUADRES
 ====================================================== */
 
 .esmorzars-card img{
 
-    height:260px;
+    height:280px;
 
     object-fit:cover;
 
@@ -742,7 +769,7 @@ ENCUADRES EDITORIALES
 
 .romantic-card img{
 
-    height:260px;
+    height:280px;
 
     object-fit:cover;
 
@@ -755,8 +782,12 @@ RESERVA FINAL
 
 .reserva-final{
 
+    position:relative;
+
+    overflow:hidden;
+
     padding:
-    5rem
+    7rem
     0;
 
     background:
@@ -766,23 +797,39 @@ RESERVA FINAL
         #140b08 100%
     );
 
-    color:#f7f1e8;
-
     text-align:center;
+}
+
+.reserva-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,120,20,.05),
+        transparent 48%
+    );
 }
 
 .reserva-inner{
 
-    max-width:720px;
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
 }
 
 .reserva-label{
 
     display:inline-block;
 
-    margin-bottom:.9rem;
+    margin-bottom:1rem;
 
-    color:#d6a15d;
+    color:var(--oro-viejo);
 
     font-size:.7rem;
 
@@ -793,7 +840,7 @@ RESERVA FINAL
 
 .reserva-final h2{
 
-    margin-bottom:1.2rem;
+    margin-bottom:1.3rem;
 }
 
 .reserva-final p{
@@ -804,8 +851,7 @@ RESERVA FINAL
     0 auto
     2rem;
 
-    color:
-    rgba(247,241,232,.78);
+    color:var(--texto-soft);
 }
 
 .reserva-final .btn{
@@ -820,17 +866,69 @@ FOOTER
 .footer{
 
     padding:
-    2.5rem
-    1rem;
+    4rem
+    0;
 
-    background:#0a0a0a;
+    background:#090909;
 
-    color:
-    rgba(255,255,255,.42);
+    border-top:
+    1px solid rgba(255,255,255,.04);
+}
 
-    text-align:center;
+.footer-inner{
 
-    font-size:.78rem;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:2rem;
+}
+
+.footer-label{
+
+    display:inline-block;
+
+    margin-bottom:.8rem;
+
+    color:var(--oro-viejo);
+
+    font-size:.66rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+}
+
+.footer-brand p{
+
+    max-width:340px;
+
+    color:var(--texto-muted);
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.9rem;
+}
+
+.footer-links a{
+
+    color:var(--texto-soft);
+
+    font-size:.82rem;
+
+    transition:opacity .3s ease;
+}
+
+.footer-links a:hover{
+
+    opacity:.72;
 }
 
 /* ======================================================
@@ -844,9 +942,9 @@ TABLET
         min-height:auto;
 
         padding:
-        140px
+        150px
         0
-        70px;
+        90px;
     }
 
     .buttons{
@@ -861,45 +959,22 @@ TABLET
         min-width:auto;
     }
 
-    .gastronomia-grid{
-
-        grid-template-columns:1fr;
-    }
-
+    .gastronomia-grid,
     .experience-grid{
 
         grid-template-columns:1fr;
     }
 
-    .card img{
-
-        height:220px;
-    }
-
-    .esmorzars-card img{
-
-        height:220px;
-
-        object-position:center 40%;
-    }
-
+    .card img,
+    .esmorzars-card img,
     .romantic-card img{
 
-        height:220px;
-
-        object-position:center 36%;
+        height:240px;
     }
 
-    .bodega-banner-index{
+    .footer-inner{
 
-        min-height:180px;
-    }
-
-    .reserva-final{
-
-        padding:
-        4rem
-        0;
+        flex-direction:column;
     }
 }
 
@@ -911,7 +986,7 @@ MOBILE
 
     .navbar{
 
-        padding:18px 0;
+        padding:20px 0;
     }
 
     .nav-inner{
@@ -923,11 +998,11 @@ MOBILE
 
     .nav-links{
 
-        gap:12px;
-
         flex-wrap:wrap;
 
         justify-content:center;
+
+        gap:12px;
     }
 
     .nav-links a{
@@ -935,19 +1010,12 @@ MOBILE
         font-size:.62rem;
     }
 
-    .nav-links a.reserva-link{
-
-        padding:
-        .5rem
-        .9rem;
-    }
-
     .hero{
 
         padding:
-        130px
+        135px
         0
-        60px;
+        70px;
     }
 
     h1{
@@ -970,31 +1038,24 @@ MOBILE
         font-size:.98rem;
     }
 
-    .gastronomia-section{
+    .gastronomia-section,
+    .experiencias-manyosa{
 
         padding:
-        2rem
-        0
-        3rem;
+        72px
+        0;
     }
 
-    .card img{
+    .section-intro{
 
-        height:190px;
+        margin-bottom:2rem;
     }
 
-    .esmorzars-card img{
-
-        height:190px;
-
-        object-position:center 50%;
-    }
-
+    .card img,
+    .esmorzars-card img,
     .romantic-card img{
 
-        height:190px;
-
-        object-position:center 56%;
+        height:200px;
     }
 
     .card-content,
@@ -1003,40 +1064,25 @@ MOBILE
         padding:
         1.3rem
         1.2rem
-        1.4rem;
+        1.5rem;
     }
 
     .bodega-banner-index{
 
-        min-height:150px;
+        min-height:180px;
     }
 
     .bodega-content{
 
         padding:
-        1.2rem
-        1rem;
-    }
-
-    .bodega-content h2{
-
-        max-width:180px;
-
-        font-size:1.9rem;
-    }
-
-    .experiencias-manyosa{
-
-        padding:
-        3rem
-        0
-        4rem;
+        1.4rem
+        1.2rem;
     }
 
     .reserva-final{
 
         padding:
-        3.5rem
+        5rem
         0;
     }
 
@@ -1045,5 +1091,12 @@ MOBILE
         width:100%;
 
         min-width:auto;
+    }
+
+    .footer{
+
+        padding:
+        3rem
+        0;
     }
 }
