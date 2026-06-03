@@ -26,27 +26,7 @@ HERO
 
 <section class="esmorzars-hero">
 
-    <div class="hero-overlay"></div>
-
-    <img
-        src="../assets/img/ESMORZARS/esmorzars-de-forquilla-fortaleza-medieval.webp"
-        alt="Esmorzars de Forquilla en Fortaleza Medieval La Manyosa"
-        class="hero-image"
-    >
-
     <header class="hero-header">
-
-        <a href="../index.html" class="hero-brand">
-
-            <span class="brand-title">
-                LA MANYOSA
-            </span>
-
-            <span class="brand-subtitle">
-                FORTALEZA GASTRONÓMICA MEDIEVAL
-            </span>
-
-        </a>
 
         <a href="../index.html" class="back-link">
             ← REGRESAR AL INICIO
@@ -57,7 +37,7 @@ HERO
     <div class="hero-content">
 
         <div class="hero-symbol">
-            ✦
+            <i data-lucide="utensils-crossed"></i>
         </div>
 
         <h1>
@@ -76,6 +56,30 @@ HERO
 
     </div>
 
+    <!-- ======================================================
+    WAVE TRANSITION
+    ====================================================== -->
+
+    <div class="hero-wave-transition">
+
+        <svg
+            class="hero-wave"
+            viewBox="0 0 1440 260"
+            preserveAspectRatio="none"
+        >
+            <path d="
+                M0,70
+                C120,180 310,20 480,90
+                C650,160 820,30 980,100
+                C1150,170 1290,80 1440,130
+                L1440,260
+                L0,260
+                Z">
+            </path>
+        </svg>
+
+    </div>
+
 </section>
 
 <!-- ======================================================
@@ -89,8 +93,6 @@ MENU
         <!-- LEFT -->
 
         <div class="menu-column">
-
-            <!-- BACALAO -->
 
             <article class="menu-item">
 
@@ -125,8 +127,6 @@ MENU
 
             </article>
 
-            <!-- BUTIFARRA -->
-
             <article class="menu-item">
 
                 <img
@@ -159,8 +159,6 @@ MENU
                 </div>
 
             </article>
-
-            <!-- GALTES -->
 
             <article class="menu-item">
 
@@ -195,8 +193,6 @@ MENU
 
             </article>
 
-            <!-- PEUS DE PORC -->
-
             <article class="menu-item">
 
                 <img
@@ -229,8 +225,6 @@ MENU
                 </div>
 
             </article>
-
-            <!-- CALLOS -->
 
             <article class="menu-item">
 
@@ -271,8 +265,6 @@ MENU
 
         <div class="menu-column">
 
-            <!-- HUEVOS -->
-
             <article class="menu-item">
 
                 <img
@@ -305,8 +297,6 @@ MENU
                 </div>
 
             </article>
-
-            <!-- HAMBURGUESA -->
 
             <article class="menu-item">
 
@@ -341,8 +331,6 @@ MENU
 
             </article>
 
-            <!-- ENSALADA VERDE -->
-
             <article class="menu-item">
 
                 <img
@@ -376,8 +364,6 @@ MENU
 
             </article>
 
-            <!-- ENSALADA FRUTOS SECOS -->
-
             <article class="menu-item">
 
                 <img
@@ -410,8 +396,6 @@ MENU
                 </div>
 
             </article>
-
-            <!-- ALBONDIGAS -->
 
             <article class="menu-item">
 
@@ -453,81 +437,99 @@ MENU
 </section>
 
 <!-- ======================================================
-BOTTOM
+EDITORIAL BOTTOM
 ====================================================== -->
 
-<section class="esmorzars-bottom">
+<section class="editorial-bottom">
 
-    <div class="bottom-item">
+    <!-- PAN -->
 
-        <img
-            src="../assets/img/ESMORZARS/pan-pages-rustico.webp"
-            alt="Pan de payés"
-        >
+    <article class="editorial-card editorial-pan">
 
-        <div>
+        <div class="editorial-card-image"></div>
+
+        <div class="editorial-card-content">
+
+            <p class="editorial-card-kicker">
+                Tradición Manyosa
+            </p>
 
             <h3>
                 Pan de payés
             </h3>
 
+            <div class="editorial-card-divider"></div>
+
             <p>
-                Pan tradicional recién cortado.
+                Pan tradicional recién cortado,
+                servido caliente junto al fuego.
             </p>
+
+            <span>
+                1,10€
+            </span>
 
         </div>
 
-        <span>
-            1,10€
-        </span>
+    </article>
 
-    </div>
+    <!-- ALLIOLI -->
 
-    <div class="bottom-item">
+    <article class="editorial-card editorial-allioli">
 
-        <img
-            src="../assets/img/ESMORZARS/allioli-casero.webp"
-            alt="Allioli casero"
-        >
+        <div class="editorial-card-image"></div>
 
-        <div>
+        <div class="editorial-card-content">
+
+            <p class="editorial-card-kicker">
+                Cocina lenta
+            </p>
 
             <h3>
                 Allioli casero
             </h3>
 
+            <div class="editorial-card-divider"></div>
+
             <p>
-                Elaborado de manera tradicional.
+                Elaborado artesanalmente
+                con mortero y aceite.
             </p>
+
+            <span>
+                1,10€
+            </span>
 
         </div>
 
-        <span>
-            1,10€
-        </span>
+    </article>
 
-    </div>
+    <!-- VINO -->
 
-    <div class="bottom-item">
+    <article class="editorial-card editorial-vino">
 
-        <img
-            src="../assets/img/ESMORZARS/vino-casa-medieval.webp"
-            alt="Vino de la casa"
-        >
+        <div class="editorial-card-image"></div>
 
-        <div>
+        <div class="editorial-card-content">
+
+            <p class="editorial-card-kicker">
+                Fortaleza Medieval
+            </p>
 
             <h3>
                 Vino de la casa
             </h3>
 
+            <div class="editorial-card-divider"></div>
+
             <p>
-                Consulta nuestra selección de vinos y cavas.
+                Selección de vinos y cavas
+                para acompañar la experiencia.
             </p>
 
         </div>
 
-    </div>
+    </article>
 
 </section>
 

@@ -1,30 +1,54 @@
 /* ======================================================
-BASE
+RESET
 ====================================================== */
 
-body{
-
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
 
     background:#0E0B09;
 
     color:#F3EBDD;
 
-    font-family:Georgia, serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+    overflow-x:hidden;
 
     -webkit-font-smoothing:antialiased;
 }
 
-*{
-
-    box-sizing:border-box;
-}
-
 img{
 
-    max-width:100%;
+    width:100%;
 
     display:block;
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+/* ======================================================
+BASE
+====================================================== */
+
+.esmorzars-page{
+
+    width:100%;
 }
 
 /* ======================================================
@@ -35,50 +59,29 @@ HERO
 
     position:relative;
 
-    min-height:920px;
-
-    overflow:hidden;
+    min-height:82vh;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:space-between;
-}
+    justify-content:flex-start;
 
-.hero-image{
+    overflow:hidden;
 
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center center;
-
-    z-index:1;
-
-    transform:scale(1.02);
-}
-
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    z-index:2;
-
-    background:
+    background-image:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.74),
-            rgba(0,0,0,.38)
-        );
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.32)
+        ),
+        url("../assets/img/ESMORZARS/esmorzars-de-forquilla-fortaleza-medieval.webp");
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    background-size:cover;
 }
 
 /* ======================================================
@@ -93,47 +96,17 @@ HEADER
 
     display:flex;
 
-    justify-content:space-between;
+    justify-content:flex-start;
 
-    align-items:flex-start;
+    align-items:center;
 
     padding:
-        34px
-        48px;
-}
-
-.hero-brand{
-
-    text-decoration:none;
-
-    color:#E9DCC6;
-}
-
-.brand-title{
-
-    display:block;
-
-    font-size:2rem;
-
-    letter-spacing:.08em;
-}
-
-.brand-subtitle{
-
-    display:block;
-
-    margin-top:6px;
-
-    font-size:.72rem;
-
-    letter-spacing:.24em;
-
-    opacity:.72;
+        56px
+        48px
+        0;
 }
 
 .back-link{
-
-    text-decoration:none;
 
     color:#E9DCC6;
 
@@ -161,46 +134,85 @@ HERO CONTENT
 
     z-index:3;
 
-    max-width:760px;
+    width:100%;
+
+    max-width:1100px;
+
+    margin-left:auto;
+
+    margin-right:auto;
 
     padding:
-        0
+        2.6rem
         48px
-        120px;
+        8rem;
+}
+
+.hero-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-40px -20px -30px -20px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.34),
+            rgba(0,0,0,.22)
+        );
+
+    filter:blur(24px);
+
+    z-index:-1;
 }
 
 .hero-symbol{
 
-    margin-bottom:26px;
+    margin-bottom:24px;
+}
 
-    font-size:1.8rem;
+.hero-symbol svg{
 
-    color:#D6B58A;
+    width:30px;
+
+    height:30px;
+
+    stroke:#D6B58A;
+
+    stroke-width:1.7;
 }
 
 .hero-content h1{
 
     margin:0;
 
-    font-size:7rem;
+    font-size:
+        clamp(3.8rem,9vw,5.8rem);
 
     line-height:.88;
 
-    letter-spacing:-0.06em;
+    letter-spacing:-.07em;
+
+    font-weight:400;
 
     color:#F3EBDD;
+
+    text-shadow:
+        0 10px 30px rgba(0,0,0,.34);
 }
 
 .hero-claim{
 
     margin:
-        38px
+        30px
         0
-        24px;
+        22px;
 
-    font-size:1.1rem;
+    font-size:.84rem;
 
-    letter-spacing:.18em;
+    letter-spacing:.22em;
 
     text-transform:uppercase;
 
@@ -213,11 +225,52 @@ HERO CONTENT
 
     margin:0;
 
-    font-size:1.18rem;
+    font-size:1.05rem;
 
     line-height:1.9;
 
-    color:#E5DDD3;
+    color:
+        rgba(243,235,221,.92);
+
+    text-shadow:
+        0 4px 18px rgba(0,0,0,.38);
+}
+
+/* ======================================================
+WAVE TRANSITION
+====================================================== */
+
+.hero-wave-transition{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-2px;
+
+    width:100%;
+
+    line-height:0;
+
+    z-index:3;
+
+    pointer-events:none;
+
+    overflow:hidden;
+}
+
+.hero-wave{
+
+    display:block;
+
+    width:100%;
+
+    height:140px;
+}
+
+.hero-wave path{
+
+    fill:#F3EBDD;
 }
 
 /* ======================================================
@@ -236,24 +289,6 @@ MENU
         90px
         48px
         70px;
-}
-
-.esmorzars-menu::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-1px;
-
-    left:0;
-
-    width:100%;
-
-    height:120px;
-
-    background:url("../assets/img/paper-divider-top.webp")
-    center top/cover no-repeat;
 }
 
 .menu-container{
@@ -285,7 +320,7 @@ MENU
 }
 
 /* ======================================================
-ITEM
+MENU ITEM
 ====================================================== */
 
 .menu-item{
@@ -317,12 +352,12 @@ ITEM
 
     object-position:center center;
 
+    border-radius:18px;
+
     filter:
         contrast(1.03)
         saturate(.96)
         brightness(.96);
-
-    border-radius:18px;
 
     box-shadow:
         0 18px 40px
@@ -412,93 +447,231 @@ ITEM
 }
 
 /* ======================================================
-BOTTOM
+EDITORIAL BOTTOM
 ====================================================== */
 
-.esmorzars-bottom{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
+.editorial-bottom{
 
     background:#F3EBDD;
 
-    border-top:
-        1px solid
-        rgba(110,15,31,.12);
+    padding:
+        10px
+        48px
+        70px;
 
-    border-bottom:
-        1px solid
-        rgba(110,15,31,.12);
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
 }
 
-.bottom-item{
+.editorial-card{
 
-    display:grid;
+    position:relative;
 
-    grid-template-columns:
-        auto
-        1fr
-        auto;
+    overflow:hidden;
 
-    gap:18px;
+    min-height:220px;
 
-    align-items:center;
+    border-radius:28px;
+
+    background:#F3EBDD;
+
+    border:
+        1px solid
+        rgba(110,15,31,.10);
+
+    box-shadow:
+        0 18px 44px
+        rgba(0,0,0,.06);
+}
+
+.editorial-card-image{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center center;
+
+    z-index:1;
+
+    filter:
+        contrast(1.02)
+        saturate(.92)
+        brightness(.92);
+}
+
+/* ======================================================
+IMAGES
+====================================================== */
+
+.editorial-pan .editorial-card-image{
+
+    background-image:
+    url("../assets/img/ESMORZARS/pan-pages-rustico.webp");
+}
+
+.editorial-allioli .editorial-card-image{
+
+    background-image:
+    url("../assets/img/ESMORZARS/allioli-casero.webp");
+}
+
+.editorial-vino .editorial-card-image{
+
+    background-image:
+    url("../assets/img/ESMORZARS/vino-casa-medieval.webp");
+}
+
+/* ======================================================
+ATMOSPHERIC OVERLAY
+====================================================== */
+
+.editorial-card-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:3;
+
+    background:
+        linear-gradient(
+            to right,
+
+            #F3EBDD 0%,
+
+            rgba(243,235,221,.998) 8%,
+
+            rgba(243,235,221,.992) 16%,
+
+            rgba(243,235,221,.975) 26%,
+
+            rgba(243,235,221,.93) 38%,
+
+            rgba(243,235,221,.82) 50%,
+
+            rgba(243,235,221,.62) 64%,
+
+            rgba(243,235,221,.34) 80%,
+
+            rgba(243,235,221,.08) 92%,
+
+            rgba(243,235,221,0) 100%
+        );
+
+    filter:blur(52px);
+
+    transform:scaleX(1.28);
+}
+
+.editorial-card-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,0) 42%,
+            rgba(0,0,0,.18) 100%
+        );
+
+    z-index:2;
+}
+
+/* ======================================================
+CONTENT
+====================================================== */
+
+.editorial-card-content{
+
+    position:relative;
+
+    z-index:4;
+
+    width:36%;
 
     padding:
         38px
-        34px;
+        40px;
 
-    border-right:
-        1px solid
-        rgba(110,15,31,.12);
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
 }
 
-.bottom-item:last-child{
+.editorial-card-kicker{
 
-    border-right:none;
+    margin-bottom:12px;
+
+    font-size:.68rem;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+    color:#A67B4F;
 }
 
-.bottom-item svg{
+.editorial-card h3{
 
-    width:34px;
+    font-size:2.9rem;
 
-    height:34px;
+    line-height:.9;
 
-    stroke:#A77B50;
+    letter-spacing:-.05em;
 
-    stroke-width:1.5;
-}
-
-.bottom-item h3{
-
-    margin:
-        0
-        0
-        8px;
-
-    font-size:1.5rem;
+    font-weight:500;
 
     color:#241B17;
 }
 
-.bottom-item p{
+.editorial-card-divider{
 
-    margin:0;
+    width:80px;
+
+    height:1px;
+
+    margin:
+        18px
+        0;
+
+    background:
+        linear-gradient(
+            to right,
+            #B68C5A,
+            transparent
+        );
+}
+
+.editorial-card p{
+
+    max-width:320px;
 
     font-size:.98rem;
 
-    line-height:1.7;
+    line-height:1.8;
 
     color:#5C544C;
 }
 
-.bottom-item span{
+.editorial-card span{
 
-    white-space:nowrap;
+    margin-top:20px;
 
-    font-size:1.5rem;
+    font-size:1.7rem;
 
     color:#241B17;
 }
@@ -596,11 +769,6 @@ TABLET
 
 @media(max-width:1100px){
 
-    .hero-content h1{
-
-        font-size:5.6rem;
-    }
-
     .menu-container{
 
         grid-template-columns:1fr;
@@ -612,25 +780,6 @@ TABLET
             1fr
             1fr;
     }
-
-    .esmorzars-bottom{
-
-        grid-template-columns:1fr;
-    }
-
-    .bottom-item{
-
-        border-right:none;
-
-        border-bottom:
-            1px solid
-            rgba(110,15,31,.12);
-    }
-
-    .bottom-item:last-child{
-
-        border-bottom:none;
-    }
 }
 
 /* ======================================================
@@ -641,186 +790,277 @@ MOBILE
 
     .esmorzars-hero{
 
-        min-height:760px;
+        min-height:560px;
     }
 
     .hero-header{
 
         padding:
-            26px
-            22px;
-    }
-
-    .brand-title{
-
-        font-size:1.4rem;
-    }
-
-    .brand-subtitle{
-
-        font-size:.58rem;
-
-        letter-spacing:.18em;
-    }
-
-    .back-link{
-
-        display:none;
+            32px
+            22px
+            0;
     }
 
     .hero-content{
 
         padding:
-            0
+            5.8rem
             22px
-            80px;
-    }
-
-    .hero-symbol{
-
-        margin-bottom:20px;
+            2.8rem;
     }
 
     .hero-content h1{
 
-        font-size:3.8rem;
-
-        line-height:.9;
+        font-size:2.8rem;
     }
 
     .hero-claim{
 
         margin:
-            26px
+            16px
             0
-            20px;
+            12px;
 
-        font-size:.78rem;
+        font-size:.64rem;
 
-        line-height:1.7;
+        letter-spacing:.16em;
     }
 
     .hero-text{
 
-        font-size:1rem;
+        max-width:290px;
 
-        line-height:1.9;
+        font-size:.92rem;
+
+        line-height:1.7;
     }
+
+    .hero-wave{
+
+        height:55px;
+    }
+
+    /* MENU */
 
     .esmorzars-menu{
 
         padding:
-            60px
-            22px
-            40px;
-    }
-
-    .esmorzars-menu::before{
-
-        height:50px;
+            34px
+            18px
+            30px;
     }
 
     .menu-container{
 
-        gap:20px;
+        grid-template-columns:1fr;
+
+        gap:8px;
     }
 
     .menu-column{
 
-        gap:22px;
+        gap:8px;
     }
 
     .menu-item{
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+            110px
+            1fr;
 
-        gap:18px;
+        gap:14px;
 
-        padding-bottom:24px;
+        padding:12px;
+
+        border:none;
+
+        border-radius:16px;
+
+        background:#F7F0E4;
+
+        box-shadow:
+            0 8px 24px
+            rgba(0,0,0,.06);
     }
 
     .menu-item img{
 
-        width:100%;
+        width:110px;
 
-        border-radius:16px;
+        height:110px;
+
+        border-radius:12px;
     }
 
     .menu-info{
 
-        grid-template-columns:
-            auto
-            1fr;
+        display:flex;
 
-        gap:14px;
+        flex-direction:column;
+
+        gap:4px;
     }
 
-    .menu-price{
+    .menu-icon svg{
 
-        grid-column:
-            2
-            / 3;
+        width:15px;
 
-        padding-top:0;
-
-        font-size:1.5rem;
+        height:15px;
     }
 
     .menu-text h2{
 
-        font-size:1.7rem;
+        font-size:1.08rem;
 
-        line-height:1.08;
+        margin:0;
     }
 
     .menu-text p{
 
-        font-size:.98rem;
+        font-size:.82rem;
 
-        line-height:1.8;
+        line-height:1.4;
     }
 
-    .bottom-item{
+    .menu-price{
 
-        grid-template-columns:
-            auto
-            1fr;
+        margin-top:4px;
 
-        gap:14px;
+        padding-top:0;
+
+        font-size:1rem;
+    }
+
+    /* EDITORIAL */
+
+    .editorial-bottom{
 
         padding:
-            28px
+            0
+            18px
+            40px;
+
+        gap:18px;
+    }
+
+    .editorial-card{
+
+        min-height:205px;
+
+        border-radius:22px;
+    }
+
+    .editorial-card-content{
+
+        width:100%;
+
+        padding:
+            24px
             22px;
     }
 
-    .bottom-item span{
+    .editorial-card-image::before{
 
-        grid-column:
-            2
-            / 3;
+        background:
+            linear-gradient(
+                to right,
 
-        font-size:1.2rem;
+                #F3EBDD 0%,
+
+                rgba(243,235,221,.998) 12%,
+
+                rgba(243,235,221,.988) 24%,
+
+                rgba(243,235,221,.94) 40%,
+
+                rgba(243,235,221,.74) 58%,
+
+                rgba(243,235,221,.42) 76%,
+
+                rgba(243,235,221,.12) 90%,
+
+                rgba(243,235,221,0) 100%
+            );
+
+        filter:blur(22px);
+
+        transform:scaleX(1.12);
     }
+
+    .editorial-card h3{
+
+        font-size:2.3rem;
+    }
+
+    .editorial-card-divider{
+
+        margin:
+            14px
+            0;
+    }
+
+    .editorial-card p{
+
+        max-width:220px;
+
+        font-size:.9rem;
+
+        line-height:1.6;
+    }
+
+    .editorial-card span{
+
+        margin-top:14px;
+
+        font-size:1.5rem;
+    }
+
+    /* RITUAL */
 
     .ritual-section{
 
         padding:
-            50px
-            22px
-            70px;
+            34px
+            18px
+            50px;
     }
 
     .ritual-grid{
 
         grid-template-columns:1fr;
 
-        gap:20px;
+        gap:12px;
     }
 
     .ritual-item{
 
         padding:
-            28px
-            22px;
+            20px
+            18px;
+
+        border-radius:16px;
+    }
+
+    .ritual-item svg{
+
+        width:24px;
+
+        height:24px;
+
+        margin-bottom:12px;
+    }
+
+    .ritual-item h3{
+
+        margin-bottom:6px;
+
+        font-size:1.05rem;
+    }
+
+    .ritual-item p{
+
+        font-size:.84rem;
+
+        line-height:1.6;
     }
 }
