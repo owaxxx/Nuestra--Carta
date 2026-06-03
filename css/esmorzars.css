@@ -472,7 +472,7 @@ EDITORIAL BOTTOM
 
     overflow:hidden;
 
-    min-height:220px;
+    height:240px;
 
     border-radius:28px;
 
@@ -547,28 +547,22 @@ ATMOSPHERIC OVERLAY
 
             #F3EBDD 0%,
 
-            rgba(243,235,221,.998) 8%,
+            rgba(243,235,221,.995) 10%,
 
-            rgba(243,235,221,.992) 16%,
+            rgba(243,235,221,.96) 20%,
 
-            rgba(243,235,221,.975) 26%,
+            rgba(243,235,221,.82) 32%,
 
-            rgba(243,235,221,.93) 38%,
+            rgba(243,235,221,.52) 42%,
 
-            rgba(243,235,221,.82) 50%,
+            rgba(243,235,221,.18) 50%,
 
-            rgba(243,235,221,.62) 64%,
-
-            rgba(243,235,221,.34) 80%,
-
-            rgba(243,235,221,.08) 92%,
-
-            rgba(243,235,221,0) 100%
+            rgba(243,235,221,0) 58%
         );
 
-    filter:blur(52px);
+    filter:blur(26px);
 
-    transform:scaleX(1.28);
+    transform:scaleX(1.02);
 }
 
 .editorial-card-image::after{
@@ -599,22 +593,22 @@ CONTENT
 
     z-index:4;
 
-    width:36%;
+    width:38%;
 
     padding:
-        38px
-        40px;
+        30px
+        42px;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
+    justify-content:flex-start;
 }
 
 .editorial-card-kicker{
 
-    margin-bottom:12px;
+    margin-bottom:8px;
 
     font-size:.68rem;
 
@@ -627,9 +621,9 @@ CONTENT
 
 .editorial-card h3{
 
-    font-size:2.9rem;
+    font-size:2.8rem;
 
-    line-height:.9;
+    line-height:.92;
 
     letter-spacing:-.05em;
 
@@ -645,7 +639,7 @@ CONTENT
     height:1px;
 
     margin:
-        18px
+        14px
         0;
 
     background:
@@ -658,20 +652,24 @@ CONTENT
 
 .editorial-card p{
 
+    margin-top:0;
+
     max-width:320px;
 
-    font-size:.98rem;
+    font-size:1rem;
 
-    line-height:1.8;
+    line-height:1.55;
 
     color:#5C544C;
 }
 
 .editorial-card span{
 
-    margin-top:20px;
+    margin-top:18px;
 
-    font-size:1.7rem;
+    font-size:1.6rem;
+
+    line-height:1;
 
     color:#241B17;
 }
@@ -779,6 +777,11 @@ TABLET
         grid-template-columns:
             1fr
             1fr;
+    }
+
+    .editorial-card-content{
+
+        width:48%;
     }
 }
 
@@ -940,79 +943,71 @@ MOBILE
             18px
             40px;
 
-        gap:18px;
+        gap:14px;
     }
 
     .editorial-card{
 
-        min-height:205px;
+        height:150px;
 
         border-radius:22px;
     }
 
     .editorial-card-content{
 
-        width:100%;
+        width:58%;
 
         padding:
-            24px
-            22px;
+            18px
+            20px;
+
+        justify-content:flex-start;
     }
 
-    .editorial-card-image::before{
+    .editorial-card-kicker{
 
-        background:
-            linear-gradient(
-                to right,
+        margin-bottom:4px;
 
-                #F3EBDD 0%,
+        font-size:.58rem;
 
-                rgba(243,235,221,.998) 12%,
-
-                rgba(243,235,221,.988) 24%,
-
-                rgba(243,235,221,.94) 40%,
-
-                rgba(243,235,221,.74) 58%,
-
-                rgba(243,235,221,.42) 76%,
-
-                rgba(243,235,221,.12) 90%,
-
-                rgba(243,235,221,0) 100%
-            );
-
-        filter:blur(22px);
-
-        transform:scaleX(1.12);
+        letter-spacing:.22em;
     }
 
     .editorial-card h3{
 
-        font-size:2.3rem;
+        font-size:1.55rem;
+
+        line-height:.92;
     }
 
     .editorial-card-divider{
 
+        width:48px;
+
         margin:
-            14px
+            8px
             0;
     }
 
     .editorial-card p{
 
-        max-width:220px;
+        max-width:185px;
 
-        font-size:.9rem;
+        font-size:.78rem;
 
-        line-height:1.6;
+        line-height:1.4;
     }
 
     .editorial-card span{
 
-        margin-top:14px;
+        margin-top:10px;
 
-        font-size:1.5rem;
+        font-size:1.15rem;
+    }
+
+    .editorial-card-image::before{
+
+        filter:blur(18px);
     }
 
     /* RITUAL */
