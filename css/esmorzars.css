@@ -975,9 +975,7 @@ MOBILE
 
     .editorial-vino{
 
-        height:auto;
-
-        min-height:240px;
+        height:220px;
     }
 
     /* PAN + ALLIOLI */
@@ -1129,7 +1127,7 @@ MOBILE
 
     .editorial-vino .editorial-card-content{
 
-        width:78%;
+        width:72%;
     }
 
 }
