@@ -518,7 +518,7 @@ IMAGES
 .editorial-allioli .editorial-card-image{
 
     background-image:
-    url("../assets/img/ESMORZARS/allioli-casero.webp");
+    url("../assets/img/ESMORZARS/allioli.webp");
 }
 
 .editorial-vino .editorial-card-image{
@@ -1386,5 +1386,220 @@ FIX MOBILE BACK LINK
         width:30px;
 
         height:30px;
+    }
+}
+
+
+/* ======================================================
+RITUAL MOBILE COMPACT
+====================================================== */
+
+@media(max-width:640px){
+
+    .ritual-section{
+
+        padding:40px 18px 50px;
+    }
+
+    .ritual-grid{
+
+        gap:12px;
+    }
+
+    .ritual-item{
+
+        padding:18px 14px;
+    }
+
+    .ritual-item svg{
+
+        width:24px;
+
+        height:24px;
+
+        margin-bottom:10px;
+    }
+
+    .ritual-item h3{
+
+        margin:0;
+
+        font-size:1rem;
+
+        line-height:1.2;
+    }
+
+    .ritual-item p{
+
+        display:none;
+    }
+}
+
+
+/* ======================================================
+EPILOGO MANYOSA
+====================================================== */
+
+.esmorzars-epilogo{
+
+    position:relative;
+
+    min-height:520px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(8,6,5,.28),
+            rgba(8,6,5,.58)
+        ),
+        url("../assets/img/ESMORZARS/castillo esmorzars de forquilla con sello.webp");
+
+    background-size:cover;
+
+    background-position:center center;
+}
+
+.esmorzars-epilogo::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(214,181,138,.04),
+            transparent 70%
+        );
+}
+
+.epilogo-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+    padding:40px 24px;
+}
+
+.epilogo-kicker{
+
+    display:block;
+
+    margin-bottom:16px;
+
+    color:#D6B58A;
+
+    font-size:.72rem;
+
+    letter-spacing:.30em;
+
+    text-transform:uppercase;
+}
+
+.epilogo-content h2{
+
+    margin:0;
+
+    color:#F3EBDD;
+
+    font-size:clamp(3rem,7vw,5.5rem);
+
+    line-height:.9;
+
+    letter-spacing:-.06em;
+}
+
+.epilogo-content p{
+
+    margin:24px auto 0;
+
+    max-width:460px;
+
+    color:rgba(243,235,221,.88);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+}
+
+.epilogo-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:34px;
+
+    flex-wrap:wrap;
+}
+
+.epilogo-btn{
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    background:#6E0F1F;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:.75rem;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+}
+
+.epilogo-btn-secondary{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.14);
+}
+
+@media(max-width:640px){
+
+    .esmorzars-epilogo{
+
+        min-height:420px;
+    }
+
+    .epilogo-content h2{
+
+        font-size:3.2rem;
+    }
+
+    .epilogo-content p{
+
+        font-size:.95rem;
+    }
+
+    .epilogo-actions{
+
+        flex-direction:column;
+    }
+
+    .epilogo-btn{
+
+        width:100%;
     }
 }
