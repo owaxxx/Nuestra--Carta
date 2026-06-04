@@ -28,7 +28,7 @@ HERO
 
     <header class="hero-header">
 
-        <a href="../index.html" class="back-link">
+        <a href="../index.html" class="back-link" onclick="window.location.href='../index.html'; return false;">
             ← REGRESAR AL INICIO
         </a>
 
@@ -442,6 +442,61 @@ EDITORIAL BOTTOM
 
 <section class="editorial-bottom">
 
+    <!-- VINO -->
+
+    <details class="editorial-card editorial-vino">
+
+        <summary class="vino-summary">
+
+            <div class="editorial-card-image"></div>
+
+            <div class="editorial-card-content">
+
+                <p class="editorial-card-kicker">
+                    BODEGA DE LA FORTALEZA
+                </p>
+
+                <h3>
+                    La Bodega
+                </h3>
+
+                <div class="editorial-card-divider"></div>
+
+                <p>
+                    Tintos, blancos y cavas seleccionados para acompañar nuestras brasas.
+                </p>
+
+                <span class="vino-link">
+                    Ver selección ↓
+                </span>
+
+            </div>
+
+        </summary>
+
+        <div class="vino-content">
+
+            <h4>Vino de la casa · 7,50€</h4>
+
+            <h4>Tintos</h4>
+            <div>Abadía Mantrús Crianza <span>11,50€</span></div>
+            <div>Llanto de Uva Reserva <span>13,50€</span></div>
+            <div>Viña Albina Reserva <span>15,50€</span></div>
+
+            <h4>Blancos</h4>
+            <div>Goleta Azul Verdejo <span>11,50€</span></div>
+            <div>Viña Esmeralda <span>15,50€</span></div>
+
+            <h4>Cavas y rosados</h4>
+            <div>Mateus <span>11,50€</span></div>
+            <div>Codorníu Brut Nature <span>12,50€</span></div>
+            <div>Conde de Caralt <span>13,50€</span></div>
+            <div>Llàgrima d'Or Brut Nature <span>16,50€</span></div>
+
+        </div>
+
+    </details>
+
     <!-- PAN -->
 
     <article class="editorial-card editorial-pan">
@@ -461,8 +516,7 @@ EDITORIAL BOTTOM
             <div class="editorial-card-divider"></div>
 
             <p>
-                Pan tradicional,<br>
-                recién cortado.
+                Pan tradicional recién cortado.
             </p>
 
             <span>
@@ -482,54 +536,78 @@ EDITORIAL BOTTOM
         <div class="editorial-card-content">
 
             <p class="editorial-card-kicker">
-                Cocina lenta
+                Acompañamiento
             </p>
 
             <h3>
-                Allioli casero
+                Allioli
             </h3>
 
             <div class="editorial-card-divider"></div>
 
             <p>
-                Elaborado artesanalmente
-                con mortero y aceite.
-            </p>
-
-            <span>
-                1,10€
-            </span>
-
-        </div>
-
-    </article>
-
-    <!-- VINO -->
-
-    <article class="editorial-card editorial-vino">
-
-        <div class="editorial-card-image"></div>
-
-        <div class="editorial-card-content">
-
-            <p class="editorial-card-kicker">
-                Fortaleza Medieval
-            </p>
-
-            <h3>
-                Vino de la casa
-            </h3>
-
-            <div class="editorial-card-divider"></div>
-
-            <p>
-                Selección de vinos y cavas
-                para acompañar la experiencia.
+                Servido con el pan de payés.
             </p>
 
         </div>
 
     </article>
+
+
+    <!-- BEBIDAS -->
+
+    <details class="accordion-card bebidas-card">
+
+        <summary>Otras bebidas</summary>
+
+        <div class="accordion-content">
+
+            <div>Agua mineral <span>2,00€</span></div>
+            <div>Refrescos <span>2,75€</span></div>
+            <div>Cervezas (con y sin alcohol) <span>2,90€</span></div>
+            <div>Cerveza Voll-Damm <span>3,50€</span></div>
+            <div>Vermut blanco o rojo <span>4,50€</span></div>
+            <div>Cafés e infusiones <span>2,00€</span></div>
+            <div>Carajillos, trifásicos u orujo <span>2,75€</span></div>
+            <div>Combinados y licores <span>7,50€</span></div>
+
+        </div>
+
+    </details>
+
+    <!-- POSTRES -->
+
+    <details class="accordion-card postres-card">
+
+        <summary>Postres</summary>
+
+        <div class="accordion-content">
+
+            <p class="postre-intro">Crema Catalana, café y sobremesa. El final clásico de un esmorzar sin prisa.</p>
+
+            <div>Coulant con helado y nata <span>6,50€</span></div>
+            <div>Gelato italiano <span>5,95€</span></div>
+
+            <ul>
+                <li>Pistacho natural</li>
+                <li>Chocolate</li>
+                <li>Tiramisú</li>
+                <li>Fresa o vainilla</li>
+                <li>Leche merengada</li>
+            </ul>
+
+            <div>Crema Catalana <span>4,50€</span></div>
+            <div>Tarta de queso con arándanos <span>5,50€</span></div>
+            <div>Tarta al whisky <span>5,50€</span></div>
+            <div>Trufas de chocolate con nata <span>5,50€</span></div>
+            <div>Sorbete de limón <span>5,50€</span></div>
+            <div>Flan casero <span>4,50€</span></div>
+            <div>Frutas de temporada <span>3,50€</span></div>
+
+        </div>
+
+    </details>
+
 
 </section>
 

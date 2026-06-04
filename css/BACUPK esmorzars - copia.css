@@ -175,9 +175,9 @@ HERO CONTENT
 
 .hero-symbol svg{
 
-    width:42px;
+    width:30px;
 
-    height:42px;
+    height:30px;
 
     stroke:#D6B58A;
 
@@ -776,16 +776,6 @@ VINO DESTACADO
         0 24px 50px rgba(0,0,0,.12);
 }
 
-
-/* CTA BODEGA */
-
-.editorial-vino{
-
-    border:2px solid rgba(110,15,31,.18);
-}
-
-
-
 /* ======================================================
 TABLET
 ====================================================== */
@@ -975,7 +965,7 @@ MOBILE
 
     .editorial-vino{
 
-        height:180px;
+        height:150px;
     }
 
     /* PAN + ALLIOLI */
@@ -983,7 +973,7 @@ MOBILE
     .editorial-pan,
     .editorial-allioli{
 
-        height:80px;
+        height:95px;
     }
 
     .editorial-card{
@@ -1040,7 +1030,7 @@ MOBILE
 
     .editorial-card span{
 
-        margin-top:18px;
+        margin-top:10px;
 
         font-size:1.15rem;
     }
@@ -1052,24 +1042,12 @@ MOBILE
     .editorial-allioli .editorial-card-kicker,
 
     .editorial-pan p,
+    .editorial-allioli p,
 
     .editorial-pan .editorial-card-divider,
     .editorial-allioli .editorial-card-divider{
 
         display:none;
-    }
-
-    .editorial-allioli p{
-
-        display:block;
-
-        margin-top:2px;
-
-        font-size:.70rem;
-
-        line-height:1.25;
-
-        color:#6A6158;
     }
 
     .editorial-pan h3,
@@ -1106,285 +1084,24 @@ MOBILE
 
     .vino-link{
 
-        display:block;
+        display:inline-block;
 
-        margin-top:10px;
+        margin-top:8px;
 
-        color:#6E0F1F !important;
+        font-size:.72rem;
 
-        font-size:.92rem;
+        letter-spacing:.14em;
 
-        letter-spacing:.08em;
+        text-transform:uppercase;
 
-        text-transform:none;
+        color:#6E0F1F;
 
-        font-weight:700;
-
-        line-height:1;
-
-        text-align:left;
+        font-weight:600;
     }
 
     .editorial-vino .editorial-card-content{
 
-        width:72%;
+        width:68%;
     }
 
-}
-
-/* ======================================================
-ACORDEONES BEBIDAS Y POSTRES
-====================================================== */
-
-.accordion-card{
-
-    background:#F7F0E4;
-
-    border:1px solid rgba(110,15,31,.10);
-
-    border-radius:22px;
-
-    overflow:hidden;
-}
-
-.accordion-card summary{
-
-    list-style:none;
-
-    cursor:pointer;
-
-    padding:24px 28px;
-
-    font-size:1.4rem;
-
-    color:#241B17;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-}
-
-.accordion-card summary::-webkit-details-marker{
-    display:none;
-}
-
-.accordion-card summary::after{
-
-    content:"⌄";
-
-    font-size:1rem;
-
-    color:#A67B4F;
-
-    transition:transform .3s ease;
-}
-
-.accordion-card[open] summary::after{
-
-    transform:rotate(180deg);
-}
-
-
-.accordion-content{
-
-    padding:0 28px 28px;
-}
-
-.accordion-content div{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:20px;
-
-    padding:10px 0;
-
-    border-bottom:1px dotted rgba(110,15,31,.15);
-
-    color:#4D443D;
-}
-
-.accordion-content ul{
-
-    margin:14px 0 18px 18px;
-
-    color:#6A6158;
-}
-
-.accordion-content li{
-
-    margin:6px 0;
-}
-
-@media(max-width:640px){
-
-    .accordion-card summary{
-
-        padding:18px 20px;
-
-        font-size:1.15rem;
-    }
-
-    .accordion-content{
-
-        padding:0 20px 20px;
-    }
-
-    .accordion-content div{
-
-        font-size:.9rem;
-    }
-
-    .accordion-content li{
-
-        font-size:.85rem;
-    }
-}
-
-
-/* ======================================================
-BODEGA DESPLEGABLE PREMIUM
-====================================================== */
-
-.vino-summary{
-    list-style:none;
-    cursor:pointer;
-}
-
-.vino-summary::-webkit-details-marker{
-    display:none;
-}
-
-.vino-content{
-    position:relative;
-    z-index:5;
-    background:#F7F0E4;
-    padding:28px 34px 34px;
-    border-top:1px solid rgba(110,15,31,.10);
-}
-
-.vino-content h4{
-    margin:18px 0 10px;
-    font-size:.82rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:#6E0F1F;
-}
-
-.vino-content div{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:10px 0;
-    border-bottom:1px dotted rgba(110,15,31,.15);
-    color:#3E332C;
-}
-
-.editorial-vino[open] .vino-link{
-    color:#6E0F1F;
-}
-
-@media(max-width:640px){
-
-    .vino-content{
-        padding:18px 18px 24px;
-    }
-
-    .vino-content div{
-        font-size:.88rem;
-    }
-
-    .vino-content h4{
-        font-size:.72rem;
-    }
-}
-
-
-/* ======================================================
-CORRECCIÓN BODEGA DESPLEGABLE
-====================================================== */
-
-.editorial-vino[open]{
-
-    height:auto;
-
-    overflow:visible;
-}
-
-.editorial-vino[open] .editorial-card-image{
-
-    min-height:240px;
-}
-
-
-/* ======================================================
-POSTRE INTRO
-====================================================== */
-
-.postre-intro{
-
-    margin:0 0 18px;
-
-    padding:12px 0 16px;
-
-    font-size:.95rem;
-
-    line-height:1.7;
-
-    color:#6A6158;
-
-    font-style:italic;
-
-    border-bottom:1px solid rgba(110,15,31,.10);
-}
-
-@media(max-width:640px){
-
-    .postre-intro{
-
-        font-size:.82rem;
-
-        line-height:1.6;
-
-        margin:0 0 14px;
-
-        padding:8px 0 12px;
-    }
-}
-
-
-/* ======================================================
-FIX MOBILE BACK LINK
-====================================================== */
-
-.hero-header{
-
-    z-index:100 !important;
-}
-
-.back-link{
-
-    position:relative;
-
-    z-index:101;
-
-    display:inline-block;
-
-    pointer-events:auto;
-
-    touch-action:manipulation;
-}
-
-
-@media(max-width:640px){
-
-    .hero-symbol svg{
-
-        width:30px;
-
-        height:30px;
-    }
 }
