@@ -94,13 +94,29 @@ color:rgba(239,231,216,.92);
 }
 
 .btn{
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:220px;
 margin-top:30px;
-padding:16px 32px;
+padding:1.15rem 2rem;
 background:var(--red);
 color:#fff;
 text-decoration:none;
 border-radius:6px;
+font-family:"Cormorant Garamond",serif;
+font-size:1rem;
+font-weight:600;
+letter-spacing:.08em;
+text-transform:uppercase;
+transition:
+transform .3s ease,
+background .3s ease,
+border .3s ease;
+}
+
+.btn:hover{
+transform:translateY(-2px);
 }
 
 .features{
@@ -571,13 +587,18 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 width:220px;
-height:58px;
+min-height:58px;
 margin-top:24px;
 background:transparent;
 border:1px solid rgba(201,165,106,.45);
 color:#efe7d8;
 text-decoration:none;
 border-radius:6px;
+font-family:"Cormorant Garamond",serif;
+font-size:1rem;
+font-weight:600;
+letter-spacing:.08em;
+text-transform:uppercase;
 }
 
 .card.featured .btn{
