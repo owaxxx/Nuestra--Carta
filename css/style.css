@@ -347,14 +347,14 @@ BOTONES
     min-width:240px;
 
     padding:
-    1rem
-    1.8rem;
+    1.15rem
+    2rem;
 
-    border-radius:14px;
+    border-radius:6px;
 
-    font-size:.76rem;
+    font-size:.82rem;
 
-    letter-spacing:.14em;
+    letter-spacing:.12em;
 
     text-transform:uppercase;
 
@@ -591,6 +591,20 @@ BODEGA
     border:var(--border-soft);
 }
 
+
+.bodega-banner-index{
+    border:1px solid rgba(201,165,106,.35);
+}
+
+.bodega-banner-index::after{
+content:"";
+position:absolute;
+inset:0;
+pointer-events:none;
+border-radius:20px;
+border:1px solid rgba(201,165,106,.35);
+}
+
 .bodega-overlay{
 
     position:absolute;
@@ -724,6 +738,12 @@ EXPERIENCIAS
 
 .experience-text{
 
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:390px;
+
     padding:
     1.6rem
     1.5rem;
@@ -749,6 +769,8 @@ EXPERIENCIAS
     margin-top:1rem;
 
     color:var(--texto-soft);
+
+    flex-grow:1;
 }
 
 .experience-text .btn{
@@ -770,7 +792,7 @@ ENCUADRES
 
     object-fit:cover;
 
-    object-position:center 52%;
+    object-position:center 40%;
 }
 
 .romantic-card img{
@@ -1052,13 +1074,13 @@ MOBILE
     .experiencias-manyosa{
 
         padding:
-        72px
+        56px
         0;
     }
 
     .section-intro{
 
-        margin-bottom:2rem;
+        margin-bottom:1.5rem;
     }
 
     .card img,
@@ -1092,7 +1114,7 @@ MOBILE
     .reserva-final{
 
         padding:
-        5rem
+        56px
         0;
     }
 
@@ -1101,6 +1123,15 @@ MOBILE
         width:100%;
 
         min-width:auto;
+    }
+
+    .experience-text{
+        display:block;
+        min-height:auto;
+    }
+
+    .experience-text p{
+        flex-grow:0;
     }
 
     .footer{
