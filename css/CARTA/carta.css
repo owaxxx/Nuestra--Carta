@@ -1046,3 +1046,23 @@ MOBILE
     }
 
 }
+
+/* ======================================================
+CTA FINAL
+====================================================== */
+
+.cta-final{
+
+    padding:0 1rem 4rem;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.cta-final .btn-primary{
+
+    width:auto;
+
+    min-width:260px;
+}
