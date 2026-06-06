@@ -45,7 +45,7 @@ HERO
 
     position:relative;
 
-    height:420px;
+    height:620px;
 
     display:flex;
     align-items:center;
@@ -186,9 +186,7 @@ CONTENIDO
 }
 
 .section + .section{
-
-    border-top:
-    1px solid rgba(255,255,255,.05);
+    border-top:none;
 }
 
 .section h2{
@@ -248,7 +246,7 @@ DESTACADOS
 
 .section:first-of-type{
 
-    margin-top:2rem;
+    margin-top:3rem;
 }
 
 .section:first-of-type::before{
@@ -319,7 +317,7 @@ MOBILE
 
     .hero{
 
-        height:360px;
+        height:700px;
     }
 
     .hero h1{
@@ -360,7 +358,11 @@ IMAGENES CATEGORIA
     object-fit:cover;
     border-radius:20px;
     margin-bottom:2rem;
-    border:1px solid rgba(200,154,75,.15);
+    border:1px solid rgba(200,154,75,.35);
+
+    box-shadow:
+        0 0 0 1px rgba(200,154,75,.08),
+        inset 0 0 0 1px rgba(200,154,75,.05);
 }
 
 .section:first-of-type::before{
@@ -384,7 +386,7 @@ HERO MOBILE
 
     .hero{
 
-        height:360px;
+        height:700px;
 
         background:
         linear-gradient(
@@ -436,15 +438,589 @@ HERO MOBILE
     position:relative;
 }
 
-.hero-divider span:after{
-    content:"◇";
-    position:absolute;
-    right:-12px;
-    top:-13px;
-    color:#c89a4b;
-}
+
 
 .hero p{
     margin:0 0 2rem;
     max-width:500px;
+}
+
+
+/* ======================================================
+PARA COMPARTIR
+====================================================== */
+
+.compartir-hero{
+    width:min(1100px,92%);
+    position:relative;
+    z-index:5;
+    margin:-60px auto 2rem;
+    overflow:hidden;
+    border-radius:24px;
+    border:1px solid rgba(200,154,75,.15);
+    background:#111;
+}
+
+.compartir-hero img{
+    height:320px;
+    object-fit:cover;
+}
+
+.compartir-content{
+    padding:2rem;
+}
+
+.compartir-kicker{
+    display:block;
+    color:#d9b06b;
+    letter-spacing:.18em;
+    font-size:.72rem;
+    margin-bottom:1rem;
+}
+
+.compartir-content h2{
+    font-size:clamp(2.2rem,5vw,4rem);
+    font-weight:400;
+    margin-bottom:.75rem;
+}
+
+.compartir-content p{
+    color:rgba(255,255,255,.75);
+    margin-bottom:1.5rem;
+}
+
+.compartir-destacado{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:1rem 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#f2eadf;
+}
+
+.compartir-destacado span,
+.compartir-secundarios span{
+    color:#d9b06b;
+    font-weight:600;
+}
+
+.compartir-secundarios div{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:1rem 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:768px){
+    .compartir-hero img{
+        height:220px;
+    }
+
+    .compartir-content{
+        padding:1.5rem;
+    }
+}
+
+
+/* HERO AJUSTES */
+
+.hero-content{
+    padding-top:0rem;
+    padding-bottom:2rem;
+}
+
+.hero-kicker{
+    margin-bottom:2rem;
+}
+
+.hero-price{
+    margin-top:2rem;
+    font-size:3.2rem;
+    line-height:1;
+    color:#d9b06b;
+    letter-spacing:-.04em;
+}
+
+.hero-price span{
+    display:block;
+    margin-top:.8rem;
+    font-size:1rem;
+    color:#f2eadf;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+@media(max-width:768px){
+
+    .hero-content{
+        padding-top:3rem;
+    }
+
+    .hero-price{
+        font-size:2.8rem;
+    }
+
+    .hero-price span{
+        font-size:.9rem;
+    }
+}
+
+
+/* HERO OVERLAP REFINADO */
+
+@media(max-width:768px){
+
+    .hero{
+        background-position:center -120px;
+    }
+
+    .hero-content{
+        padding-top:0rem;
+        padding-bottom:2rem;
+        transform:translateY(-120px);
+    }
+
+    .compartir-hero{
+        margin:-170px auto 2rem;
+    }
+}
+
+
+/* VEGETARIANO */
+
+.veg-icon{
+    display:inline-flex;
+    align-items:center;
+    margin-left:8px;
+    color:#c89a4b;
+    vertical-align:middle;
+}
+
+.veg-icon svg{
+    width:18px;
+    height:18px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+
+.dish-name{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:inherit;
+    text-transform:none;
+    white-space:normal;
+}
+
+.dish-name .veg-icon{
+    flex-shrink:0;
+    margin:0;
+}
+
+.veg-icon svg{
+    width:18px;
+    height:18px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+
+/* CORRECCIÓN PESO TEXTO VEGETARIANO */
+
+.dish-name{
+    font-weight:400 !important;
+}
+
+
+.compartir-nota{
+    margin-top:1rem;
+    color:rgba(255,255,255,.55);
+    font-size:.9rem;
+    font-style:italic;
+}
+
+
+/* AJUSTE FINAL BLOQUE IBÉRICOS */
+
+.compartir-editorial-subtitle{
+    margin:0 0 1.25rem;
+}
+
+.compartir-editorial-price{
+    color:#d9b06b;
+    margin-bottom:2rem;
+}
+
+.compartir-content{
+    padding:2rem 2rem 1rem;
+}
+
+
+/* REFINADO PROMO IBÉRICOS */
+
+.compartir-content h2{
+    font-size:clamp(2.2rem,5vw,3.2rem);
+    line-height:1.05;
+    margin-bottom:.75rem;
+}
+
+.compartir-editorial-price{
+    color:#d9b06b;
+    font-size:2.5rem;
+    line-height:1;
+    margin-bottom:2rem;
+}
+
+@media(max-width:768px){
+
+    .compartir-content h2{
+        font-size:1.8rem;
+        letter-spacing:-0.03em;
+    }
+}
+
+
+/* DESTACADOS SIN NEGRITA */
+
+.featured-dish{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:inherit;
+    font-weight:400 !important;
+}
+
+.featured-dish .featured-icon{
+    flex-shrink:0;
+}
+
+.featured-icon{
+    color:#c89a4b;
+}
+
+.featured-icon svg{
+    width:16px;
+    height:16px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+
+/* ACORDEONES */
+.menu-accordion{
+    width:min(1100px,92%);
+    margin:0 auto 1.5rem;
+    border:1px solid rgba(200,154,75,.15);
+    border-radius:16px;
+    background:rgba(255,255,255,.02);
+}
+.menu-accordion summary{
+    cursor:pointer;
+    padding:1.2rem 1.5rem;
+    color:#c89a4b;
+    font-size:1.15rem;
+}
+.accordion-content{
+    padding:0 1.5rem 1.5rem;
+}
+.accordion-note{
+    color:rgba(255,255,255,.6);
+    margin-bottom:1rem;
+}
+
+
+.dish-note{
+    display:block;
+    margin-top:.35rem;
+    color:rgba(255,255,255,.5);
+    font-size:.85rem;
+}
+
+.section-subtitle{
+    margin-top:-1rem;
+    margin-bottom:2rem;
+    color:rgba(255,255,255,.6);
+    font-size:.95rem;
+    font-style:italic;
+}
+
+.menu-accordion summary{
+    list-style:none;
+}
+.menu-accordion summary::-webkit-details-marker{
+    display:none;
+}
+.menu-accordion summary::after{
+    content:"+";
+    float:right;
+}
+.menu-accordion[open] summary::after{
+    transform:rotate(45deg);
+}
+
+
+/* ======================================================
+CIERRE EDITORIAL DE CATEGORÍAS
+====================================================== */
+
+.section > ul::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:1px;
+    margin:2rem auto 0;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(200,154,75,.45),
+        transparent
+    );
+}
+
+
+/* PRECIO CON ACLARACIÓN */
+
+.price-with-note{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content:center;
+    color:#d9b06b;
+    font-weight:600;
+    line-height:1.1;
+}
+
+.price-note{
+    margin-top:.45rem;
+    font-size:.75rem;
+    color:rgba(255,255,255,.55);
+    font-weight:400;
+    text-transform:none;
+}
+
+
+/* AJUSTE ASADOS */
+
+#asados li:first-child{
+    align-items:center !important;
+}
+
+.dish-with-note{
+    align-items:flex-start !important;
+}
+
+
+/* POSTRES - GELATO */
+
+#postres > ul::after{
+    display:none !important;
+}
+
+#postres > ul > li:last-child{
+    border-bottom:none !important;
+}
+
+#postres .menu-accordion{
+    margin-top:1rem;
+    margin-bottom:0;
+}
+
+.section-gelato-end{
+    display:block;
+    width:100px;
+    height:1px;
+    margin:2rem auto 0;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(200,154,75,.45),
+        transparent
+    );
+}
+
+
+/* ======================================================
+GELATO - NOTA EDITORIAL
+====================================================== */
+
+#postres .menu-accordion{
+    width:auto;
+    max-width:260px;
+    margin:.35rem auto 0;
+    border-radius:8px;
+    border:1px solid rgba(200,154,75,.08);
+    background:rgba(200,154,75,.03);
+}
+
+#postres .menu-accordion summary{
+    padding:.65rem 1rem;
+    font-size:.82rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:rgba(200,154,75,.85);
+}
+
+#postres .accordion-content{
+    padding:0 .9rem .9rem;
+}
+
+#postres .accordion-content li{
+    font-size:.9rem;
+}
+
+
+/* ======================================================
+INFANTIL - JERARQUÍA VISUAL
+====================================================== */
+
+.accordion-note{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+
+    margin:1.75rem 0 .75rem;
+
+    color:#e4c48a;
+
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+}
+
+.accordion-note::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(228,196,138,.25);
+}
+
+.accordion-note:first-child{
+    margin-top:.5rem;
+}
+
+
+.child-menu-intro{
+    margin-bottom:1.5rem;
+    color:rgba(255,255,255,.65);
+    font-size:.95rem;
+    font-style:italic;
+}
+
+
+/* INFANTIL - NOTAS EDITORIALES */
+
+.child-menu-intro,
+.child-menu-note{
+    color:rgba(255,255,255,.65);
+    font-size:.95rem;
+    font-style:italic;
+}
+
+.child-menu-intro{
+    margin-bottom:1.5rem;
+}
+
+.child-menu-note{
+    margin:.75rem 0;
+}
+
+
+/* ======================================================
+BODEGA CTA FINAL
+====================================================== */
+
+.bodega-banner{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+
+    width:min(1100px,92%);
+    margin:2rem auto 4rem;
+
+    min-height:260px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,.84) 0%,
+        rgba(0,0,0,.38) 36%,
+        rgba(0,0,0,.06) 100%
+    ),
+    url("../../assets/img/CARTA/vino-medieval-bodega-romantica.webp");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(200,154,75,.15);
+}
+
+.bodega-overlay{
+    position:absolute;
+    inset:0;
+}
+
+.bodega-content{
+    position:relative;
+    z-index:2;
+    padding:2rem 1.8rem;
+}
+
+.bodega-label{
+    display:inline-block;
+    margin-bottom:.55rem;
+    color:#d6a15d;
+    font-size:.62rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+}
+
+.bodega-content h2{
+    max-width:420px;
+    font-size:clamp(2.4rem,5vw,4rem);
+    line-height:.88;
+    letter-spacing:-.06em;
+}
+
+.bodega-link{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    margin-top:1rem;
+    color:#d6a15d;
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+
+@media(max-width:768px){
+
+    .bodega-banner{
+        min-height:220px;
+        margin:2rem auto 3rem;
+    }
+
+    .bodega-content{
+        padding:1.5rem;
+    }
+
+    .bodega-content h2{
+        max-width:260px;
+        font-size:2.7rem;
+    }
 }
