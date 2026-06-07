@@ -771,7 +771,7 @@ button{
 
     color:#cfa36c;
 
-    font-size:0.78rem;
+    font-size:0.9rem;
     font-weight:700;
 
     letter-spacing:0.16em;
@@ -860,7 +860,7 @@ button{
 
     color:#dcc5a7;
 
-    font-size:1.08rem;
+    font-size:1.15rem;
 
     line-height:1.45;
 
@@ -990,7 +990,7 @@ button{
 
     color:#d7ad74;
 
-    font-size:0.72rem;
+    font-size:0.85rem;
     font-weight:600;
 
     letter-spacing:0.24em;
@@ -1018,7 +1018,7 @@ button{
 
     color:#dcc5a7;
 
-    font-size:1.08rem;
+    font-size:1.2rem;
 
     line-height:1.5;
 }
@@ -1236,14 +1236,14 @@ button{
 
     .vino-info h4{
 
-        font-size:1.35rem;
+        font-size:1.45rem;
 
         line-height:1.15;
     }
 
     .vino-info span{
 
-        font-size:0.98rem;
+        font-size:1.05rem;
     }
 
     .vino-item strong{
@@ -1309,6 +1309,23 @@ button{
     .final-btn{
 
         min-width:100%;
+    }
+
+    .esencia-item p{
+
+        font-size:0.95rem;
+        line-height:1.35;
+    }
+
+    .footer-brand p{
+
+        font-size:1rem;
+        line-height:1.6;
+    }
+
+    .footer-links a{
+
+        font-size:1rem;
     }
 
     .vino-card,
