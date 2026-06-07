@@ -138,14 +138,14 @@ HERO
     background-image:
     linear-gradient(
         to bottom,
-        rgba(0,0,0,.28) 0%,
-        rgba(0,0,0,.84) 100%
+        rgba(0,0,0,.05) 0%,
+        rgba(0,0,0,.25) 100%
     ),
     url("../assets/img/horno-lena-tradicional.webp");
 
     background-size:cover;
 
-    background-position:center center;
+    background-position:center 28%;
 }
 
 .hero::before{
@@ -908,7 +908,7 @@ MOBILE
 
     .hero{
 
-        padding-top:160px;
+        padding-top:40px;
     }
 
     .hero-content{
@@ -934,7 +934,7 @@ MOBILE
     .hero{
 
         padding:
-        150px
+        40px
         0
         70px;
 
@@ -971,25 +971,47 @@ MOBILE
 
     .fire-section{
 
+        min-height:72vh;
+
         padding:
-        5rem
+        2rem
         1.4rem;
     }
 
     .fire-content{
 
+        min-height:calc(78vh - 4rem);
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:space-between;
+
         text-align:center;
+    }
+
+    .section-tag{
+
+        margin-top:.5rem;
+
+        margin-bottom:1rem;
     }
 
     .fire-content h2{
 
-        margin:auto;
+        margin:0 auto;
+
+        line-height:.92;
     }
 
     .fire-content p{
 
-        margin:
-        1.2rem auto 0;
+        margin:0 auto 1rem;
+
+        max-width:420px;
+
+        line-height:2;
     }
 
     .final-cta{
@@ -1004,5 +1026,168 @@ MOBILE
         padding:
         3rem
         0;
+    }
+}
+
+/* ======================================================
+HERO TEXT RESPONSIVE
+====================================================== */
+
+.hero-text-mobile{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .hero-text-desktop{
+        display:none;
+    }
+
+    .hero-text-mobile{
+        display:inline;
+    }
+}
+
+
+/* ======================================================
+DESKTOP FIRE SECTION - GRADIENT + BRIGHT EMBERS + SPACING
+====================================================== */
+
+@media(min-width:981px){
+
+    .fire-section{
+
+        background-image:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.88) 0%,
+            rgba(0,0,0,.72) 20%,
+            rgba(0,0,0,.42) 35%,
+            rgba(0,0,0,0) 50%
+        ),
+        linear-gradient(
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.30)
+        ),
+        url("../assets/img/parrilla-brasa-medieval.webp");
+    }
+
+    .section-tag{
+        margin-bottom:1.5rem;
+    }
+
+    .fire-content h2{
+        margin-bottom:2rem;
+        line-height:.98;
+    }
+
+    .fire-content p{
+        margin-top:0;
+        line-height:2;
+    }
+}
+
+
+/* ======================================================
+MOBILE FIRE SECTION - BRASAS VISIBLES
+====================================================== */
+
+@media(max-width:768px){
+
+    .fire-section{
+
+        background-image:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.85) 0%,
+            rgba(0,0,0,.55) 20%,
+            rgba(0,0,0,.15) 40%,
+            rgba(0,0,0,0) 60%
+        ),
+        url("../assets/img/parrilla-brasa-medieval-mobile.webp");
+
+        background-size:cover;
+
+        background-position:center 45%;
+    }
+
+    .fire-overlay{
+
+        background:
+        radial-gradient(
+            circle at bottom center,
+            rgba(255,120,20,.12),
+            transparent 55%
+        );
+    }
+}
+
+
+/* ======================================================
+MOBILE FIRE SECTION - MOVE TITLE BLOCK UP
+====================================================== */
+
+@media(max-width:480px){
+
+    .fire-content{
+
+        padding-top:0;
+
+        min-height:calc(72vh - 4rem);
+    }
+
+    .section-tag{
+
+        margin-top:-2rem;
+        margin-bottom:.25rem;
+    }
+
+    .fire-content h2{
+
+        margin-top:0;
+        margin-bottom:0;
+    }
+}
+
+
+/* ======================================================
+MOBILE FIRE SECTION - TITLE TOP / TEXT BOTTOM
+====================================================== */
+
+@media(max-width:480px){
+
+    .fire-content{
+
+        min-height:calc(72vh - 4rem);
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        text-align:center;
+    }
+
+    .section-tag{
+
+        margin-top:-1rem;
+        margin-bottom:.25rem;
+    }
+
+    .fire-content h2{
+
+        margin:0 auto;
+    }
+
+    .fire-content p{
+
+        margin-top:auto;
+
+        margin-bottom:1rem;
+
+        max-width:420px;
+
+        line-height:2;
     }
 }

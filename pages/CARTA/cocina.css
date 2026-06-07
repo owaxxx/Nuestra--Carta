@@ -2188,36 +2188,3 @@ ESPECIAL FIN DE SEMANA
         font-size:2rem;
     }
 }
-
-
-/* ======================================================
-ESPECIAL FIN DE SEMANA - MISMO FORMATO QUE TABLA IBÉRICOS
-====================================================== */
-
-@media (min-width:769px){
-
-    .especial-fin-semana{
-        width:min(1100px,92%);
-        max-width:1100px;
-        margin:0 auto 2rem;
-    }
-
-    .especial-fin-semana img{
-        height:320px;
-    }
-
-    .especial-content{
-        padding:2rem 2rem 1rem;
-    }
-
-    .especial-content h2{
-        font-size:clamp(2.2rem,5vw,3.2rem);
-        line-height:1.05;
-        margin-bottom:.75rem;
-    }
-
-    .especial-price{
-        font-size:2.5rem;
-        margin-bottom:0;
-    }
-}

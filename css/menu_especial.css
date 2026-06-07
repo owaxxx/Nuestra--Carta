@@ -33,7 +33,7 @@ padding:80px;
 display:inline-flex;
 align-items:center;
 gap:8px;
-margin-bottom:60px;
+margin-bottom:35px;
 padding:10px 18px;
 border:1px solid rgba(255,255,255,.35);
 border-radius:999px;
@@ -302,14 +302,17 @@ border-right:1px solid rgba(201,165,106,.12);
 @media(max-width:900px){
 
 .hero{
-padding:30px;
+min-height:72vh;
+padding:55px 30px 25px;
 background-position:70% center;
+align-items:flex-start;
 }
 
 .back-link{
-padding:8px 14px;
-font-size:.78rem;
+padding:7px 12px;
+font-size:.72rem;
 letter-spacing:.10em;
+margin-bottom:12px;
 }
 
 .hero > div{
@@ -349,20 +352,22 @@ overflow:hidden;
 }
 
 .feature{
-min-height:auto;
-padding:28px 18px;
+min-height:110px;
+padding:10px 8px;
+gap:8px;
 }
 
 .feature svg,
 .feature-icon{
 width:48px;
 height:48px;
-margin:0 auto 14px;
+margin:0;
 }
 
 .feature h3{
 font-size:1.4rem;
-margin-bottom:0;
+margin:0;
+line-height:1.1;
 }
 
 
@@ -919,6 +924,155 @@ margin:0 auto;
 
 .footer-link{
 margin-top:20px;
+}
+
+}
+
+
+/* MENÚ EXCLUSIVO */
+
+.exclusive-stars{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+margin:14px 0 8px;
+color:#c9a56a;
+opacity:.95;
+}
+
+.exclusive-stars svg{
+width:14px;
+height:14px;
+fill:none;
+stroke:currentColor;
+stroke-width:1.7;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+@media(max-width:900px){
+
+.exclusive-stars{
+gap:10px;
+margin:12px 0 6px;
+}
+
+.exclusive-stars svg{
+width:13px;
+height:13px;
+}
+
+}
+
+
+/* COMPARACIÓN DE MENÚS DESKTOP Y MOBILE */
+.menu-detail-instance{
+display:block !important;
+grid-column:span 1;
+margin:0 0 20px;
+}
+
+.menu-detail-instance .menu-detail-inner{
+max-width:none;
+}
+
+@media (max-width:900px){
+.menu-detail-instance{
+grid-column:1/-1;
+}
+}
+
+
+/* AJUSTE EXCLUSIVO VS EXPERIENCIA */
+
+@media (min-width:901px){
+
+.card-exclusivo .card-content p{
+    min-height:72px;
+}
+
+.card-exclusivo .exclusive-stars{
+    height:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:8px 0 4px;
+}
+
+.card-exclusivo .price{
+    margin:16px 0;
+}
+
+}
+
+
+/* CORRECCIÓN FINAL: IGUALAR VISUALMENTE 72€ Y 36€ */
+@media (min-width:901px){
+
+.card-exclusivo .exclusive-stars{
+    position:relative;
+    top:-10px;
+    margin:0 0 -10px 0;
+}
+
+.card-exclusivo .price{
+    margin-top:0;
+}
+
+}
+
+
+/* ORDEN DESKTOP FINAL: 72 -> 52 -> 36 */
+@media (min-width:901px){
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.card-exclusivo{
+    order:1;
+}
+
+.card-celebracion{
+    order:2;
+}
+
+.card-experiencia{
+    order:3;
+}
+
+}
+
+
+/* DESPLEGABLES INDEPENDIENTES */
+.detail-host{
+    display:block;
+}
+
+.detail-host .menu-detail-instance{
+    margin-top:0;
+}
+
+
+
+
+
+/* ORDEN DESKTOP REAL 72 -> 52 -> 36 */
+@media (min-width:901px){
+
+.card-slot:has(.card-exclusivo){
+    order:1;
+}
+
+.card-slot:has(.card-celebracion){
+    order:2;
+}
+
+.card-slot:has(.card-experiencia){
+    order:3;
 }
 
 }

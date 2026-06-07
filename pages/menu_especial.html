@@ -30,7 +30,7 @@
 </div>
 
 <p>Menús diseñados para disfrutar sin prisas, entre vino, fuego y buena compañía.</p>
-<a href="#menus" class="btn">Ver menús</a>
+
 </div>
 </section>
 
@@ -83,18 +83,7 @@
 
 <section class="cards">
 
-<article class="card">
-<img src="../assets/img/MENU ESPECIAL/menu-exclusivo-vino-chimenea.webp">
-<div class="card-badge">⚜</div>
-<div class="card-content">
-<h3>Menú Experiencia</h3>
-<p>La introducción perfecta a la cocina de la fortaleza.</p>
-<div class="price">36€</div>
-<a href="#menu-detail" class="btn menu-trigger" data-menu="experiencia">Ver menú</a>
-</div>
-</article>
-
-<article class="card featured">
+<div class="card-slot"><article class="card featured card-celebracion">
 <div class="featured-label">MÁS ELEGIDO</div>
 <img src="../assets/img/MENU ESPECIAL/menu-celebracion-vino-rosas-romantico.webp">
 <div class="card-badge">❦</div>
@@ -105,25 +94,41 @@
 <a href="#menu-detail" class="btn menu-trigger" data-menu="celebracion">Ver menú</a>
 </div>
 </article>
+<div class="detail-host" data-host="celebracion"></div></div>
 
-<article class="card">
+<div class="card-slot"><article class="card card-exclusivo">
 <img src="../assets/img/MENU ESPECIAL/pareja-cena-romantica-fortaleza-medieval.webp">
 <div class="card-badge">♛</div>
 <div class="card-content">
 <h3>Menú Exclusivo</h3>
-<p>La experiencia gastronómica más completa de Manyosa.</p>
+<p>Cordero lechal, vinos seleccionados y la propuesta más exclusiva de la fortaleza.</p>
+
+<div class="exclusive-stars">
+<svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9L12 3z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9L12 3z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9L12 3z"/></svg>
+</div>
+
 <div class="price">72€</div>
 <a href="#menu-detail" class="btn menu-trigger" data-menu="exclusivo">Ver menú</a>
 </div>
 </article>
+<div class="detail-host" data-host="exclusivo"></div></div>
+
+<div class="card-slot"><article class="card card-experiencia">
+<img src="../assets/img/MENU ESPECIAL/menu-exclusivo-vino-chimenea.webp">
+<div class="card-badge">⚜</div>
+<div class="card-content">
+<h3>Menú Experiencia</h3>
+<p>La introducción perfecta a la cocina de la fortaleza.</p>
+<div class="price">36€</div>
+<a href="#menu-detail" class="btn menu-trigger" data-menu="experiencia">Ver menú</a>
+</div>
+</article>
+<div class="detail-host" data-host="experiencia"></div></div>
 
 </section>
 
-
-
-<section id="menu-detail" class="menu-detail">
-<div class="menu-detail-inner"></div>
-</section>
 
 <div class="menus-note">
     <span class="menus-note-icon">✦</span>
@@ -154,31 +159,38 @@ celebracion:{title:"Menú Celebración",sub:"La opción más elegida para compar
 
 exclusivo:{title:"Menú Exclusivo",sub:"La experiencia gastronómica más completa de Manyosa.",price:"72€",blocks:[["Aperitivo de bienvenida","Aperitivo de bienvenida y copa de cava"],["Para compartir","Tabla premium de ibéricos<br>Selección de quesos artesanos<br>Croquetas de foie"],["Principal a elegir","Cordero lechal<br>Solomillo con foie<br>Chuletón"],["Postre a elegir","Torrija con helado<br>Coulant con helado"],["Incluye","Pan y vino de nuestra bodega o cava"]]} };
 
-const detail=document.getElementById('menu-detail');
-const inner=detail.querySelector('.menu-detail-inner');
 
 document.querySelectorAll('.menu-trigger').forEach(btn=>{
 btn.addEventListener('click',(e)=>{
 e.preventDefault();
 
-const m=menus[btn.dataset.menu];
+const card = btn.closest('.card');
+const host=document.querySelector('.detail-host[data-host="'+btn.dataset.menu+'"]');
+const existing = host.querySelector('.menu-detail-instance');
 
-inner.innerHTML=`
+if(existing){
+    existing.remove();
+    return;
+}
+
+const m = menus[btn.dataset.menu];
+if(!m) return;
+
+const detail = document.createElement('div');
+detail.className = 'menu-detail-instance active';
+
+detail.innerHTML = `
+<div class="menu-detail-inner">
 <h2>${m.title}</h2>
 <p class="menu-subtitle">${m.sub}</p>
-${m.blocks.map(b=>`<div class="menu-block"><h4>${b[0]}</h4><p>${b[1]}</p></div>`).join('')}
+${m.blocks.map(b => `<div class="menu-block"><h4>${b[0]}</h4><p>${b[1]}</p></div>`).join('')}
 <div class="menu-price">${m.price}</div>
+</div>`;
 
-`;
 
-detail.classList.add('active');
-
-detail.scrollIntoView({
-behavior:'smooth',
-block:'start'
+// insertar justo después de la tarjeta, no dentro
+host.appendChild(detail);
 });
-});
-});
-</script>
+});</script>
 </body>
 </html>

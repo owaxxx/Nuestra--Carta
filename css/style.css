@@ -1073,19 +1073,39 @@ MOBILE
     .hero p{
 
         font-size:.98rem;
+
+        margin-top:7rem;
     }
 
-    .gastronomia-section,
-    .experiencias-manyosa{
+    .gastronomia-section{
 
         padding:
         56px
         0;
     }
 
+    .experiencias-manyosa{
+
+        padding:
+        40px
+        0;
+    }
+
     .section-intro{
 
         margin-bottom:1.5rem;
+    }
+
+    .experiencias-header{
+
+        margin-bottom:1.4rem;
+    }
+
+    .experiencias-header h2{
+
+        font-size:2rem;
+
+        line-height:.95;
     }
 
     .card img,
