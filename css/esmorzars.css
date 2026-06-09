@@ -1541,13 +1541,13 @@ EPILOGO MANYOSA
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
+
+    align-items:center;
 
     gap:14px;
 
     margin-top:34px;
-
-    flex-wrap:wrap;
 }
 
 .epilogo-btn{

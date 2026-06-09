@@ -1076,3 +1076,32 @@ grid-column:1/-1;
 }
 
 }
+
+
+.price-note{
+
+display:block;
+
+margin-top:-6px;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:1.25rem;
+
+font-weight:600;
+
+color:rgba(201,165,106,.85);
+
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.price-note{
+
+font-size:.95rem;
+
+margin-top:-4px;
+}
+
+}

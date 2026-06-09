@@ -29,7 +29,7 @@
     <span></span>
 </div>
 
-<p>Menús diseñados para disfrutar sin prisas, entre vino, fuego y buena compañía.</p>
+<p>Menús diseñados para disfrutar, entre vino, fuego y buena compañía.</p>
 
 </div>
 </section>
@@ -90,7 +90,7 @@
 <div class="card-content">
 <h3>Menú Celebración</h3>
 <p>Nuestra opción más elegida para compartir una comida especial.</p>
-<div class="price">52€</div>
+<div class="price">52€</div><span class="price-note">Por persona</span>
 <a href="#menu-detail" class="btn menu-trigger" data-menu="celebracion">Ver menú</a>
 </div>
 </article>
@@ -109,7 +109,7 @@
 <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9L12 3z"/></svg>
 </div>
 
-<div class="price">72€</div>
+<div class="price">72€</div><span class="price-note">Por persona</span>
 <a href="#menu-detail" class="btn menu-trigger" data-menu="exclusivo">Ver menú</a>
 </div>
 </article>
@@ -121,7 +121,7 @@
 <div class="card-content">
 <h3>Menú Experiencia</h3>
 <p>La introducción perfecta a la cocina de la fortaleza.</p>
-<div class="price">36€</div>
+<div class="price">36€</div><span class="price-note">Por persona</span>
 <a href="#menu-detail" class="btn menu-trigger" data-menu="experiencia">Ver menú</a>
 </div>
 </article>
@@ -148,12 +148,12 @@
 <section class="footer-cta">
     <h2>La cocina de Manyosa está pensada para compartirse.</h2>
     <p>Entre vino, fuego y buena compañía.</p>
-    <a href="https://carta.lamanyosa.com/pages/CARTA/carta.html" class="footer-link">Ver carta completa</a>
+    <a href="https://carta.lamanyosa.com/pages/CARTA/carta.html" class="footer-link">Ver carta</a>
 </section>
 
 <script>
 const menus={
-experiencia:{title:"Menú Experiencia",sub:"La introducción perfecta a la cocina de la fortaleza.",price:"36€",blocks:[["Aperitivo de bienvenida","Aperitivo de la fortaleza y selección de bienvenida de la casa"],["Para compartir","Ensalada de delicias verdes con queso y frutos secos<br>Croquetas caseras de cocido o jamón"],["Principal a elegir","Entrecot a la brasa<br>Bacalao con sanfaina<br>Rabo de ternera"],["Postre a elegir","Crema catalana<br>Tarta de queso"],["Incluye","Pan y vino de la casa"]]},
+experiencia:{title:"Menú Experiencia",sub:"La introducción perfecta a la cocina de la fortaleza.",price:"36€",blocks:[["Aperitivo de bienvenida","Aperitivo de la fortaleza y selección de bienvenida de la casa"],["Para compartir","Ensalada de delicias verdes con queso y frutos secos<br>Croquetas caseras de cocido o jamón"],["Principal a elegir","Entrecot a la brasa<br>Bacalao con sanfaina<br>Rabo de ternera"],["Postre a elegir","Crema catalana<br>Tarta de queso"],["Incluye","Pan y Rioja Crianza"]]},
 
 celebracion:{title:"Menú Celebración",sub:"La opción más elegida para compartir una ocasión especial.",price:"52€",blocks:[["Aperitivo de bienvenida","Vermut y selección de la fortaleza"],["Para compartir","Tabla mixta de ibéricos y quesos<br>Croquetas de setas con foie"],["Principal a elegir","Solomillo a la brasa<br>Bacalao<br>Costillitas de lechal"],["Postre a elegir","Torrija con helado<br>Tarta de queso"],["Incluye","Pan y vino seleccionado"]]},
 
@@ -184,7 +184,7 @@ detail.innerHTML = `
 <h2>${m.title}</h2>
 <p class="menu-subtitle">${m.sub}</p>
 ${m.blocks.map(b => `<div class="menu-block"><h4>${b[0]}</h4><p>${b[1]}</p></div>`).join('')}
-<div class="menu-price">${m.price}</div>
+<div class="menu-price">${m.price}</div><div class="price-note">Por persona</div>
 </div>`;
 
 

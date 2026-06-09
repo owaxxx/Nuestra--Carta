@@ -2221,3 +2221,57 @@ ESPECIAL FIN DE SEMANA - MISMO FORMATO QUE TABLA IBÉRICOS
         margin-bottom:0;
     }
 }
+
+
+/* HERO DESKTOP REFINADO */
+
+@media (min-width:769px){
+
+    .hero{
+
+        justify-content:flex-start;
+
+        padding-left:8%;
+
+        text-align:left;
+
+        background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.92) 0%,
+            rgba(0,0,0,.88) 28%,
+            rgba(0,0,0,.55) 52%,
+            rgba(0,0,0,.15) 100%
+        ),
+        url("../../assets/img/COCINA/lechazo-asado-horno-lena-manyosa.webp");
+
+        background-size:cover;
+        background-position:center right;
+    }
+
+    .hero-content{
+
+        max-width:520px;
+
+        margin-left:0;
+    }
+
+    .hero h1{
+
+        font-size:5.5rem;
+
+        line-height:.9;
+    }
+
+    .hero-subtitle{
+
+        font-size:4rem;
+
+        line-height:.95;
+    }
+
+    .hero p{
+
+        max-width:420px;
+    }
+}

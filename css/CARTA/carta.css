@@ -906,6 +906,55 @@ MOBILE
         background-position:72% center;
     }
 
+    .esencias{
+
+        margin-top:-1.2rem;
+
+        padding:0 .8rem 1rem;
+    }
+
+    .esencias-card{
+
+        padding:1.4rem 1rem;
+        border-radius:24px;
+    }
+
+    .esencias-grid{
+
+        gap:.8rem;
+    }
+
+    .esencia-item{
+
+        padding:.25rem;
+    }
+
+    .esencia-icon{
+
+        width:42px;
+        height:42px;
+        margin:0 auto .6rem;
+    }
+
+    .esencia-icon svg{
+
+        width:42px;
+        height:42px;
+    }
+
+    .esencia-item h3{
+
+        font-size:1rem;
+        line-height:1;
+        margin-bottom:.45rem;
+    }
+
+    .esencia-item p{
+
+        font-size:.75rem;
+        line-height:1.35;
+    }
+
     .hero-content{
 
         padding:
@@ -1065,4 +1114,67 @@ CTA FINAL
     width:auto;
 
     min-width:260px;
+}
+
+
+/* COMPACTAR ESENCIAS MOBILE */
+
+@media(max-width:768px){
+
+.esencias{
+
+    margin-top:-1rem;
+
+    padding:0 .7rem .6rem;
+}
+
+.esencias-card{
+
+    padding:1rem .8rem;
+
+    border-radius:22px;
+}
+
+.esencias-grid{
+
+    gap:.6rem !important;
+}
+
+.esencia-item{
+
+    padding:.15rem !important;
+}
+
+.esencia-icon{
+
+    width:36px !important;
+    height:36px !important;
+
+    margin:0 auto .45rem !important;
+}
+
+.esencia-icon svg{
+
+    width:36px !important;
+    height:36px !important;
+}
+
+.esencia-item h3{
+
+    min-height:auto;
+
+    font-size:.95rem !important;
+
+    line-height:.95;
+
+    margin-bottom:.25rem;
+}
+
+.esencia-item p{
+
+    font-size:.72rem !important;
+
+    line-height:1.25;
+}
+
 }
