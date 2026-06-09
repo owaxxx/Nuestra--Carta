@@ -855,34 +855,6 @@ CIERRE EDITORIAL DE CATEGORÍAS
 }
 
 
-/* ======================================================
-GELATO - NOTA EDITORIAL
-====================================================== */
-
-#postres .menu-accordion{
-    width:auto;
-    max-width:260px;
-    margin:.35rem auto 0;
-    border-radius:8px;
-    border:1px solid rgba(200,154,75,.08);
-    background:rgba(200,154,75,.03);
-}
-
-#postres .menu-accordion summary{
-    padding:.65rem 1rem;
-    font-size:.82rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:rgba(200,154,75,.85);
-}
-
-#postres .accordion-content{
-    padding:0 .9rem .9rem;
-}
-
-#postres .accordion-content li{
-    font-size:.9rem;
-}
 
 
 /* ======================================================
@@ -1621,34 +1593,6 @@ CIERRE EDITORIAL DE CATEGORÍAS
 }
 
 
-/* ======================================================
-GELATO - NOTA EDITORIAL
-====================================================== */
-
-#postres .menu-accordion{
-    width:auto;
-    max-width:260px;
-    margin:.35rem auto 0;
-    border-radius:8px;
-    border:1px solid rgba(200,154,75,.08);
-    background:rgba(200,154,75,.03);
-}
-
-#postres .menu-accordion summary{
-    padding:.65rem 1rem;
-    font-size:.82rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:rgba(200,154,75,.85);
-}
-
-#postres .accordion-content{
-    padding:0 .9rem .9rem;
-}
-
-#postres .accordion-content li{
-    font-size:.9rem;
-}
 
 
 /* ======================================================
@@ -2274,4 +2218,61 @@ ESPECIAL FIN DE SEMANA - MISMO FORMATO QUE TABLA IBÉRICOS
 
         max-width:420px;
     }
+}
+
+
+/* GELATO INLINE */
+.gelato-item{
+    display:block;
+}
+
+.gelato-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+}
+
+.gelato-name{
+    color:#f2eadf !important;
+    font-weight:400 !important;
+}
+
+.gelato-flavors-toggle{
+    margin-top:.35rem;
+}
+
+.gelato-flavors-toggle summary{
+    cursor:pointer;
+    list-style:none;
+    color:rgba(200,154,75,.85);
+    font-size:.82rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.gelato-flavors-toggle summary::-webkit-details-marker{
+    display:none;
+}
+
+.gelato-flavors-toggle summary::after{
+    content:" +";
+}
+
+.gelato-flavors-toggle[open] summary::after{
+    content:" −";
+}
+
+
+/* ======================================================
+CONTROL BANNER FIN DE SEMANA
+Cambiar mostrar-especial por ocultar-especial en el HTML
+====================================================== */
+
+.mostrar-especial{
+    display:block;
+}
+
+.ocultar-especial{
+    display:none;
 }
