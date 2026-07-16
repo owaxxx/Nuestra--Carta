@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://carta.lamanyosa.com/sitemap.xml
